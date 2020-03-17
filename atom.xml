@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-03-17T15:18:38.940Z</updated>
+    <updated>2020-03-17T15:47:22.595Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[五菱生产口罩]]></title>
+        <id>https://thisming.github.io/post/wu-ling-sheng-chan-kou-zhao/</id>
+        <link href="https://thisming.github.io/post/wu-ling-sheng-chan-kou-zhao/">
+        </link>
+        <updated>2020-03-17T15:34:38.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong>人民需要什么，五菱就造什么！</strong><br>
+持续的疫情，让口罩在一夜之间成为了稀缺品。随着全国各地各行各业的陆续复工，“一罩难求”的局面或许将更加严峻。在这样的背景下，不少在制造方面具备天然优势的企业紧急转产，开始生产口罩、消毒液等防护物资。</p>
+<figure data-type="image" tabindex="1"><img src="https://thisming.github.io/post-images/1584459443592.png" alt="" loading="lazy"></figure>
+]]></summary>
+        <content type="html"><![CDATA[<p><strong>人民需要什么，五菱就造什么！</strong><br>
+持续的疫情，让口罩在一夜之间成为了稀缺品。随着全国各地各行各业的陆续复工，“一罩难求”的局面或许将更加严峻。在这样的背景下，不少在制造方面具备天然优势的企业紧急转产，开始生产口罩、消毒液等防护物资。</p>
+<figure data-type="image" tabindex="1"><img src="https://thisming.github.io/post-images/1584459443592.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Markdown的基本格式]]></title>
         <id>https://thisming.github.io/post/Markdown的基本格式/</id>
