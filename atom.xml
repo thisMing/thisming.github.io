@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-03-17T12:26:37.380Z</updated>
+    <updated>2020-03-17T14:37:19.100Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, MrdeABC</rights>
     <entry>
         <title type="html"><![CDATA[Markdown的基本格式]]></title>
-        <id>https://thisming.github.io/post/UF6kdsv9l/</id>
-        <link href="https://thisming.github.io/post/UF6kdsv9l/">
+        <id>https://thisming.github.io/UF6kdsv9l/</id>
+        <link href="https://thisming.github.io/UF6kdsv9l/">
         </link>
         <updated>2020-03-17T09:46:14.000Z</updated>
         <summary type="html"><![CDATA[<p>本文介绍 Markdown 的基本格式，大部分情况下，你只需掌握这些简单的格式就可以开始使用 Yu Writer 编辑器来书写文档了。</p>
@@ -23,8 +23,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[格言联璧]]></title>
-        <id>https://thisming.github.io/post/geyan/</id>
-        <link href="https://thisming.github.io/post/geyan/">
+        <id>https://thisming.github.io/geyan/</id>
+        <link href="https://thisming.github.io/geyan/">
         </link>
         <updated>2020-03-16T14:54:21.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
@@ -38,8 +38,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[朱子治家格言]]></title>
-        <id>https://thisming.github.io/post/ob1284yTF/</id>
-        <link href="https://thisming.github.io/post/ob1284yTF/">
+        <id>https://thisming.github.io/ob1284yTF/</id>
+        <link href="https://thisming.github.io/ob1284yTF/">
         </link>
         <updated>2020-03-16T13:20:44.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
@@ -59,8 +59,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[现在，从这里开始...]]></title>
-        <id>https://thisming.github.io/post/start/</id>
-        <link href="https://thisming.github.io/post/start/">
+        <id>https://thisming.github.io/start/</id>
+        <link href="https://thisming.github.io/start/">
         </link>
         <updated>2020-03-16T03:49:01.000Z</updated>
         <summary type="html"><![CDATA[<p>生活是恼人的牢笼。一个有思想的人到成年时期，对生活有了成熟的感觉，他就不能不感到他关在一个无从脱逃的牢笼里面。</p>
@@ -69,9 +69,9 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[关于]]></title>
-        <id>https://thisming.github.io/post/about/</id>
-        <link href="https://thisming.github.io/post/about/">
+        <title type="html"><![CDATA[你应该要知道这是哪儿]]></title>
+        <id>https://thisming.github.io/about/</id>
+        <link href="https://thisming.github.io/about/">
         </link>
         <updated>2019-01-25T11:09:48.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="博主是谁">👨‍💻 博主是谁</h3>
@@ -83,8 +83,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Gridea介绍]]></title>
-        <id>https://thisming.github.io/post/hello-gridea/</id>
-        <link href="https://thisming.github.io/post/hello-gridea/">
+        <id>https://thisming.github.io/hello-gridea/</id>
+        <link href="https://thisming.github.io/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>

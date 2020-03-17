@@ -1913,7 +1913,7 @@ body {
       border-bottom-color: #555;
     }
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
-      background: #eee;
+      background: #212529;
     }h1, h2, h3, h4, h5, h6 {
       color: #555;
     }
@@ -1955,42 +1955,42 @@ body {
       border-bottom-color: #222;
     }
       .nav-item a {
-        color:  #555;
+        color:  #0b7285;
       }.nav-item a:hover {
         color: #d9480f;
       }.nav-item-active {
-      background: #dee2e6;
+      background: #ced4da;
     }
 
     .nav-item:hover {
-      background: #dee2e6;
+      background: #ced4da;
       color: rgba(0, 0, 0, 0.98);
     }.markdownIt-TOC a {
-      color: #eee;
-      border-bottom-color: #eee;
+      color: #212529;
+      border-bottom-color: #212529;
     }.markdownIt-TOC a:hover {
       color: #fff;
       border-bottom-color: #fff;
     }.active-current > a {
-      color: #fc6423 !important;
-      border-bottom-color: #fc6423 !important;
+      color: #495057 !important;
+      border-bottom-color: #495057 !important;
     }
     .sidebar-title-active {
-      color: #fc6423 !important;
-      border-bottom-color: #fc6423 !important;
+      color: #495057;
+      border-bottom-color: #495057;
     }
     .sidebar-title-item:hover {
-      color: #fc6423 !important;
+      color: #495057 !important;
     }
     .active-show > a {
-      color: #fc6423;
-      border-bottom-color: #fc6423;
+      color: #495057;
+      border-bottom-color: #495057;
     }
     .active-hidden > a {
-      color: #fc6423;
-      border-bottom-color: #fc6423;
+      color: #495057;
+      border-bottom-color: #495057;
     }.site-nav, .sidebar-wrapper, .section-box, .sidebar-box, .site-nav, .blog-header {
-        opacity: 0.95;
+        opacity: 0.9;
       }
       .site-meta {
         background: #000 !important;
@@ -2002,10 +2002,10 @@ body {
       background: #000;
     }
     .main-title {
-      color: #FFF;
+      color: #fff;
     }
     .mist .site-title i {
-      background: #FFF;
+      background: #fff;
     }/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
 /* Author: Nicolas Hery - http://nicolashery.com */
 /* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
