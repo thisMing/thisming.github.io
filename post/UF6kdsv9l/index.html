@@ -7,7 +7,7 @@
 <meta name="keywords" content="静态博客">
 <meta name="description" content="又是努力的一天！">
 <meta name="theme-color" content="#000">
-<title>关于 | MrdeABC</title>
+<title>Markdown的基本格式 | MrdeABC</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1584447663700">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -25,7 +25,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
-    <meta name="description" content="关于" />
+    <meta name="description" content="Markdown的基本格式" />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -298,8 +298,8 @@
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://thisming.github.io/post/about/">
-      关于
+    <a class="post-title-link" href="https://thisming.github.io/post/UF6kdsv9l/">
+      Markdown的基本格式
     </a>
   </h1>
   <div class="post-meta">
@@ -307,32 +307,123 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2019-01-25</span>
+      <span>2020-03-17</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
+      <span>5分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>133<span class="pc-show">字数</span></span>
+      <span>1228<span class="pc-show">字数</span></span>
     </span>
     
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <h3 id="博主是谁">👨‍💻 博主是谁</h3>
-<p>“我是谁？从哪儿来？要到哪儿去？”这一连串来自灵魂深处的拷问，让每一个还没有找好定位的人心里惴惴不安。</p>
+                <p>本文介绍 Markdown 的基本格式，大部分情况下，你只需掌握这些简单的格式就可以开始使用 Yu Writer 编辑器来书写文档了。</p>
 <!-- more -->
-<h3 id="关于本站">🏠 关于本站</h3>
-<p>没有明确这里要放一些什么，但是这里很简单，简单到手还能动就行，简单也是我的个性。</p>
-<h3 id="兴趣爱好">⛹ 兴趣爱好</h3>
-<p>一直想找一个能坚持下去的爱好，好像除了呼吸，也没啥能坚定的坚持着的事情。</p>
-<h3 id="联系我呀">📬 联系我呀</h3>
-<p>联系我? <a href="https://t.me/thisming">Telegram</a></p>
+<h2 id="基本格式">基本格式</h2>
+<p>Markdown 的基本格式，你只需掌握这些简单的格式就可以开始使用 Markdown 来书写文档了。</p>
+<h2 id="基本概念">基本概念</h2>
+<p>Markdown 文档本质上是一种纯文本文档，所以没办法直接在文档里设置不同的文字大小、颜色、位置，也不能直接显示图片、表格等，但可以通过一些简单易记的符号用来标识这些格式和元素，然后通过 Markdown 渲染引擎就可以生成图文并茂、格式丰富的文档。</p>
+<p>Yu Writer 的编辑器（即 Yu Writer 窗口中间部分）能够解析 Markdown 元素，并使用相应的样式来显示某些元素，比如设置为标题的文字会放大、设置为粗体的文字会加粗等，但实质上仍然是纯文本。对于表格、图片等非文本元素只能显示其原始的 Markdown 代码。</p>
+<p>Yu Writer 窗口最右侧是即时预览视图，里面显示的是 Markdown 文档的渲染结果。如果你一开始不熟悉 Markdown， 可以一边书写一边瞥看窗口右侧渲染的结果，以便确认是否书写正确。</p>
+<h2 id="段落">段落</h2>
+<p>一行文字即一个段落，段落是自动换行的，无需手动输入回车换行符。</p>
+<h2 id="粗体-斜体-下划线">粗体、斜体、下划线</h2>
+<ul>
+<li>在文字前后使用两个星号 <code>**</code> 包围起来，该部分文字即显示为粗体，比如 <strong>这是粗体</strong>。</li>
+<li>使用下划线 <code>_</code> 设置斜体格式，比如 <em>这是斜体</em>；</li>
+<li>使用两个加号 <code>++</code> 设置下划线格式，比如 ++这是下划线++。</li>
+</ul>
+<h2 id="删除线-高亮标记-行内代码">删除线、高亮标记、行内代码</h2>
+<ul>
+<li>使用双波浪线 <code>~~</code> 设置删除线格式，比如 <s>这是删除线</s>；</li>
+<li>使用双等号 <code>==</code> 设置高亮标记格式，比如 <mark>这是高亮标记</mark>；</li>
+<li>使用反引号（backtick quote）设置行内代码 （Inline Code） 格式，比如 <code>这是行内代码</code>。</li>
+</ul>
+<h2 id="标题heading">标题（heading）</h2>
+<p>Markdown 支持定义六级标题，设置标题时只需在一行文字前面添加 1 个到 6 个井号 <code>#</code> 和一个空格符即成为标题，比如上面的 <code>## 标题（heading）</code> 即表示该行是一个二级标题。</p>
+<p>对于一级标题和二级标题，还可以在该行文字下面分别使用一个到多个等号 <code>=</code> 或减号 <code>-</code> 来表示。例如：</p>
+<pre><code class="language-markdown">这是一级标题
+==========
+
+这是二级标题
+----------
+</code></pre>
+<p>这种标题格式称为 Setext 风格，相应地，使用井号定义标题叫做 Atx 风格。一般情况下，在同一个文档里不要混用两种风格。</p>
+<h2 id="链接">链接</h2>
+<p>点击工具栏的 <code>链接</code> 按钮，在弹出的窗口中输入链接的文字标题以及目标地址，即可在文档内插入一个超级链接 Markdown 代码。如果想修改链接代码的内容，可以直接在编辑器里修改，也可以右击链接代码，在弹出菜单选择 <code>编辑链接</code>。</p>
+<h2 id="图像">图像</h2>
+<p>点击工具栏的 <code>图像</code> 按钮，在弹出的 <code>图片资源管理窗口</code> 中点击 <code>添加图片</code> 按钮，或者直接把图片拖进去，然后选中图片，再点击插入按钮即会在文档中插入一个图片 Markdown 代码。同样地，如果想修改图片代码的内容，可以直接在编辑器里修改，也可以右击图片代码，然后在弹出菜单选择 <code>编辑图像</code>，重新选择图片再点击更新按钮。</p>
+<h2 id="列表">列表</h2>
+<p>在一行文字前使用一个星号 <code>*</code> 加一个空格符即成为一个列表项，比如：</p>
+<ul>
+<li>这是第 1 个列表项</li>
+<li>这是第 2 个列表项</li>
+<li>这是第 3 个列表项</li>
+</ul>
+<p>除了使用星号，还可以使用加号 <code>+</code> 和减号 <code>-</code> 来定义列表项，它们作用是一样的。如果要定义一个有序列表，则每行应该以一个数字开头，然后加一个点号 <code>.</code> 再加一个空格符，比如：</p>
+<ol>
+<li>这是第 1 个有序列表项</li>
+<li>这是第 2 个有序列表项</li>
+<li>这是第 3 个有序列表项</li>
+</ol>
+<p>列表可以有层级关系，子级列表只需比上级列表在前多加两个空格即可，比如：</p>
+<ul>
+<li>第一级第 1 项
+<ul>
+<li>第二级第 1 项</li>
+<li>第二级第 2 项</li>
+</ul>
+</li>
+<li>第一级第 2 项</li>
+<li>第一级第 3 项</li>
+</ul>
+<h2 id="插入其他元素">插入其他元素</h2>
+<p>点击工具栏的 <code>插入</code> 按钮，然后选择相应的功能即可，比如脚注、目录、图表、LaTeX 数学公式等。</p>
+<h2 id="表格">表格</h2>
+<p>下面是一个典型的表格样式。</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Series 1</th>
+<th>Series 2</th>
+<th>Series 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Category 1</td>
+<td>4.3</td>
+<td>2.4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Category 2</td>
+<td>2.5</td>
+<td>4.4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Category 3</td>
+<td>3.5</td>
+<td>1.8</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Category 4</td>
+<td>4.5</td>
+<td>2.8</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
 
               </div>
               <div class="post-footer">
@@ -343,7 +434,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://thisming.github.io/post/about/" title="关于">关于</a>
+      <a href="https://thisming.github.io/post/UF6kdsv9l/" title="Markdown的基本格式">Markdown的基本格式</a>
     </li>
   </ul>
   <div class="tags">
@@ -352,15 +443,11 @@
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="现在，从这里开始..." href="https://thisming.github.io/post/start/">现在，从这里开始...</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="现在，从这里开始..." href="https://thisming.github.io/post/start/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="Gridea介绍" href="https://thisming.github.io/post/hello-gridea/">Gridea介绍</a>
-        <a class="nav-mobile-next" title="Gridea介绍" href="https://thisming.github.io/post/hello-gridea/">下一篇</a>
+        <a class="nav-pc-next" title="格言联璧" href="https://thisming.github.io/post/geyan/">格言联璧</a>
+        <a class="nav-mobile-next" title="格言联璧" href="https://thisming.github.io/post/geyan/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
