@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-03-18T06:44:28.616Z</updated>
+    <updated>2020-03-18T08:47:56.775Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[台美防疫夥伴關係聯合聲明]]></title>
+        <id>https://thisming.github.io/UNNBjPFMv/</id>
+        <link href="https://thisming.github.io/UNNBjPFMv/">
+        </link>
+        <updated>2020-03-18T07:41:17.000Z</updated>
+        <summary type="html"><![CDATA[<p>台美合作再升級！共同發表 #台美防疫夥伴關係聯合聲明</p>
+<p>為了加強防疫的國際合作，外交部 Ministry of Foreign Affairs, ROC（Taiwan）和 美國在台協會 AIT 已經共同發表「台美防疫夥伴關係聯合聲明」。在 #平等互惠 的原則下，台美雙方進一步強化諮商和合作的機制，分享防疫的措施，包括：</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>台美合作再升級！共同發表 #台美防疫夥伴關係聯合聲明</p>
+<p>為了加強防疫的國際合作，外交部 Ministry of Foreign Affairs, ROC（Taiwan）和 美國在台協會 AIT 已經共同發表「台美防疫夥伴關係聯合聲明」。在 #平等互惠 的原則下，台美雙方進一步強化諮商和合作的機制，分享防疫的措施，包括：</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[因全球新冠疫情变化，台湾管制升级]]></title>
         <id>https://thisming.github.io/yin-quan-qiu-xin-guan-yi-qing-bian-hua-tai-wan-guan-zhi-sheng-ji/</id>
