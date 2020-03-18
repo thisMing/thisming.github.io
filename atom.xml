@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-03-18T08:47:56.775Z</updated>
+    <updated>2020-03-18T10:01:11.738Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[做馒头记]]></title>
+        <id>https://thisming.github.io/u6LddRA4z/</id>
+        <link href="https://thisming.github.io/u6LddRA4z/">
+        </link>
+        <updated>2020-03-18T08:49:25.000Z</updated>
+        <summary type="html"><![CDATA[<p>前一段时间馋饼，买了一袋5kg面粉，吃厌了也没能吃完，放时间久了会变质，不如自己做点其他的面食吃，馒头这个词就出现再脑海里了。<br>
+于是，买菜的时候就顺带买了酵母，请教一下会做馒头的妹妹，再结合网上搜到的教程，开做...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>前一段时间馋饼，买了一袋5kg面粉，吃厌了也没能吃完，放时间久了会变质，不如自己做点其他的面食吃，馒头这个词就出现再脑海里了。<br>
+于是，买菜的时候就顺带买了酵母，请教一下会做馒头的妹妹，再结合网上搜到的教程，开做...</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[台美防疫夥伴關係聯合聲明]]></title>
         <id>https://thisming.github.io/UNNBjPFMv/</id>
@@ -129,19 +142,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<h3 id="博主是谁">👨‍💻 博主是谁</h3>
 <p>“我是谁？从哪儿来？要到哪儿去？”这一连串来自灵魂深处的拷问，让每一个还没有找好定位的人心里惴惴不安。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Gridea介绍]]></title>
-        <id>https://thisming.github.io/hello-gridea/</id>
-        <link href="https://thisming.github.io/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 ]]></content>
     </entry>
 </feed>
