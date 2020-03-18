@@ -1913,7 +1913,7 @@ body {
       border-bottom-color: #555;
     }
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
-      background: #212529;
+      background: #eee;
     }h1, h2, h3, h4, h5, h6 {
       color: #555;
     }
@@ -1931,28 +1931,28 @@ body {
     }.bg-color {
       background-color: #fff;
     }a {
-      color: #555;
+      color: #1971c2;
     }
     
     .next-md-body a, .friends-box a  {
-      color: #555;
-      border-bottom: 1px solid #555;
+      color: #1971c2;
+      border-bottom: 1px solid #1971c2;
     }a:hover {
-      color: #222;
+      color: #d9480f;
     }
     
     .archive-timeline-box .tag-node:hover::before {
-      background-color: #222;
+      background-color: #d9480f;
     }
     
     .markdownIt-TOC a:hover {
-      color: #222;
-      border-bottom-color: #222;
+      color: #d9480f;
+      border-bottom-color: #d9480f;
     }
 
     .next-md-body a:hover, .friends-box a:hover {
-      color: #222;
-      border-bottom-color: #222;
+      color: #d9480f;
+      border-bottom-color: #d9480f;
     }
       .nav-item a {
         color:  #0b7285;
@@ -1966,32 +1966,30 @@ body {
       background: #ced4da;
       color: rgba(0, 0, 0, 0.98);
     }.markdownIt-TOC a {
-      color: #212529;
-      border-bottom-color: #212529;
+      color: #1864ab;
+      border-bottom-color: #1864ab;
     }.markdownIt-TOC a:hover {
-      color: #fff;
-      border-bottom-color: #fff;
+      color: #dee2e6;
+      border-bottom-color: #dee2e6;
     }.active-current > a {
-      color: #495057 !important;
-      border-bottom-color: #495057 !important;
+      color: #343a40 !important;
+      border-bottom-color: #343a40 !important;
     }
     .sidebar-title-active {
-      color: #495057;
-      border-bottom-color: #495057;
+      color: #343a40;
+      border-bottom-color: #343a40;
     }
     .sidebar-title-item:hover {
-      color: #495057 !important;
+      color: #343a40 !important;
     }
     .active-show > a {
-      color: #495057;
-      border-bottom-color: #495057;
+      color: #343a40;
+      border-bottom-color: #343a40;
     }
     .active-hidden > a {
-      color: #495057;
-      border-bottom-color: #495057;
-    }.site-nav, .sidebar-wrapper, .section-box, .sidebar-box, .site-nav, .blog-header {
-        opacity: 0.9;
-      }
+      color: #343a40;
+      border-bottom-color: #343a40;
+    }
       .site-meta {
         background: #000 !important;
       }
@@ -2002,10 +2000,10 @@ body {
       background: #000;
     }
     .main-title {
-      color: #fff;
+      color: #FFF;
     }
     .mist .site-title i {
-      background: #fff;
+      background: #FFF;
     }/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
 /* Author: Nicolas Hery - http://nicolashery.com */
 /* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
@@ -2306,10 +2304,6 @@ table tr:nth-child(2n) {
 
 img {
   max-width: 100%
-}.bg-img img {
-        filter: blur(10px)
-      }.box-shadow-wrapper {
-      padding: 10px;
-    }.box-shadow-wrapper {
+}.box-shadow-wrapper {
       box-shadow: none !important;
     }
