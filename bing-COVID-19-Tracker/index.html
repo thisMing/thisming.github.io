@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta charset="UTF-8"/>
+    <meta charset="UTF-8"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="静态博客">
 <meta name="description" content="又是努力的一天！">
 <meta name="theme-color" content="#000">
-<title>MrdeABC</title>
+<title>基于Bing搜索的全球冠状病毒追踪器 | MrdeABC</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1584512015533">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -25,6 +25,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
+    <meta name="description" content="基于Bing搜索的全球冠状病毒追踪器" />
+    <meta name="keywords" content="tracker,新闻,抗疫" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -126,10 +128,17 @@
     </div>
     <div class="main-continer">
       
-      <div class="section-layout  gemini">
+      <div class="section-layout gemini ">
         <div class="section-layout-wrapper">
-          <div id="sidebarMeta" class="sidebar">
-    
+          
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://thisming.github.io/images/avatar.png"/>
@@ -191,94 +200,216 @@
 
 
 </div>
+        
+      </div>
+    </div>
+  
 </div>
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
       }
-    });
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
   }
-  </script>
-            <div class="section-box tag-line">
-              <div class="box-shadow-wrapper">
-                <div class="bg-color">
-                  <section class="section posts-expand">
-                    <div class="padding-wrapper">
-  <div class="tag-timeline-box">
-    <div class="tag-timeline-wrapper">
-      <div class="tag-timeline-title">
-        <h2>
-          台湾
-          <small>标签</small>
-        </h2>
-      </div>
-      
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+          <div class="section-box box-shadow-wrapper">
+            <div class="section bg-color post post-page">
+              <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://thisming.github.io/bing-COVID-19-Tracker/">
+      基于Bing搜索的全球冠状病毒追踪器
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2020-03-18</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+      <span class="meta-item">
+        <i class="fa fa-folder-o"></i>
+        <span class="pc-show">分类于</span>
         
+          
+            <a href="https://thisming.github.io/sax0vOKAB/">
+              <span>tracker</span>
+            </a>、
           
         
           
-        
-          
-        
-      
-        
+            <a href="https://thisming.github.io/xin-wen/">
+              <span>新闻</span>
+            </a>、
           
         
           
-            <a href="https://thisming.github.io/yin-quan-qiu-xin-guan-yi-qing-bian-hua-tai-wan-guan-zhi-sheng-ji/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    03-18
-                    <small>因全球新冠疫情变化，台湾管制升级</small>
-                  </h1>
-                </div>  
-              </div>
+            <a href="https://thisming.github.io/kang-yi/">
+              <span>抗疫</span>
             </a>
           
         
+      </span>
+      <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>1分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>216<span class="pc-show">字数</span></span>
+    </span>
+    
+      <span id="/postundefined" class="meta-item pc-show leancloud_visitors">
+        <span class="post-meta-divider">|</span>
+        <i class="fa fa-eye"></i>
+        <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
+      </span>
+    
+  </div>
+</header>
+              <div class="post-body next-md-body" id="post_body">
+                <p>据外媒zdnet报道，微软在今年的3月16日推出了一个基于搜索引擎Bing的全球冠状病毒追踪器（COVID-19 Tracker），用于跟踪全球范围内的新冠病毒疫情变化。</p>
+<!-- more -->
+<p><img src="https://thisming.github.io/post-images/1584511031457.jpg" alt="" loading="lazy"><br>
+<a href="https://bing.com/covid"><strong>COVID-19 Tracker</strong></a></p>
+<p>这款追踪器可以收集和整理互联网上所有可用的数据。追踪器会显示确诊病例、疑似病例和死亡病例。</p>
+<p>追踪器可以可通过bing.com/covid访问，它显示了全球每个国家和美国所有州的最新感染统计数据。</p>
+<p>不仅如此，该追踪器还能查询某个国家或地区的疫情情况，以及当地媒体的相关报道。这些内容都是通过Bing引擎搜索通过搜索NPR以及《纽约时报》等主要新闻媒体呈现的。</p>
+<blockquote>
+<p>新闻来源：<a href="https://tech.sina.com.cn/n/k/2020-03-16/doc-iimxyqwa0782434.shtml">新浪科技</a></p>
+</blockquote>
+<hr>
+
+              </div>
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>编辑上传：</strong>
+      MrdeABC
+    </li>
+    <li class="post-copyright-link">
+      <strong>本站链接：</strong>
+      <a href="https://thisming.github.io/bing-COVID-19-Tracker/" title="基于Bing搜索的全球冠状病毒追踪器">基于Bing搜索的全球冠状病毒追踪器</a>
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://thisming.github.io/sax0vOKAB/"># tracker</a>
+    
+      <a href="https://thisming.github.io/xin-wen/"># 新闻</a>
+    
+      <a href="https://thisming.github.io/kang-yi/"># 抗疫</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
       
-        
-          
-        
-          
-        
+    </div>
+    <div class="nav-next">
       
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
+        <a class="nav-pc-next" title="因全球新冠疫情变化，台湾管制升级" href="https://thisming.github.io/yin-quan-qiu-xin-guan-yi-qing-bian-hua-tai-wan-guan-zhi-sheng-ji/">因全球新冠疫情变化，台湾管制升级</a>
+        <a class="nav-mobile-next" title="因全球新冠疫情变化，台湾管制升级" href="https://thisming.github.io/yin-quan-qiu-xin-guan-yi-qing-bian-hua-tai-wan-guan-zhi-sheng-ji/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
 </div>
-                  </section>
-                </div>
-              </div>
+              
+                
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+<script>
+new Valine({
+    el: '#vcomments' ,
+    appId: 'voomdQXXilbYk2KjQu293htD-MdYXbMMI',
+    appKey: 'XEyIBIWgyI0eQkWJ2sDqsUnP',
+    notify: 'true' === 'true', 
+    avatar:'identicon', 
+    placeholder: '说点什么...',
+    pageSize: '12',
+    lang: 'zh-cn',
+    visitor: 'true' === 'true',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'false',
+});
+</script>
+              
+            </div>
           </div>
         </div>
       </div>

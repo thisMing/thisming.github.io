@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-03-18T05:06:41.888Z</updated>
+    <updated>2020-03-18T06:13:55.888Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[基于Bing搜索的全球冠状病毒追踪器]]></title>
+        <id>https://thisming.github.io/bing-COVID-19-Tracker/</id>
+        <link href="https://thisming.github.io/bing-COVID-19-Tracker/">
+        </link>
+        <updated>2020-03-18T05:55:49.000Z</updated>
+        <summary type="html"><![CDATA[<p>据外媒zdnet报道，微软在今年的3月16日推出了一个基于搜索引擎Bing的全球冠状病毒追踪器（COVID-19 Tracker），用于跟踪全球范围内的新冠病毒疫情变化。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>据外媒zdnet报道，微软在今年的3月16日推出了一个基于搜索引擎Bing的全球冠状病毒追踪器（COVID-19 Tracker），用于跟踪全球范围内的新冠病毒疫情变化。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[因全球新冠疫情变化，台湾管制升级]]></title>
         <id>https://thisming.github.io/yin-quan-qiu-xin-guan-yi-qing-bian-hua-tai-wan-guan-zhi-sheng-ji/</id>
