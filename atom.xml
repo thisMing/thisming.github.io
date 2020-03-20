@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-03-18T13:41:43.882Z</updated>
+    <updated>2020-03-20T02:00:32.469Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[針對疫情對經濟的衝擊，政府已經展開超前部署]]></title>
+        <id>https://thisming.github.io/_lVoJpGW6/</id>
+        <link href="https://thisming.github.io/_lVoJpGW6/">
+        </link>
+        <updated>2020-03-19T09:56:58.000Z</updated>
+        <summary type="html"><![CDATA[<p>針對疫情對經濟的衝擊，政府已經展開超前部署！</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>針對疫情對經濟的衝擊，政府已經展開超前部署！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[未來14天，是第二階段的防疫關鍵期]]></title>
+        <id>https://thisming.github.io/Wk77E1q37/</id>
+        <link href="https://thisming.github.io/Wk77E1q37/">
+        </link>
+        <updated>2020-03-19T08:50:27.000Z</updated>
+        <summary type="html"><![CDATA[<p>未來14天，是第二階段的 #防疫關鍵期，政府會確保民生物資穩定供給，我也要向國人提出三點呼籲：</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>未來14天，是第二階段的 #防疫關鍵期，政府會確保民生物資穩定供給，我也要向國人提出三點呼籲：</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[第一次尝试做馒头备忘]]></title>
         <id>https://thisming.github.io/u6LddRA4z/</id>
@@ -118,30 +140,6 @@
         <summary type="html"><![CDATA[<p>据外媒zdnet报道，微软在今年的3月16日推出了一个基于搜索引擎Bing的全球冠状病毒追踪器（COVID-19 Tracker），用于跟踪全球范围内的新冠病毒疫情变化。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>据外媒zdnet报道，微软在今年的3月16日推出了一个基于搜索引擎Bing的全球冠状病毒追踪器（COVID-19 Tracker），用于跟踪全球范围内的新冠病毒疫情变化。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[现在，从这里开始...]]></title>
-        <id>https://thisming.github.io/start/</id>
-        <link href="https://thisming.github.io/start/">
-        </link>
-        <updated>2020-03-16T03:49:01.000Z</updated>
-        <summary type="html"><![CDATA[<p>生活是恼人的牢笼。一个有思想的人到成年时期，对生活有了成熟的感觉，他就不能不感到他关在一个无从脱逃的牢笼里面。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>生活是恼人的牢笼。一个有思想的人到成年时期，对生活有了成熟的感觉，他就不能不感到他关在一个无从脱逃的牢笼里面。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[你应该要知道这是哪儿]]></title>
-        <id>https://thisming.github.io/about/</id>
-        <link href="https://thisming.github.io/about/">
-        </link>
-        <updated>2019-01-25T11:09:48.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="博主是谁">👨‍💻 博主是谁</h3>
-<p>“我是谁？从哪儿来？要到哪儿去？”这一连串来自灵魂深处的拷问，让每一个还没有找好定位的人心里惴惴不安。</p>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="博主是谁">👨‍💻 博主是谁</h3>
-<p>“我是谁？从哪儿来？要到哪儿去？”这一连串来自灵魂深处的拷问，让每一个还没有找好定位的人心里惴惴不安。</p>
 ]]></content>
     </entry>
 </feed>

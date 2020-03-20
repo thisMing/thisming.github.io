@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta charset="UTF-8"/>
+    <meta charset="UTF-8"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="静态博客">
 <meta name="description" content="又是努力的一天！">
 <meta name="theme-color" content="#000">
-<title>MrdeABC</title>
+<title>未來14天，是第二階段的防疫關鍵期 | MrdeABC</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1584669627299">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -25,6 +25,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
+    <meta name="description" content="未來14天，是第二階段的防疫關鍵期" />
+    <meta name="keywords" content="蔡英文,台湾,新闻,抗疫" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -126,10 +128,25 @@
     </div>
     <div class="main-continer">
       
-      <div class="section-layout  gemini">
+      <div class="section-layout gemini ">
         <div class="section-layout-wrapper">
-          <div id="sidebarMeta" class="sidebar">
-    
+          
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://thisming.github.io/images/avatar.png"/>
@@ -184,136 +201,231 @@
 
 
 </div>
+          
+        
+      </div>
+    </div>
+  
 </div>
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
       }
-    });
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
   }
-  </script>
-            <div class="section-box tag-line">
-              <div class="box-shadow-wrapper">
-                <div class="bg-color">
-                  <section class="section posts-expand">
-                    <div class="padding-wrapper">
-  <div class="tag-timeline-box">
-    <div class="tag-timeline-wrapper">
-      <div class="tag-timeline-title">
-        <h2>
-          知识
-          <small>标签</small>
-        </h2>
-      </div>
-      
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+          <div class="section-box box-shadow-wrapper">
+            <div class="section bg-color post post-page">
+              <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://thisming.github.io/Wk77E1q37/">
+      未來14天，是第二階段的防疫關鍵期
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2020-03-19</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+      <span class="meta-item">
+        <i class="fa fa-folder-o"></i>
+        <span class="pc-show">分类于</span>
         
+          
+            <a href="https://thisming.github.io/cai-ying-wen/">
+              <span>蔡英文</span>
+            </a>、
           
         
           
-        
+            <a href="https://thisming.github.io/tai-wan/">
+              <span>台湾</span>
+            </a>、
           
         
           
-        
-      
-        
+            <a href="https://thisming.github.io/xin-wen/">
+              <span>新闻</span>
+            </a>、
           
         
           
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-            <a href="https://thisming.github.io/Markdown的基本格式/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    03-17
-                    <small>Markdown的基本格式</small>
-                  </h1>
-                </div>  
-              </div>
+            <a href="https://thisming.github.io/kang-yi/">
+              <span>抗疫</span>
             </a>
           
         
+      </span>
+      <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>2分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>394<span class="pc-show">字数</span></span>
+    </span>
+    
+      <span id="/postundefined" class="meta-item pc-show leancloud_visitors">
+        <span class="post-meta-divider">|</span>
+        <i class="fa fa-eye"></i>
+        <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
+      </span>
+    
+  </div>
+</header>
+              <div class="post-body next-md-body" id="post_body">
+                <p>未來14天，是第二階段的 #防疫關鍵期，政府會確保民生物資穩定供給，我也要向國人提出三點呼籲：</p>
+<!-- more -->
+<p>1️⃣請大家全力配合指揮中心的防疫規定<br>
+防疫措施難免造成生活不便，但是，對個人行動的限制，都是必要的短期措施。此刻把自己和家人的健康照顧好，就是守護家園最好的做法。</p>
+<p>2️⃣請大家不要仇視、不要相互指責<br>
+我們要感謝所有配合居家檢疫、自主健康管理的國民，為所有人的健康設下防線。更要感謝所有負責防疫及醫療的同仁，不眠不休守在第一線，為守護台灣做好把關。以及，也謝謝投入製造防疫物資的國家隊同仁，展現出台灣人民在壓力下的韌性。</p>
+<p>3️⃣請大家不要製造恐慌，協助傳播正確資訊<br>
+各項醫療物資，政府都有充足準備。口罩實名制的分配，也會視需要逐步增加。邊境管制的原則，是管理非必要的人員流動，但物流是暢通的，各項民生物資，國家都有足夠的存量，也會確保穩定的供給。請大家不需要搶購、囤積物資。如果有囤積或炒作價格的人，政府一定會重罰。</p>
+<p>此時此刻，我們都是生命共同體。讓我們全力以赴，控制疫情，保護國民！</p>
+<blockquote>
+<p>转发自：<a href="https://t.me/iingtw">台灣隊長蔡英文</a></p>
+</blockquote>
+<hr>
+
+              </div>
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>编辑上传：</strong>
+      MrdeABC
+    </li>
+    <li class="post-copyright-link">
+      <strong>本站链接：</strong>
+      <a href="https://thisming.github.io/Wk77E1q37/" title="未來14天，是第二階段的防疫關鍵期">未來14天，是第二階段的防疫關鍵期</a>
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://thisming.github.io/cai-ying-wen/"># 蔡英文</a>
+    
+      <a href="https://thisming.github.io/tai-wan/"># 台湾</a>
+    
+      <a href="https://thisming.github.io/xin-wen/"># 新闻</a>
+    
+      <a href="https://thisming.github.io/kang-yi/"># 抗疫</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
       
-        
-          
-        
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="針對疫情對經濟的衝擊，政府已經展開超前部署" href="https://thisming.github.io/_lVoJpGW6/">針對疫情對經濟的衝擊，政府已經展開超前部署</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="針對疫情對經濟的衝擊，政府已經展開超前部署" href="https://thisming.github.io/_lVoJpGW6/">上一篇</a>
       
-        
-          
-        
+    </div>
+    <div class="nav-next">
       
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
+        <a class="nav-pc-next" title="第一次尝试做馒头备忘" href="https://thisming.github.io/u6LddRA4z/">第一次尝试做馒头备忘</a>
+        <a class="nav-mobile-next" title="第一次尝试做馒头备忘" href="https://thisming.github.io/u6LddRA4z/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
 </div>
-                  </section>
-                </div>
-              </div>
+              
+                
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+<script>
+new Valine({
+    el: '#vcomments' ,
+    appId: 'voomdQXXilbYk2KjQu293htD-MdYXbMMI',
+    appKey: 'XEyIBIWgyI0eQkWJ2sDqsUnP',
+    notify: 'true' === 'false', 
+    avatar:'mp', 
+    placeholder: '说点什么...',
+    pageSize: '',
+    lang: 'zh-cn',
+    visitor: 'true' === 'true',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'false',
+});
+</script>
+              
+            </div>
           </div>
         </div>
       </div>
