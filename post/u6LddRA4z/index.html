@@ -7,7 +7,7 @@
 <meta name="keywords" content="静态博客">
 <meta name="description" content="又是努力的一天！">
 <meta name="theme-color" content="#000">
-<title>朱子治家格言 | MrdeABC</title>
+<title>第一次尝试做馒头备忘 | MrdeABC</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1584795256982">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -25,8 +25,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
-    <meta name="description" content="朱子治家格言" />
-    <meta name="keywords" content="智慧" />
+    <meta name="description" content="第一次尝试做馒头备忘" />
+    <meta name="keywords" content="学习,家常,食物" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -146,7 +146,8 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            
+            <div class="post-side-meta" id="post_side_meta">
+              
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://thisming.github.io/images/avatar.png"/>
@@ -201,6 +202,187 @@
 
 
 </div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#%E6%B7%BB%E5%8A%A0%E5%89%82%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%AF%86">添加剂使用常识：</a></li>
+<li><a href="#%E4%B8%BB%E8%A6%81%E6%9D%90%E6%96%99">主要材料：</a></li>
+<li><a href="#%E5%88%B6%E4%BD%9C%E8%BF%87%E7%A8%8B">制作过程 ：</a></li>
+<li><a href="#%E6%AD%A5%E9%AA%A41%E5%8A%A0%E7%B3%96"><strong>步骤1：加糖</strong></a></li>
+<li><a href="#%E6%AD%A5%E9%AA%A42%E6%BF%80%E6%B4%BB%E9%85%B5%E6%AF%8D-%E6%98%A5%E7%A7%8B%E5%AD%A3%E8%8A%82%E9%9C%80%E8%A6%81"><strong>步骤2：激活酵母</strong> <code>春秋季节需要</code></a></li>
+<li><a href="#%E6%AD%A5%E9%AA%A43%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E8%86%A8%E6%9D%BE%E5%89%82-%E5%8F%AF%E5%90%88%E5%B9%B6"><strong>步骤3：正确使用膨松剂</strong> <code>可合并</code></a></li>
+<li><a href="#%E6%AD%A5%E9%AA%A44%E5%92%8C%E9%9D%A2"><strong>步骤4：和面</strong></a></li>
+<li><a href="#%E6%AD%A5%E9%AA%A45%E5%8F%91%E9%9D%A2"><strong>步骤5：发面</strong></a></li>
+<li><a href="#%E6%AD%A5%E9%AA%A46%E6%B7%BB%E5%8A%A0%E5%B0%8F%E8%8B%8F%E6%89%93-%E5%8F%AF%E5%90%88%E5%B9%B6"><strong>步骤６：添加小苏打</strong> <strong><em><code>可合并</code></em></strong></a></li>
+<li><a href="#%E6%AD%A5%E9%AA%A47%E4%B8%8A%E9%94%85"><strong>步骤７：上锅</strong></a></li>
+<li><a href="#%E6%AD%A5%E9%AA%A48%E5%87%BA%E9%94%85"><strong>步骤8：出锅</strong></a></li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop + 10;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+            </div>
           
         
       </div>
@@ -288,8 +470,8 @@
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://thisming.github.io/post/朱子治家格言/">
-      朱子治家格言
+    <a class="post-title-link" href="https://thisming.github.io/post/u6LddRA4z/">
+      第一次尝试做馒头备忘
     </a>
   </h1>
   <div class="post-meta">
@@ -297,7 +479,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-03-16</span>
+      <span>2020-03-18</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -306,8 +488,20 @@
         <span class="pc-show">分类于</span>
         
           
-            <a href="https://thisming.github.io/tag/zhi-hui/">
-              <span>智慧</span>
+            <a href="https://thisming.github.io/tag/xue-xi/">
+              <span>学习</span>
+            </a>、
+          
+        
+          
+            <a href="https://thisming.github.io/tag/y9ZZAsbtk/">
+              <span>家常</span>
+            </a>、
+          
+        
+          
+            <a href="https://thisming.github.io/tag/cacoCHg4EL/">
+              <span>食物</span>
             </a>
           
         
@@ -316,15 +510,15 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>4分钟</span>
+      <span>5分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>950<span class="pc-show">字数</span></span>
+      <span>1313<span class="pc-show">字数</span></span>
     </span>
     
-      <span id="/post/朱子治家格言/" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/u6LddRA4z/" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -333,58 +527,119 @@
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <blockquote>
-<p>朱柏庐（1627—1698），明末清初江苏昆山县人。著名理学家、教育家。</p>
+                <p>前一段时间馋饼，买了一袋5kg面粉，吃厌了也没能吃完，放时间久了会变质，不如自己做点其他的面食吃，馒头这个词就出现再脑海里了。</p>
+<p>于是，买菜的时候就顺带买了酵母，请教一下会做馒头的妹妹，再结合教程，开做...</p>
+<!-- more -->
+<p>本文是结合<strong>下厨房</strong>上的教程，与自己搜索<code>酵母</code>、<code>膨松剂</code>的正确使用方法相结合，写的实际操作备忘。<strong>非教程</strong></p>
+<hr>
+<blockquote>
+<p><strong>根据<a href="https://dimsum.angelyeast.com/contents/4131/70840.html">安琪酵母发面的科普知识</a>，在室温较低时（冬季），步骤１、２、３、４、６应合并<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></strong>，直接将<code>糖</code>、<code>酵母</code>、<code>膨松剂</code>、<code>小苏打</code>加入面粉中和匀，用温水揉面，可以防止酵母失活导致发面失败。</p>
+</blockquote>
+<h1 id="添加剂使用常识">添加剂使用常识：</h1>
+<ul>
+<li>
+<p>酵母用法、用量<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+</li>
+<li>
+<p>什么是膨松剂<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></p>
+</li>
+<li>
+<p>膨松剂的特点<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup></p>
+</li>
+<li>
+<p>膨松剂使用方法、用量<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup></p>
+</li>
+<li>
+<p>小苏打的资料暂缺</p>
+</li>
+</ul>
+<hr>
+<h1 id="主要材料">主要材料：</h1>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>面粉</td>
+<td>酵母</td>
+<td>膨松剂</td>
+<td>糖</td>
+<td>小苏打</td>
+</tr>
+<tr>
+<td>200g</td>
+<td>1.5g</td>
+<td>1g</td>
+<td>8g</td>
+<td>0.5g</td>
+</tr>
+</tbody>
+</table>
+<figure data-type="image" tabindex="1"><img src="https://thisming.github.io/post-images/1584524775371.JPEG" alt="" loading="lazy"></figure>
+<hr>
+<h1 id="制作过程">制作过程 ：</h1>
+<h1 id="步骤1加糖"><strong>步骤1：加糖</strong></h1>
+<p><strong>用热水将8克糖融化</strong></p>
+<blockquote>
+<p>这些糖不是给馒头增加甜味，而是用来促进发酵，酵母在糖水中能更好的被激活。</p>
+</blockquote>
+<h1 id="步骤2激活酵母-春秋季节需要"><strong>步骤2：激活酵母</strong> <code>春秋季节需要</code></h1>
+<p>待水温稍微下降<code>（大约35°C）</code>后，<strong>将1.5g酵母倒入搅匀后静置，等待酵母激活</strong>。看到表面有泡沫出现<code>（大约10min）</code>，说明酵母已经完全激活了。</p>
+<figure data-type="image" tabindex="2"><img src="https://thisming.github.io/post-images/1584523504889.jpg" alt="" loading="lazy"></figure>
+<blockquote>
+<p>如果没有出现细腻的泡沫，那就要反思一下，哪个步骤出问题了： <code>水温对不对？</code>、<code>糖加了吗？</code>、<code>静置时间够不够？</code></p>
+</blockquote>
+<h1 id="步骤3正确使用膨松剂-可合并"><strong>步骤3：正确使用膨松剂</strong> <code>可合并</code></h1>
+<p><strong>将1g膨松剂放入面粉中搅匀</strong>。膨松剂和面粉先混合搅拌均匀，再加水和面，这样可以让面团很好地包埋更多的有效气体，充分发挥膨松剂的作用。</p>
+<blockquote>
+<p>不建议把膨松剂先混入水中，因为此类膨松剂一遇水就会起反应产生气体，混在水里太久反应产生的气体都消失了，这时候再加到面粉里面，就起不到膨松的作用。所以有时候和面没膨胀的一个原因就是没有正确使用膨松剂。</p>
+</blockquote>
+<h1 id="步骤4和面"><strong>步骤4：和面</strong></h1>
+<p>把上面放了酵母的水倒入面粉中，边加边搅拌，搅拌到面粉成絮状后，<strong>将面揉成光滑的面团</strong>。</p>
+<figure data-type="image" tabindex="3"><img src="https://thisming.github.io/post-images/1584523770796.jpg" alt="" loading="lazy"></figure>
+<h1 id="步骤5发面"><strong>步骤5：发面</strong></h1>
+<p>把揉好的<strong>面团放入容器中，盖上盖子</strong>，等待醒发。温度高，发的就快，一般半小时；发好的面体积会大很多。</p>
+<figure data-type="image" tabindex="4"><img src="https://thisming.github.io/post-images/1584524926692.jpg" alt="" loading="lazy"></figure>
+<blockquote>
+<p>温度低了需要一小时甚至更久，如果要精确的控制发面时间，可以将装面团的容器放入温水中，基本半小时就好。</p>
+</blockquote>
+<h1 id="步骤6添加小苏打-可合并"><strong>步骤６：添加小苏打</strong> <strong><em><code>可合并</code></em></strong></h1>
+<p>在案板上撒上一些干面粉，将发好的面团倒在案板上，这时的面团内部充满了密密麻麻的气孔，非常蓬松。但是闻起来是有点酸味的。<strong>小苏打可以中和面团发酵产生的酸味</strong>，将小苏打撒在案板上，揉进面团中。</p>
+<figure data-type="image" tabindex="5"><img src="https://thisming.github.io/post-images/1584524180777.jpg" alt="" loading="lazy"></figure>
+<blockquote>
+<p>不放小苏打也是可以的，但是馒头有点酸味，影响口感，小苏打放多了蒸出来的馒头会发黄。</p>
 </blockquote>
 <blockquote>
-<p>《朱子家训》全文虽只有506字，却集儒家做人处世方法之大成，内容简明赅备，文字通俗易懂，朗朗上口，问世以来，不胫而走，成为有清一代家喻户晓、脍炙人口的教子治家的经典家训。</p>
+<p>揉面的过程中要用刀切开面团看内部气孔，如果气孔太大，蒸出来的馒头会太过松软，外观也不好看。</p>
 </blockquote>
-<!-- more -->
-<hr>
-<p>黎明即起，洒扫庭除，要内外整洁；既昏便息，关锁门户，必亲自检点。一粥一饭，当思来处不易；半丝半缕，恒念物力维艰。</p>
-<p>宜未雨而绸缪，<code>毋(wú)</code><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>临渴而掘井。自奉必须俭约，宴客切勿留连。器具质而洁，<code>瓦缶(wǎ fǒu)</code><sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>胜金玉；饮食约而精，园蔬愈<code>珍馐(zhēn xiū)</code><sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>。勿营华屋，勿谋良田。</p>
-<p>三姑六婆，实淫盗之媒；婢美妾娇，非闺房之福。童仆勿用俊美，妻妾切忌艳妆。</p>
-<p>祖宗虽远，祭祀不可不诚；子孙虽愚，经书不可不读。居身务期简朴；教子要有义方。勿贪意外之财，勿饮过量之酒。与肩挑贸易，勿占便宜；见穷苦亲邻，须加<code>温恤(wēn xù)</code><sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>。刻薄成家，理无久享；<code>伦常（lún cháng）</code><sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup><code>乖舛（guāi chuǎn）</code><sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup>，立见消亡。<code>兄弟叔侄，需分多润寡，长幼内外，宜法肃辞严</code><sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup>。听妇言，乖骨肉，岂是丈夫；重赀才，薄父母，不成人子。嫁女择佳<code>婿(xù)</code><sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup>，无索重聘；娶媳求淑女，勿计厚<code>奁(lián)</code><sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup>处世戒多言，言多必失。勿恃势力而凌逼孤寡；勿贪口腹而恣杀生禽。乖僻自是，悔误必多；<code>颓隳(tuí huī)</code><sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup>自甘，家道难成。</p>
-<p><code>狎暱(xiá nì)</code><sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup>恶少，久必受其累；屈志<code>老成</code><sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup>，急则可相依。</p>
-<p>轻听发言，安知非人之<code>谮愬(zèn sù)</code><sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup>，当忍耐三思；因事相争，焉知非我之不是？须平心暗想。施惠无念，受恩莫忘。凡事当留余地，得意不宜再往。</p>
-<p>人有喜庆，不可生嫉妒心；人有祸患，不可生喜幸心。善欲人见，不是真善；恶恐人知，便是大恶。见色而起淫心，报在妻女；匿怨而用暗箭，祸延子孙。家门和顺，虽<code>饔飧（yōng sūn）</code><sup class="footnote-ref"><a href="#fn14" id="fnref14">[14]</a></sup>不继，亦有余欢；国课早完，即<code>囊橐（náng tuó）</code><sup class="footnote-ref"><a href="#fn15" id="fnref15">[15]</a></sup>无余，自得至乐。</p>
-<p>读书志在圣贤，为官心存君国。守分安命，顺时听天。<code>为人若此</code><sup class="footnote-ref"><a href="#fn16" id="fnref16">[16]</a></sup>，<code>庶（shù）乎</code><sup class="footnote-ref"><a href="#fn17" id="fnref17">[17]</a></sup>近焉。</p>
+<h1 id="步骤7上锅"><strong>步骤７：上锅</strong></h1>
+<p>将揉好的面团分成小份揉成圆团或者切成条状，<code>表皮不要有缺口</code>，蒸汽进入馒头内部，馒头表面就会坑坑洼洼。</p>
+<p>蒸锅内放入冷水，蒸帘刷油或放油纸防止粘锅。摆上馒头，留好空隙，静置10~20min等待二次发酵。发酵好的馒头会大一圈，拿一下能感觉到里面充气了，好像变轻了。如果室温低二次发酵需要的时间会更久一些。</p>
+<figure data-type="image" tabindex="6"><img src="https://thisming.github.io/post-images/1584525408803.jpg" alt="" loading="lazy"></figure>
+<blockquote>
+<p>二次发酵好之后，开中火看到蒸汽出来之后计时<code>蒸15min，闷3~5min</code>，等温度稍微降一些再拿出来。如果蒸好马上出锅，<strong>馒头遇冷会缩的很厉害</strong>。</p>
+</blockquote>
+<h1 id="步骤8出锅"><strong>步骤8：出锅</strong></h1>
+<figure data-type="image" tabindex="7"><img src="https://thisming.github.io/post-images/1584528895373.JPEG" alt="" loading="lazy"></figure>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>毋：不要，不可以：～妄言。宁缺～滥。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+<li id="fn1" class="footnote-item"><p>【步骤合并】防止水温过低，导致酵母失活 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn2" class="footnote-item"><p>瓦缶：指小口大腹的瓦器。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+<li id="fn2" class="footnote-item"><p>【酵母使用方法、用量】将干酵母与面粉等原料混匀，然后加水搅拌。在面包中的用量为面粉的0.8-1.2%；在馒头中用量为面粉的0.3-1.0%. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn3" class="footnote-item"><p>珍馐（珍羞）：指珍奇名贵的食物，也可解释为美色。也可指比较美好、比较漂亮的东西。 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+<li id="fn3" class="footnote-item"><p>【膨松剂】（Leaveningagents）指食品加工中添加于生产焙烤食品的主要原料小麦粉中，并在加工过程中受热分解，产生气体，使面坯起发，形成致密多孔组织，从而使制品具有膨松、柔软或酥脆的一类物质。 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn4" class="footnote-item"><p>温恤：亦作“温卹”。体贴抚慰的意思。 <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+<li id="fn4" class="footnote-item"><p>【膨松剂的特点】在常温下性质稳定，经高温时能迅速均匀地产生大量气体，使制品膨松的膨松剂。 <a href="#fnref4" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn5" class="footnote-item"><p>伦常：我国封建社会的伦理道德。封建时代称君臣、父子、夫妇、兄弟、朋友五种关系为五伦，认为这种尊卑、长幼的关系是不可改变的常道。 <a href="#fnref5" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn6" class="footnote-item"><p>乖舛：指谬误；差错；不顺遂。 <a href="#fnref6" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn7" class="footnote-item"><p>兄弟叔侄之间要互相帮助，富有的要资助贫穷的；一个家庭要有严正的规矩，长辈对晚辈言辞应庄重。 <a href="#fnref7" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn8" class="footnote-item"><p>婿：形声。从女,胥声。或作“壻”。本义:古时女子称夫为婿 <a href="#fnref8" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn9" class="footnote-item"><p>奁，中国古代女子存放梳妆用品的镜箱 <a href="#fnref9" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn10" class="footnote-item"><p>颓隳: 败坏。本作“穨堕”。 <a href="#fnref10" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn11" class="footnote-item"><p>狎昵：指过于亲近而态度不庄重 <a href="#fnref11" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn12" class="footnote-item"><p>老成：经历多，成熟稳重。 <a href="#fnref12" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn13" class="footnote-item"><p>亦作“ 谮诉 ”。谗毁攻讦。 <a href="#fnref13" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn14" class="footnote-item"><p>饔飧：1、做饭，也指早饭和晚饭；2、饭食的意思。3.指馈食及宴饮之礼。 <a href="#fnref14" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn15" class="footnote-item"><p>囊橐：口袋 <a href="#fnref15" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn16" class="footnote-item"><p>为人若此，若此是指的守份安命，顺时听天。 <a href="#fnref16" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn17" class="footnote-item"><p>庶乎就是近的意思。已经达到了一个什么样的理想状态 <a href="#fnref17" class="footnote-backref">↩︎</a></p>
+<li id="fn5" class="footnote-item"><p>【膨松剂使用方法、用量】 与面粉直接混合。使用量：面粉用量的0.3~1.2%。使用限量：面粉用量的2%。 <a href="#fnref5" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
@@ -398,26 +653,30 @@
     </li>
     <li class="post-copyright-link">
       <strong>本站链接：</strong>
-      <a href="https://thisming.github.io/post/朱子治家格言/" title="朱子治家格言">朱子治家格言</a>
+      <a href="https://thisming.github.io/post/u6LddRA4z/" title="第一次尝试做馒头备忘">第一次尝试做馒头备忘</a>
     </li>
   </ul>
   <div class="tags">
     
-      <a href="https://thisming.github.io/tag/zhi-hui/"># 智慧</a>
+      <a href="https://thisming.github.io/tag/xue-xi/"># 学习</a>
+    
+      <a href="https://thisming.github.io/tag/y9ZZAsbtk/"># 家常</a>
+    
+      <a href="https://thisming.github.io/tag/cacoCHg4EL/"># 食物</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="格言联璧" href="https://thisming.github.io/post/格言联璧/">格言联璧</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="格言联璧" href="https://thisming.github.io/post/格言联璧/">上一篇</a>
+        <a class="nav-pc-next" title="未來14天，是第二階段的防疫關鍵期" href="https://thisming.github.io/post/Wk77E1q37/">未來14天，是第二階段的防疫關鍵期</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="未來14天，是第二階段的防疫關鍵期" href="https://thisming.github.io/post/Wk77E1q37/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="基于Bing搜索的全球冠状病毒追踪器" href="https://thisming.github.io/post/bing-COVID-19-Tracker/">基于Bing搜索的全球冠状病毒追踪器</a>
-        <a class="nav-mobile-next" title="基于Bing搜索的全球冠状病毒追踪器" href="https://thisming.github.io/post/bing-COVID-19-Tracker/">下一篇</a>
+        <a class="nav-pc-next" title="台美防疫夥伴關係聯合聲明" href="https://thisming.github.io/post/UNNBjPFMv/">台美防疫夥伴關係聯合聲明</a>
+        <a class="nav-mobile-next" title="台美防疫夥伴關係聯合聲明" href="https://thisming.github.io/post/UNNBjPFMv/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

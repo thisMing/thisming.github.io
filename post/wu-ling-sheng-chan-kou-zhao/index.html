@@ -8,14 +8,14 @@
 <meta name="description" content="又是努力的一天！">
 <meta name="theme-color" content="#000">
 <title>五菱生产口罩 | MrdeABC</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1584503069961">
+<link rel="shortcut icon" href="/favicon.ico?v=1584795256982">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-<link href="/media/hljs/styles/vs2015.css" rel="stylesheet">  
+<link href="/media/hljs/styles/tomorrow-night.css" rel="stylesheet">  
 
 <script src="/media/hljs/highlight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
@@ -136,9 +136,17 @@
   
     <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
       
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://thisming.github.io/images/avatar.png"/>
@@ -149,30 +157,26 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">7</span>
+        <span class="site-item-stat-count">16</span>
         <span class="site-item-stat-name">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="">
-        <span class="site-item-stat-count">6</span>
+        <span class="site-item-stat-count">12</span>
         <span class="site-item-stat-name">分类</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
-        <span class="site-item-stat-count">6</span>
+        <span class="site-item-stat-count">12</span>
         <span class="site-item-stat-name">标签</span>
       </a>
     </div>
   </div>
   
     
-      <div class="sidebar-item">
-        <span class="site-item-rss">
-            <i class="fa fa-rss"></i>
-            <a href="https://thisming.github.io/atom.xml" target="_blank">RSS</a>
-        </span>
+      <div class="sidebar-item" style="border-top: 1px dotted #ccc; margin-top: 10px;">
       </div>
     
   
@@ -185,14 +189,11 @@
               <i class="fa fa-telegram fa-2x"></i> Telegram
             </a>
           
-        
-        
-          
-            <a class="social-img" href="#">
-              <img src="\media\images\custom-array-imgSocials-1584456549352-socialImg.png" />
-              <i class="fa fa-wechat fa-2x"></i> Wechat
+            <a href="https://instagram.com/thisming">
+              <i class="fa fa-instagram fa-2x"></i> Instagram
             </a>
           
+        
         
       </div>
     </div>
@@ -200,6 +201,7 @@
 
 
 </div>
+          
         
       </div>
     </div>
@@ -381,6 +383,10 @@
   <div class="nav">
     <div class="nav-prev">
       
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="因全球新冠疫情变化，台湾管制升级" href="https://thisming.github.io/post/yin-quan-qiu-xin-guan-yi-qing-bian-hua-tai-wan-guan-zhi-sheng-ji/">因全球新冠疫情变化，台湾管制升级</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="因全球新冠疫情变化，台湾管制升级" href="https://thisming.github.io/post/yin-quan-qiu-xin-guan-yi-qing-bian-hua-tai-wan-guan-zhi-sheng-ji/">上一篇</a>
+      
     </div>
     <div class="nav-next">
       
@@ -400,10 +406,10 @@ new Valine({
     el: '#vcomments' ,
     appId: 'voomdQXXilbYk2KjQu293htD-MdYXbMMI',
     appKey: 'XEyIBIWgyI0eQkWJ2sDqsUnP',
-    notify: 'true' === 'true', 
-    avatar:'identicon', 
+    notify: 'true' === 'false', 
+    avatar:'mp', 
     placeholder: '说点什么...',
-    pageSize: '12',
+    pageSize: '',
     lang: 'zh-cn',
     visitor: 'true' === 'true',
     highlight: 'true' === 'true',
@@ -434,10 +440,6 @@ new Valine({
     </span>
     
   </div>
-  
-    <div class="bg-img">
-      <img src="\media\images\custom-bgImg.jpg" />
-    </div>
   
   
   
