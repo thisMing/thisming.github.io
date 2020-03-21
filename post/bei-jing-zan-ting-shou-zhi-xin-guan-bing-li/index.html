@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta charset="UTF-8"/>
+    <meta charset="UTF-8"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="静态博客">
 <meta name="description" content="又是努力的一天！">
 <meta name="theme-color" content="#000">
-<title>MrdeABC</title>
+<title>今起，北京区级定点医院暂停收治新冠病例 | MrdeABC</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1584795960838">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -25,6 +25,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
+    <meta name="description" content="今起，北京区级定点医院暂停收治新冠病例" />
+    <meta name="keywords" content="新闻,抗疫" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -126,10 +128,25 @@
     </div>
     <div class="main-continer">
       
-      <div class="section-layout  gemini">
+      <div class="section-layout gemini ">
         <div class="section-layout-wrapper">
-          <div id="sidebarMeta" class="sidebar">
-    
+          
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://thisming.github.io/images/avatar.png"/>
@@ -184,189 +201,209 @@
 
 
 </div>
+          
+        
+      </div>
+    </div>
+  
 </div>
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
       }
-    });
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
   }
-  </script>
-            <div class="section-box tag-line">
-              <div class="box-shadow-wrapper">
-                <div class="bg-color">
-                  <section class="section posts-expand">
-                    <div class="padding-wrapper">
-  <div class="tag-timeline-box">
-    <div class="tag-timeline-wrapper">
-      <div class="tag-timeline-title">
-        <h2>
-          台湾
-          <small>标签</small>
-        </h2>
-      </div>
-      
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+          <div class="section-box box-shadow-wrapper">
+            <div class="section bg-color post post-page">
+              <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://thisming.github.io/post/bei-jing-zan-ting-shou-zhi-xin-guan-bing-li/">
+      今起，北京区级定点医院暂停收治新冠病例
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2020-03-21</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+      <span class="meta-item">
+        <i class="fa fa-folder-o"></i>
+        <span class="pc-show">分类于</span>
         
+          
+            <a href="https://thisming.github.io/tag/xin-wen/">
+              <span>新闻</span>
+            </a>、
           
         
           
-        
-      
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-            <a href="https://thisming.github.io/post/_lVoJpGW6/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    03-19
-                    <small>針對疫情對經濟的衝擊，政府已經展開超前部署</small>
-                  </h1>
-                </div>  
-              </div>
+            <a href="https://thisming.github.io/tag/kang-yi/">
+              <span>抗疫</span>
             </a>
           
         
-          
-        
-          
-        
-      
-        
-          
-        
-          
-            <a href="https://thisming.github.io/post/Wk77E1q37/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    03-19
-                    <small>未來14天，是第二階段的防疫關鍵期</small>
-                  </h1>
-                </div>  
+      </span>
+      <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>2分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>382<span class="pc-show">字数</span></span>
+    </span>
+    
+      <span id="/post/bei-jing-zan-ting-shou-zhi-xin-guan-bing-li/" class="meta-item pc-show leancloud_visitors">
+        <span class="post-meta-divider">|</span>
+        <i class="fa fa-eye"></i>
+        <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
+      </span>
+    
+  </div>
+</header>
+              <div class="post-body next-md-body" id="post_body">
+                <p>#疫情动态 #Beijing #北京<br>
+【今起，北京区级定点医院暂停收治新冠病例，新发疑似和确诊病例均由市级定点医院收治】</p>
+<!-- more -->
+<p>3月21日，在北京市新型冠状病毒肺炎疫情防控工作新闻发布会上，北京市卫生健康委新闻发言人高小俊说，根据北京疫情形势，为有序促进日常医疗服务开展，适应群众就医需求，3月20日，北京疫情防控领导小组医疗保障组印发了《加强疫情防控期间医疗服务工作的通知》。按照分区分类、精准施策的原则，对加强疫情防控期间全市医疗服务工作进行了部署安排。要求各级政府和部门、各医疗卫生机构坚持一手抓疫情防控，一手抓医疗服务，有序促进日常医疗服务开展，适应人民群众健康需求。</p>
+<p>通知明确，从3月21日零时起，各区级定点医疗机构暂停新冠肺炎病例收治任务，新发疑似和确诊病例全部由市级定点医院收治。不再承担收治任务的医疗机构，由各区卫生健康委组织疾控和院感专业人员，严格开展终末消毒，经专家评估后，于3月23日零时起，全面恢复日常医疗服务。</p>
+<hr>
+<blockquote>
+<p>新闻来源：<a href="https://ie.bjd.com.cn/5b165687a010550e5ddc0e6a/contentApp/5b16573ae4b02a9fe2d558f9/AP5e75cbd0e4b0f99f4df56832?isshare=1">北京日报客户端 </a><br>
+记者: 贾晓宏<br>
+2020-03-21 16:09</p>
+</blockquote>
+
               </div>
-            </a>
-          
-        
-          
-        
-          
-        
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>编辑上传：</strong>
+      MrdeABC
+    </li>
+    <li class="post-copyright-link">
+      <strong>本站链接：</strong>
+      <a href="https://thisming.github.io/post/bei-jing-zan-ting-shou-zhi-xin-guan-bing-li/" title="今起，北京区级定点医院暂停收治新冠病例">今起，北京区级定点医院暂停收治新冠病例</a>
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://thisming.github.io/tag/xin-wen/"># 新闻</a>
+    
+      <a href="https://thisming.github.io/tag/kang-yi/"># 抗疫</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
       
-        
-          
-        
-          
-        
-          
-        
+    </div>
+    <div class="nav-next">
       
-        
-          
-        
-          
-            <a href="https://thisming.github.io/post/UNNBjPFMv/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    03-18
-                    <small>台美防疫夥伴關係聯合聲明</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-            <a href="https://thisming.github.io/post/yin-quan-qiu-xin-guan-yi-qing-bian-hua-tai-wan-guan-zhi-sheng-ji/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    03-18
-                    <small>因全球新冠疫情变化，台湾管制升级</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
+        <a class="nav-pc-next" title="美国截至3月20日晚11:00止新冠疫情统计" href="https://thisming.github.io/post/3-20-mei-guo/">美国截至3月20日晚11:00止新冠疫情统计</a>
+        <a class="nav-mobile-next" title="美国截至3月20日晚11:00止新冠疫情统计" href="https://thisming.github.io/post/3-20-mei-guo/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
 </div>
-                  </section>
-                </div>
-              </div>
+              
+                
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+<script>
+new Valine({
+    el: '#vcomments' ,
+    appId: 'voomdQXXilbYk2KjQu293htD-MdYXbMMI',
+    appKey: 'XEyIBIWgyI0eQkWJ2sDqsUnP',
+    notify: 'true' === 'false', 
+    avatar:'mp', 
+    placeholder: '说点什么...',
+    pageSize: '',
+    lang: 'zh-cn',
+    visitor: 'true' === 'true',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'false',
+});
+</script>
+              
+            </div>
           </div>
         </div>
       </div>

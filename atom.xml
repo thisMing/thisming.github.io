@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-03-21T12:54:33.637Z</updated>
+    <updated>2020-03-21T13:06:46.992Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[今起，北京区级定点医院暂停收治新冠病例]]></title>
+        <id>https://thisming.github.io/post/bei-jing-zan-ting-shou-zhi-xin-guan-bing-li/</id>
+        <link href="https://thisming.github.io/post/bei-jing-zan-ting-shou-zhi-xin-guan-bing-li/">
+        </link>
+        <updated>2020-03-21T12:59:26.000Z</updated>
+        <summary type="html"><![CDATA[<p>#疫情动态 #Beijing #北京<br>
+【今起，北京区级定点医院暂停收治新冠病例，新发疑似和确诊病例均由市级定点医院收治】</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>#疫情动态 #Beijing #北京<br>
+【今起，北京区级定点医院暂停收治新冠病例，新发疑似和确诊病例均由市级定点医院收治】</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[美国截至3月20日晚11:00止新冠疫情统计]]></title>
         <id>https://thisming.github.io/post/3-20-mei-guo/</id>
@@ -119,17 +132,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p><strong>人民需要什么，五菱就造什么！</strong><br>
 持续的疫情，让口罩在一夜之间成为了稀缺品。随着全国各地各行各业的陆续复工，“一罩难求”的局面或许将更加严峻。在这样的背景下，不少在制造方面具备天然优势的企业紧急转产，开始生产口罩、消毒液等防护物资。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Markdown的基本格式]]></title>
-        <id>https://thisming.github.io/post/Markdown的基本格式/</id>
-        <link href="https://thisming.github.io/post/Markdown的基本格式/">
-        </link>
-        <updated>2020-03-17T09:46:14.000Z</updated>
-        <summary type="html"><![CDATA[<p>本文介绍 Markdown 的基本格式，大部分情况下，你只需掌握这些简单的格式就可以开始使用 Yu Writer 编辑器来书写文档了。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>本文介绍 Markdown 的基本格式，大部分情况下，你只需掌握这些简单的格式就可以开始使用 Yu Writer 编辑器来书写文档了。</p>
 ]]></content>
     </entry>
 </feed>
