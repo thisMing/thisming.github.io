@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-03-22T05:09:27.386Z</updated>
+    <updated>2020-03-22T05:43:57.077Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[建议取消或推迟出国出境计划]]></title>
+        <id>https://thisming.github.io/post/建议取消或推迟出国计划/</id>
+        <link href="https://thisming.github.io/post/建议取消或推迟出国计划/">
+        </link>
+        <updated>2020-03-22T05:24:31.000Z</updated>
+        <summary type="html"><![CDATA[<p>鉴于当前全球疫情蔓延的严峻形势，多国（地区）已采取临时入境管制措施，为防止旅行中交叉感染，以及出行受阻造成不必要损失，如非紧急必要事由，建议取消或推迟出国出境计划，特别是暂不要前往疫情严重国家。如确有必要出国出境的，出发前应详细了解前往地入境管制措施和疫情情况，做足个人防护准备工作。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>鉴于当前全球疫情蔓延的严峻形势，多国（地区）已采取临时入境管制措施，为防止旅行中交叉感染，以及出行受阻造成不必要损失，如非紧急必要事由，建议取消或推迟出国出境计划，特别是暂不要前往疫情严重国家。如确有必要出国出境的，出发前应详细了解前往地入境管制措施和疫情情况，做足个人防护准备工作。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[3月22日全球疫情统计]]></title>
         <id>https://thisming.github.io/post/3月22日全球疫情统计/</id>
@@ -59,7 +70,7 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[截至3月19日晚9:00止新冠疫情统计]]></title>
+        <title type="html"><![CDATA[截至3月19日晚9:00止全球新冠疫情统计]]></title>
         <id>https://thisming.github.io/post/WMIlK9eES/</id>
         <link href="https://thisming.github.io/post/WMIlK9eES/">
         </link>
@@ -117,19 +128,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>台美合作再升級！共同發表 #台美防疫夥伴關係聯合聲明</p>
 <p>為了加強防疫的國際合作，外交部 Ministry of Foreign Affairs, ROC（Taiwan）和 美國在台協會 AIT 已經共同發表「台美防疫夥伴關係聯合聲明」。在 #平等互惠 的原則下，台美雙方進一步強化諮商和合作的機制，分享防疫的措施，包括：</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[因全球新冠疫情变化，台湾管制升级]]></title>
-        <id>https://thisming.github.io/post/yin-quan-qiu-xin-guan-yi-qing-bian-hua-tai-wan-guan-zhi-sheng-ji/</id>
-        <link href="https://thisming.github.io/post/yin-quan-qiu-xin-guan-yi-qing-bian-hua-tai-wan-guan-zhi-sheng-ji/">
-        </link>
-        <updated>2020-03-18T04:54:09.000Z</updated>
-        <summary type="html"><![CDATA[<p><strong>非常時期，國境管制再升級！</strong></p>
-<p>因應全球疫情變化，我們以保護國人的健康為第一優先。今天早上，中央流行疫情指揮中心已經宣布，從明天（3/19）凌晨0時開始，全面提高國境管制及防疫措施的標準：</p>
-]]></summary>
-        <content type="html"><![CDATA[<p><strong>非常時期，國境管制再升級！</strong></p>
-<p>因應全球疫情變化，我們以保護國人的健康為第一優先。今天早上，中央流行疫情指揮中心已經宣布，從明天（3/19）凌晨0時開始，全面提高國境管制及防疫措施的標準：</p>
 ]]></content>
     </entry>
 </feed>
