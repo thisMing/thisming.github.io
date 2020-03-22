@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-03-22T10:01:34.246Z</updated>
+    <updated>2020-03-22T10:11:46.314Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,13 +10,6 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
-    <entry>
-        <title type="html"><![CDATA[表格]]></title>
-        <id>https://thisming.github.io/post/biao-ge/</id>
-        <link href="https://thisming.github.io/post/biao-ge/">
-        </link>
-        <updated>2020-03-22T09:01:48.000Z</updated>
-    </entry>
     <entry>
         <title type="html"><![CDATA[目的地为北京的国际航班需从指定点入境]]></title>
         <id>https://thisming.github.io/post/目的地为北京的国际航班需从指定点入境/</id>
@@ -122,6 +115,19 @@
         <summary type="html"><![CDATA[<p>未來14天，是第二階段的 #防疫關鍵期，政府會確保民生物資穩定供給，我也要向國人提出三點呼籲：</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>未來14天，是第二階段的 #防疫關鍵期，政府會確保民生物資穩定供給，我也要向國人提出三點呼籲：</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[第一次尝试做馒头备忘]]></title>
+        <id>https://thisming.github.io/post/u6LddRA4z/</id>
+        <link href="https://thisming.github.io/post/u6LddRA4z/">
+        </link>
+        <updated>2020-03-18T08:49:25.000Z</updated>
+        <summary type="html"><![CDATA[<p>前一段时间馋饼，买了一袋5kg面粉，吃厌了也没能吃完，放时间久了会变质，不如自己做点其他的面食吃，馒头这个词就出现再脑海里了。</p>
+<p>于是，买菜的时候就顺带买了酵母，请教一下会做馒头的妹妹，再结合教程，开做...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>前一段时间馋饼，买了一袋5kg面粉，吃厌了也没能吃完，放时间久了会变质，不如自己做点其他的面食吃，馒头这个词就出现再脑海里了。</p>
+<p>于是，买菜的时候就顺带买了酵母，请教一下会做馒头的妹妹，再结合教程，开做...</p>
 ]]></content>
     </entry>
 </feed>
