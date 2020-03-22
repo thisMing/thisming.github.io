@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-03-22T05:43:57.077Z</updated>
+    <updated>2020-03-22T05:54:19.105Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[目的地为北京的国际航班需从指定点入境]]></title>
+        <id>https://thisming.github.io/post/目的地为北京的国际航班需从指定点入境/</id>
+        <link href="https://thisming.github.io/post/目的地为北京的国际航班需从指定点入境/">
+        </link>
+        <updated>2020-03-22T05:45:01.000Z</updated>
+        <summary type="html"><![CDATA[<p><img src="https://thisming.github.io/post-images/1584856302006.jpg" alt="" loading="lazy"><br>
+　　依据《<strong>中华人民共和国国境卫生检疫法</strong>》和《<strong>中华人民共和国民用航空法</strong>》有关规定，决定所有目的地为北京的国际客运航班均从指定的第一入境点入境。现公告如下：</p>
+]]></summary>
+        <content type="html"><![CDATA[<p><img src="https://thisming.github.io/post-images/1584856302006.jpg" alt="" loading="lazy"><br>
+　　依据《<strong>中华人民共和国国境卫生检疫法</strong>》和《<strong>中华人民共和国民用航空法</strong>》有关规定，决定所有目的地为北京的国际客运航班均从指定的第一入境点入境。现公告如下：</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[建议取消或推迟出国出境计划]]></title>
         <id>https://thisming.github.io/post/建议取消或推迟出国计划/</id>
@@ -115,19 +128,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>前一段时间馋饼，买了一袋5kg面粉，吃厌了也没能吃完，放时间久了会变质，不如自己做点其他的面食吃，馒头这个词就出现再脑海里了。</p>
 <p>于是，买菜的时候就顺带买了酵母，请教一下会做馒头的妹妹，再结合教程，开做...</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[台美防疫夥伴關係聯合聲明]]></title>
-        <id>https://thisming.github.io/post/UNNBjPFMv/</id>
-        <link href="https://thisming.github.io/post/UNNBjPFMv/">
-        </link>
-        <updated>2020-03-18T07:41:17.000Z</updated>
-        <summary type="html"><![CDATA[<p>台美合作再升級！共同發表 #台美防疫夥伴關係聯合聲明</p>
-<p>為了加強防疫的國際合作，外交部 Ministry of Foreign Affairs, ROC（Taiwan）和 美國在台協會 AIT 已經共同發表「台美防疫夥伴關係聯合聲明」。在 #平等互惠 的原則下，台美雙方進一步強化諮商和合作的機制，分享防疫的措施，包括：</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>台美合作再升級！共同發表 #台美防疫夥伴關係聯合聲明</p>
-<p>為了加強防疫的國際合作，外交部 Ministry of Foreign Affairs, ROC（Taiwan）和 美國在台協會 AIT 已經共同發表「台美防疫夥伴關係聯合聲明」。在 #平等互惠 的原則下，台美雙方進一步強化諮商和合作的機制，分享防疫的措施，包括：</p>
 ]]></content>
     </entry>
 </feed>
