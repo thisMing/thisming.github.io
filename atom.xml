@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-03-25T12:12:20.125Z</updated>
+    <updated>2020-03-25T12:30:06.138Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -32,6 +32,19 @@
         <summary type="html"><![CDATA[<p>受到疫情影響，日本 #安倍首相 跟國際奧會 （IOC）巴赫主席討論後，確認2020東京奧運將延期至不晚於明年夏天舉行，我相信這是經過周延思考後的決定。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>受到疫情影響，日本 #安倍首相 跟國際奧會 （IOC）巴赫主席討論後，確認2020東京奧運將延期至不晚於明年夏天舉行，我相信這是經過周延思考後的決定。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[美国截至3月24日疫情通报]]></title>
+        <id>https://thisming.github.io/post/截至3月24日美国疫情通报/</id>
+        <link href="https://thisming.github.io/post/截至3月24日美国疫情通报/">
+        </link>
+        <updated>2020-03-25T06:21:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>#疫情通报 #US #美国<br>
+以下数据截至美西时间3月24日晚上11点</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>#疫情通报 #US #美国<br>
+以下数据截至美西时间3月24日晚上11点</p>
 ]]></content>
     </entry>
     <entry>
@@ -117,19 +130,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>#疫情动态 #Beijing #北京<br>
 【今起，北京区级定点医院暂停收治新冠病例，新发疑似和确诊病例均由市级定点医院收治】</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[美国截至3月20日晚11:00止新冠疫情统计]]></title>
-        <id>https://thisming.github.io/post/3-20-mei-guo/</id>
-        <link href="https://thisming.github.io/post/3-20-mei-guo/">
-        </link>
-        <updated>2020-03-21T12:44:02.000Z</updated>
-        <summary type="html"><![CDATA[<p>#疫情动态 #疫情统计<br>
-截至3月20日晚上11点止 美国新冠疫情统计</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>#疫情动态 #疫情统计<br>
-截至3月20日晚上11点止 美国新冠疫情统计</p>
 ]]></content>
     </entry>
 </feed>
