@@ -7,7 +7,7 @@
 <meta name="keywords" content="静态博客">
 <meta name="description" content="又是努力的一天！">
 <meta name="theme-color" content="#000">
-<title>来自中国电信的提示 | MrdeABC</title>
+<title>守護國土主權，絕不鬆懈 | MrdeABC</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1585138335111">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -25,8 +25,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
-    <meta name="description" content="来自中国电信的提示" />
-    <meta name="keywords" content="短信,新闻,抗疫" />
+    <meta name="description" content="守護國土主權，絕不鬆懈" />
+    <meta name="keywords" content="台湾,新闻" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -146,8 +146,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://thisming.github.io/images/avatar.png"/>
@@ -202,181 +201,6 @@
 
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#-more-"><!-- more --></a></li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
-let active = 'active-show', activeClass = 'active-current';
-let tocWrapper = document.querySelector('#toc_wrapper');
-let tocContent = tocWrapper.children[0];
-let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
-
-function addTocNumber(elem, deep) {
-  if (!elem) {
-    return;
-  }
-  let prop = elem.__proto__;
-
-  if (prop === HTMLUListElement.prototype) {
-    for (let i = 0; i < elem.children.length; i++) {
-      addTocNumber(elem.children[i], deep + (i + 1) + '.');
-    }
-  } else if (prop === HTMLLIElement.prototype) {
-    // 保存li元素
-    lList.push(elem);
-    for (let i = 0; i < elem.children.length; i++) {
-      let cur = elem.children[i];
-      if (cur.__proto__ === HTMLAnchorElement.prototype) {
-        if (autoNumber) {
-          cur.text =  deep + ' ' + cur.text;
-        }
-      } else if (cur.__proto__ === HTMLUListElement.prototype) {
-        addTocNumber(cur, deep);
-      }
-    }
-  }
-}
-
-
-document.addEventListener('scroll', function(e) {
-  if (lList.length <= 0) {
-    return;
-  }
-  let scrollTop = document.scrollingElement.scrollTop + 10;
-  let dir;
-
-  if (lastTop - scrollTop > 0) {
-    dir = 'up';
-  } else {
-    dir = 'down';
-  }
-
-  lastTop = scrollTop;
-  if (scrollTop <= 0) {
-    if (lastIndex >= 0 && lastIndex < hList.length) {
-      lList[lastIndex].classList.remove(activeClass);
-    }
-    return;
-  }
-
-  let current = 0, hasFind = false;
-  for (let i = 0; i < hList.length; i++) {
-    if (hList[i].offsetTop > scrollTop) {
-      current = i;
-      hasFind = true;
-      break;
-    }
-  }
-  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-    current = hList.length - 1;
-  } else {
-    current--;
-  }
-  if (dir === 'down') {
-    if (current > lastIndex) {
-      addActiveClass(current);
-      removeActiveClass(lastIndex) 
-      lastIndex = current;
-      removeParentActiveClass();
-      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
-    }
-  } else {
-    if (current < lastIndex) {
-      addActiveClass(current);
-      removeActiveClass(lastIndex);
-      lastIndex = current;
-      removeParentActiveClass();
-      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
-    }
-  }
-});
-
-function removeParentActiveClass() {
-  let parents = tocContent.querySelectorAll('.'+active)
-  parents.forEach(function(elem) {
-    elem.classList.remove(active);
-  });
-}
-
-function addActiveClass(index) {
-  if (index >= 0 && index < hList.length) {
-    lList[index].classList.add(activeClass);
-  }
-}
-
-function removeActiveClass(index) {
-  if (index >= 0 && index < hList.length) {
-    lList[index].classList.remove(activeClass);
-  }
-}
-
-function addActiveLiElemment(elem, parent) {
-  if (!elem || elem === parent) {
-    return;
-  } else {
-    if (elem.__proto__ === HTMLLIElement.prototype) {
-      elem.classList.add(active);
-    }
-    addActiveLiElemment(elem.parentElement, parent);
-  }
-}
-
-function showToc() {
-  if (tocWrapper) {
-    postBody = document.querySelector('#post_body');
-    for (let i = 0; i < postBody.children.length; i++) {
-      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-        hList.push(postBody.children[i]);
-      }
-    }
-    if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-    } else if (tocWrapper.classList.contains('no_compress')){
-      tocContent.classList.add('expanded');
-    } else {
-      if (hList.length > 10) {
-        active = 'active-hidden'
-        tocContent.classList.add('closed');
-      } else {
-        tocContent.classList.add('expanded');
-      }
-    }
-  }
-}
-addTocNumber(tocContent, '');
-
-window.addEventListener('load', function() {
-  showToc();
-  document.querySelector('#sidebar').style='display: block;';
-  tocWrapper.classList.add('toc-active');
-  setTimeout(function() {
-    if ("createEvent" in document) {
-      let evt = document.createEvent("HTMLEvents");
-      evt.initEvent("scroll", false, true);
-      document.dispatchEvent(evt);
-    }
-    else {
-      document.fireEvent("scroll");
-    }
-  }, 500)
-})
-
-</script>
-            </div>
           
         
       </div>
@@ -464,8 +288,8 @@ window.addEventListener('load', function() {
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://thisming.github.io/post/疫情防控中医药服务平台/">
-      来自中国电信的提示
+    <a class="post-title-link" href="https://thisming.github.io/post/守護國土主權絕不鬆懈/">
+      守護國土主權，絕不鬆懈
     </a>
   </h1>
   <div class="post-meta">
@@ -473,7 +297,7 @@ window.addEventListener('load', function() {
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-03-23</span>
+      <span>2020-03-24</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -482,20 +306,14 @@ window.addEventListener('load', function() {
         <span class="pc-show">分类于</span>
         
           
-            <a href="https://thisming.github.io/tag/duan-xin/">
-              <span>短信</span>
+            <a href="https://thisming.github.io/tag/tai-wan/">
+              <span>台湾</span>
             </a>、
           
         
           
             <a href="https://thisming.github.io/tag/xin-wen/">
               <span>新闻</span>
-            </a>、
-          
-        
-          
-            <a href="https://thisming.github.io/tag/kang-yi/">
-              <span>抗疫</span>
             </a>
           
         
@@ -504,15 +322,15 @@ window.addEventListener('load', function() {
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
+      <span>1分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>304<span class="pc-show">字数</span></span>
+      <span>179<span class="pc-show">字数</span></span>
     </span>
     
-      <span id="/post/疫情防控中医药服务平台/" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/守護國土主權絕不鬆懈/" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -521,19 +339,11 @@ window.addEventListener('load', function() {
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <p>短信内容：<br>
-温馨提示：为更好服务疫情防控，新冠肺炎疫情防控中医药服务平台已上线，您可登陆中国中医科学院官网下载使用。<br>
-国家中医药管理局</p>
-<h2 id="-more-"><!-- more --></h2>
-<figure data-type="image" tabindex="1"><img src="https://thisming.github.io/post-images/1585003424245.gif" alt="" loading="lazy"></figure>
-<p>中国日报北京2月8日电 当前正处于疫情防控的关键时期, 治疗新型冠状病毒肺炎目前还没有特效药物。中医药防治瘟疫具有悠久历史，中医“治未病”的早期干预、综合治疗的整体调节作用对防控突发流行性传染病具有独特优势。</p>
-<p>根据国家中医药管理局官方微信消息，为助力社区防控工作，满足群众需求，近日中国中医科学院、北京中医药大学等机构借助“互联网+中医”相继推出中医在线服务平台，提供科普知识、居家医学观察指导、心理辅导、线上咨询等免费服务，拓展中医药服务空间，及时帮助大家答疑解惑，足不出户就可就医。</p>
-<blockquote>
-<p>新闻来源：<a href="http://cn.chinadaily.com.cn/a/202002/08/WS5e3ea72ea3107bb6b579e0d3.html">中国日报网</a><br>
-编辑：严玉洁<br>
-信息来源：中国电信<br>
-发送号码：10001</p>
-</blockquote>
+                <p>守護國土主權，絕不鬆懈</p>
+<!-- more -->
+<p>全世界的疫情緊張，但是中共軍機還是不斷擾台，我們除了謹慎面對疫情挑戰，對於國家安全的守護，也絲毫沒有鬆懈。</p>
+<p>今晨國軍進行 #聯合防空作戰訓練，執行全島制敵及反空襲的訓練。我也去視導空軍第一戰術戰鬥機聯隊，聽取針對「共軍遠海長航」的因應簡報，確保國家的領空安全。</p>
+<p>這段時間，國軍投入口罩生產，也協助返台班機的消毒工作。不論是防疫，還是守護國土，國軍永遠會站在第一線，堅守崗位，請大家安心。</p>
 
               </div>
               <div class="post-footer">
@@ -544,30 +354,28 @@ window.addEventListener('load', function() {
     </li>
     <li class="post-copyright-link">
       <strong>本站链接：</strong>
-      <a href="https://thisming.github.io/post/疫情防控中医药服务平台/" title="来自中国电信的提示">来自中国电信的提示</a>
+      <a href="https://thisming.github.io/post/守護國土主權絕不鬆懈/" title="守護國土主權，絕不鬆懈">守護國土主權，絕不鬆懈</a>
     </li>
   </ul>
   <div class="tags">
     
-      <a href="https://thisming.github.io/tag/duan-xin/"># 短信</a>
+      <a href="https://thisming.github.io/tag/tai-wan/"># 台湾</a>
     
       <a href="https://thisming.github.io/tag/xin-wen/"># 新闻</a>
-    
-      <a href="https://thisming.github.io/tag/kang-yi/"># 抗疫</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="守護國土主權，絕不鬆懈" href="https://thisming.github.io/post/守護國土主權絕不鬆懈/">守護國土主權，絕不鬆懈</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="守護國土主權，絕不鬆懈" href="https://thisming.github.io/post/守護國土主權絕不鬆懈/">上一篇</a>
+        <a class="nav-pc-next" title="口罩實名制2.0" href="https://thisming.github.io/post/口罩實名制2.0/">口罩實名制2.0</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="口罩實名制2.0" href="https://thisming.github.io/post/口罩實名制2.0/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="目的地为北京的国际航班需从指定点入境" href="https://thisming.github.io/post/目的地为北京的国际航班需从指定点入境/">目的地为北京的国际航班需从指定点入境</a>
-        <a class="nav-mobile-next" title="目的地为北京的国际航班需从指定点入境" href="https://thisming.github.io/post/目的地为北京的国际航班需从指定点入境/">下一篇</a>
+        <a class="nav-pc-next" title="来自中国电信的提示" href="https://thisming.github.io/post/疫情防控中医药服务平台/">来自中国电信的提示</a>
+        <a class="nav-mobile-next" title="来自中国电信的提示" href="https://thisming.github.io/post/疫情防控中医药服务平台/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
