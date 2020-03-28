@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-03-25T12:50:23.732Z</updated>
+    <updated>2020-03-28T14:11:49.996Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[台湾政治解密]]></title>
+        <id>https://thisming.github.io/post/台湾政治解密/</id>
+        <link href="https://thisming.github.io/post/台湾政治解密/">
+        </link>
+        <updated>2020-03-28T03:24:49.000Z</updated>
+        <summary type="html"><![CDATA[<p>面對威權統治時期的歷史傷痛，我的態度很明確：過去的政治檔案，要盡快、盡可能攤開在陽光下，讓人民一起檢視，確保政府不會重蹈覆轍。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>面對威權統治時期的歷史傷痛，我的態度很明確：過去的政治檔案，要盡快、盡可能攤開在陽光下，讓人民一起檢視，確保政府不會重蹈覆轍。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[政府當國人堅強的後盾]]></title>
         <id>https://thisming.github.io/post/政府當國人堅強的後盾/</id>
@@ -117,19 +128,6 @@
         <summary type="html"><![CDATA[<p>3月22日全球疫情统计</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>3月22日全球疫情统计</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[今起，北京区级定点医院暂停收治新冠病例]]></title>
-        <id>https://thisming.github.io/post/bei-jing-zan-ting-shou-zhi-xin-guan-bing-li/</id>
-        <link href="https://thisming.github.io/post/bei-jing-zan-ting-shou-zhi-xin-guan-bing-li/">
-        </link>
-        <updated>2020-03-21T12:59:26.000Z</updated>
-        <summary type="html"><![CDATA[<p>#疫情动态 #Beijing #北京<br>
-【今起，北京区级定点医院暂停收治新冠病例，新发疑似和确诊病例均由市级定点医院收治】</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>#疫情动态 #Beijing #北京<br>
-【今起，北京区级定点医院暂停收治新冠病例，新发疑似和确诊病例均由市级定点医院收治】</p>
 ]]></content>
     </entry>
 </feed>
