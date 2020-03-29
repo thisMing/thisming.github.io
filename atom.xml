@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-03-28T14:11:49.996Z</updated>
+    <updated>2020-03-29T05:35:38.911Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[河南省新增新冠肺炎本地确诊病]]></title>
+        <id>https://thisming.github.io/post/河南省新增新冠肺炎本地确诊病/</id>
+        <link href="https://thisming.github.io/post/河南省新增新冠肺炎本地确诊病/">
+        </link>
+        <updated>2020-03-29T05:32:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>【河南省新增1例新冠肺炎确诊病例情况通报】<br>
+2020年3月28日0时—24时，河南省新增新冠肺炎本地确诊病例1例，患者为漯河市王某某。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>【河南省新增1例新冠肺炎确诊病例情况通报】<br>
+2020年3月28日0时—24时，河南省新增新冠肺炎本地确诊病例1例，患者为漯河市王某某。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[台湾政治解密]]></title>
         <id>https://thisming.github.io/post/台湾政治解密/</id>
@@ -117,17 +130,6 @@
         <summary type="html"><![CDATA[<p>鉴于当前全球疫情蔓延的严峻形势，多国（地区）已采取临时入境管制措施，为防止旅行中交叉感染，以及出行受阻造成不必要损失，如非紧急必要事由，建议取消或推迟出国出境计划，特别是暂不要前往疫情严重国家。如确有必要出国出境的，出发前应详细了解前往地入境管制措施和疫情情况，做足个人防护准备工作。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>鉴于当前全球疫情蔓延的严峻形势，多国（地区）已采取临时入境管制措施，为防止旅行中交叉感染，以及出行受阻造成不必要损失，如非紧急必要事由，建议取消或推迟出国出境计划，特别是暂不要前往疫情严重国家。如确有必要出国出境的，出发前应详细了解前往地入境管制措施和疫情情况，做足个人防护准备工作。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[3月22日全球疫情统计]]></title>
-        <id>https://thisming.github.io/post/3月22日全球疫情统计/</id>
-        <link href="https://thisming.github.io/post/3月22日全球疫情统计/">
-        </link>
-        <updated>2020-03-22T04:42:40.000Z</updated>
-        <summary type="html"><![CDATA[<p>3月22日全球疫情统计</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>3月22日全球疫情统计</p>
 ]]></content>
     </entry>
 </feed>
