@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-03-29T05:53:02.820Z</updated>
+    <updated>2020-04-01T13:31:06.041Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,25 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[防疫物資的合作交換]]></title>
+        <id>https://thisming.github.io/post/防疫物資的合作交換/</id>
+        <link href="https://thisming.github.io/post/防疫物資的合作交換/">
+        </link>
+        <updated>2020-04-01T06:26:40.000Z</updated>
+        <summary type="html"><![CDATA[<p>在全體國人努力下，國內疫情得到最好的控制，更受到國際矚目和肯定。台灣也已經從過去的口罩進口國，轉變成 #全球第二大口罩生產國。口罩日產量不斷往上突破，可以充分供應國內的需求。</p>
+<p>但是我要提醒所有的國人：國際疫情如果不能有效控制，疫情就不會結束，台灣也依然會身處險境。</p>
+<p>現在，不論是快篩、疫苗、藥品的研發，還是防疫物資的超前部署，都有非常多的國家，積極想和台灣進行合作。</p>
+<p>像是我們和美國、歐盟以及捷克，正在共商防疫策略，分享目前的研究成果。我們和澳洲以及美國，也在進行防疫物資的合作交換。對於邦交國，我們也提供協助，讓他們以當地購買的方式，取得需要的醫療物資。</p>
+<p>這陣子，大家常常看到新聞報導，有的國家醫療體系受到嚴重的衝擊，醫療人員冒著生命危險在協助病患，卻因為欠缺醫療物資而感到無助，甚至因此大量確診。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在全體國人努力下，國內疫情得到最好的控制，更受到國際矚目和肯定。台灣也已經從過去的口罩進口國，轉變成 #全球第二大口罩生產國。口罩日產量不斷往上突破，可以充分供應國內的需求。</p>
+<p>但是我要提醒所有的國人：國際疫情如果不能有效控制，疫情就不會結束，台灣也依然會身處險境。</p>
+<p>現在，不論是快篩、疫苗、藥品的研發，還是防疫物資的超前部署，都有非常多的國家，積極想和台灣進行合作。</p>
+<p>像是我們和美國、歐盟以及捷克，正在共商防疫策略，分享目前的研究成果。我們和澳洲以及美國，也在進行防疫物資的合作交換。對於邦交國，我們也提供協助，讓他們以當地購買的方式，取得需要的醫療物資。</p>
+<p>這陣子，大家常常看到新聞報導，有的國家醫療體系受到嚴重的衝擊，醫療人員冒著生命危險在協助病患，卻因為欠缺醫療物資而感到無助，甚至因此大量確診。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[河南省新增新冠肺炎本地确诊病]]></title>
         <id>https://thisming.github.io/post/河南省新增新冠肺炎本地确诊病/</id>
@@ -119,17 +138,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p><img src="https://thisming.github.io/post-images/1584856302006.jpg" alt="" loading="lazy"><br>
 　　依据《<strong>中华人民共和国国境卫生检疫法</strong>》和《<strong>中华人民共和国民用航空法</strong>》有关规定，决定所有目的地为北京的国际客运航班均从指定的第一入境点入境。现公告如下：</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[建议取消或推迟出国出境计划]]></title>
-        <id>https://thisming.github.io/post/建议取消或推迟出国计划/</id>
-        <link href="https://thisming.github.io/post/建议取消或推迟出国计划/">
-        </link>
-        <updated>2020-03-22T05:24:31.000Z</updated>
-        <summary type="html"><![CDATA[<p>鉴于当前全球疫情蔓延的严峻形势，多国（地区）已采取临时入境管制措施，为防止旅行中交叉感染，以及出行受阻造成不必要损失，如非紧急必要事由，建议取消或推迟出国出境计划，特别是暂不要前往疫情严重国家。如确有必要出国出境的，出发前应详细了解前往地入境管制措施和疫情情况，做足个人防护准备工作。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>鉴于当前全球疫情蔓延的严峻形势，多国（地区）已采取临时入境管制措施，为防止旅行中交叉感染，以及出行受阻造成不必要损失，如非紧急必要事由，建议取消或推迟出国出境计划，特别是暂不要前往疫情严重国家。如确有必要出国出境的，出发前应详细了解前往地入境管制措施和疫情情况，做足个人防护准备工作。</p>
 ]]></content>
     </entry>
 </feed>
