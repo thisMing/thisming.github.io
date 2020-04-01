@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta charset="UTF-8"/>
+    <meta charset="UTF-8"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="静态博客">
 <meta name="description" content="又是努力的一天！">
 <meta name="theme-color" content="#000">
-<title>MrdeABC</title>
+<title>口罩實名制要再升級 | MrdeABC</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1585748224296">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -25,6 +25,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
+    <meta name="description" content="口罩實名制要再升級" />
+    <meta name="keywords" content="蔡英文,台湾,新闻,抗疫" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -126,10 +128,25 @@
     </div>
     <div class="main-continer">
       
-      <div class="section-layout  gemini">
+      <div class="section-layout gemini ">
         <div class="section-layout-wrapper">
-          <div id="sidebarMeta" class="sidebar">
-    
+          
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://thisming.github.io/images/avatar.png"/>
@@ -184,317 +201,232 @@
 
 
 </div>
+          
+        
+      </div>
+    </div>
+  
 </div>
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
       }
-    });
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
   }
-  </script>
-            <div class="section-box tag-line">
-              <div class="box-shadow-wrapper">
-                <div class="bg-color">
-                  <section class="section posts-expand">
-                    <div class="padding-wrapper">
-  <div class="tag-timeline-box">
-    <div class="tag-timeline-wrapper">
-      <div class="tag-timeline-title">
-        <h2>
-          美国
-          <small>标签</small>
-        </h2>
-      </div>
-      
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+          <div class="section-box box-shadow-wrapper">
+            <div class="section bg-color post post-page">
+              <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://thisming.github.io/post/口罩實名制再升級/">
+      口罩實名制要再升級
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2020-03-30</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+      <span class="meta-item">
+        <i class="fa fa-folder-o"></i>
+        <span class="pc-show">分类于</span>
         
+          
+            <a href="https://thisming.github.io/tag/cai-ying-wen/">
+              <span>蔡英文</span>
+            </a>、
           
         
           
-        
+            <a href="https://thisming.github.io/tag/tai-wan/">
+              <span>台湾</span>
+            </a>、
           
         
           
-        
-      
-        
+            <a href="https://thisming.github.io/tag/xin-wen/">
+              <span>新闻</span>
+            </a>、
           
         
           
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-            <a href="https://thisming.github.io/post/截至3月24日美国疫情通报/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    03-25
-                    <small>美国截至3月24日疫情通报</small>
-                  </h1>
-                </div>  
-              </div>
+            <a href="https://thisming.github.io/tag/kang-yi/">
+              <span>抗疫</span>
             </a>
           
         
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-            <a href="https://thisming.github.io/post/3-20-mei-guo/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    03-21
-                    <small>美国截至3月20日晚11:00止新冠疫情统计</small>
-                  </h1>
-                </div>  
+      </span>
+      <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>1分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>182<span class="pc-show">字数</span></span>
+    </span>
+    
+      <span id="/post/口罩實名制再升級/" class="meta-item pc-show leancloud_visitors">
+        <span class="post-meta-divider">|</span>
+        <i class="fa fa-eye"></i>
+        <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
+      </span>
+    
+  </div>
+</header>
+              <div class="post-body next-md-body" id="post_body">
+                <p>各位台灣隊友，晚安！</p>
+<p>4月9日(四)起，口罩實名制要再升級了！請大家幫我分享這張圖片給你的親友😉<br>
+💡每14天可買成人口罩9片或兒童口罩10片<br>
+💡購買日期不限單雙號<br>
+💡每張健保卡可任選成人或兒童口罩</p>
+<!-- more -->
+<p>另外，也將開放寄送口罩給在海外二等親以內的親屬，兩個月內一人最多寄送30片，海外同一人限收一次。</p>
+<p>口罩新制更方便，非常感謝台灣「口罩國家隊」成員日以繼夜的努力！💪</p>
+<p>🔗疾管署<a href="https://www.fda.gov.tw/TC/siteContent.aspx?sid=11139">特約藥局及鄉鎮衛生所名單</a><br>
+🔗eMask <a href="https://emask.taiwan.gov.tw/msk/index.jsp">口罩預購系統</a></p>
+<blockquote>
+<p>新闻来源：<a href="https://t.me/iingtw">台灣隊長蔡英文</a></p>
+</blockquote>
+<hr>
+
               </div>
-            </a>
-          
-        
-          
-        
-          
-        
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>编辑上传：</strong>
+      MrdeABC
+    </li>
+    <li class="post-copyright-link">
+      <strong>本站链接：</strong>
+      <a href="https://thisming.github.io/post/口罩實名制再升級/" title="口罩實名制要再升級">口罩實名制要再升級</a>
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://thisming.github.io/tag/cai-ying-wen/"># 蔡英文</a>
+    
+      <a href="https://thisming.github.io/tag/tai-wan/"># 台湾</a>
+    
+      <a href="https://thisming.github.io/tag/xin-wen/"># 新闻</a>
+    
+      <a href="https://thisming.github.io/tag/kang-yi/"># 抗疫</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
       
-        
-          
-        
-          
-        
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="防疫物資的合作交換" href="https://thisming.github.io/post/防疫物資的合作交換/">防疫物資的合作交換</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="防疫物資的合作交換" href="https://thisming.github.io/post/防疫物資的合作交換/">上一篇</a>
       
-        
-          
-        
-          
-        
-          
-        
+    </div>
+    <div class="nav-next">
       
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-      
-        
-          
-        
+        <a class="nav-pc-next" title="河南省新增新冠肺炎本地确诊病" href="https://thisming.github.io/post/河南省新增新冠肺炎本地确诊病/">河南省新增新冠肺炎本地确诊病</a>
+        <a class="nav-mobile-next" title="河南省新增新冠肺炎本地确诊病" href="https://thisming.github.io/post/河南省新增新冠肺炎本地确诊病/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
 </div>
-                  </section>
-                </div>
-              </div>
+              
+                
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+<script>
+new Valine({
+    el: '#vcomments' ,
+    appId: 'voomdQXXilbYk2KjQu293htD-MdYXbMMI',
+    appKey: 'XEyIBIWgyI0eQkWJ2sDqsUnP',
+    notify: 'true' === 'false', 
+    avatar:'mp', 
+    placeholder: '说点什么...',
+    pageSize: '',
+    lang: 'zh-cn',
+    visitor: 'true' === 'true',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'false',
+});
+</script>
+              
+            </div>
           </div>
         </div>
       </div>
