@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-04-06T23:10:15.384Z</updated>
+    <updated>2020-04-09T12:12:42.180Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[台灣防疫最前線]]></title>
+        <id>https://thisming.github.io/post/台灣防疫最前線/</id>
+        <link href="https://thisming.github.io/post/台灣防疫最前線/">
+        </link>
+        <updated>2020-04-09T12:06:32.000Z</updated>
+        <summary type="html"><![CDATA[<p>台灣防疫最前線，從國門到家門，守護國人健康<br>
+在這次的防疫作戰中，#機場攔截 和 #居家檢疫 是最重要的兩大防線。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>台灣防疫最前線，從國門到家門，守護國人健康<br>
+在這次的防疫作戰中，#機場攔截 和 #居家檢疫 是最重要的兩大防線。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[人间百态：张静静因抢救无效死亡]]></title>
         <id>https://thisming.github.io/post/张静静因抢救无效死亡/</id>
@@ -135,17 +148,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>#疫情通报 #US #美国<br>
 以下数据截至美西时间3月24日晚上11点</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[口罩實名制2.0]]></title>
-        <id>https://thisming.github.io/post/口罩實名制2.0/</id>
-        <link href="https://thisming.github.io/post/口罩實名制2.0/">
-        </link>
-        <updated>2020-03-25T00:16:14.000Z</updated>
-        <summary type="html"><![CDATA[<p>各位台灣隊，早安！「口罩實名制2.0」第二輪預購今天開始！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>各位台灣隊，早安！「口罩實名制2.0」第二輪預購今天開始！</p>
 ]]></content>
     </entry>
 </feed>
