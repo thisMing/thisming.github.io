@@ -8,7 +8,7 @@
 <meta name="description" content="又是努力的一天！">
 <meta name="theme-color" content="#000">
 <title>谷歌云服务器(GCP)搭建过程 | MrdeABC</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1587280745810">
+<link rel="shortcut icon" href="/favicon.ico?v=1587281881560">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -221,6 +221,14 @@
 <li><a href="#%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA"><strong>网站搭建</strong></a>
 <ul>
 <li><a href="#%E5%AE%89%E8%A3%85lnmp16"><strong>安装LNMP1.6</strong></a></li>
+<li><a href="#%E6%B7%BB%E5%8A%A0%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90"><strong>添加域名解析</strong></a></li>
+</ul>
+</li>
+<li><a href="#%E6%A0%B9%E6%8D%AE%E9%9C%80%E8%A6%81%E5%AE%89%E8%A3%85ftp"><strong>根据需要安装FTP</strong></a></li>
+<li><a href="#%E5%AE%89%E8%A3%85wordpress%E7%BD%91%E7%AB%99%E7%A8%8B%E5%BA%8F"><strong>安装wordpress网站程序</strong></a></li>
+<li><a href="#%E7%94%B3%E8%AF%B7lets-encrypt%E9%80%9A%E9%85%8D%E7%AC%A6%E8%AF%81%E4%B9%A6">申请Let's Encrypt通配符证书</a>
+<ul>
+<li><a href="#%E8%8E%B7%E5%8F%96certbot-%E5%AE%A2%E6%88%B7%E7%AB%AF">获取certbot 客户端</a></li>
 <li><a href="#%E5%BC%80%E5%A7%8B%E7%94%B3%E8%AF%B7%E8%AF%81%E4%B9%A6">开始申请证书</a></li>
 </ul>
 </li>
@@ -507,7 +515,7 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>3199<span class="pc-show">字数</span></span>
+      <span>3196<span class="pc-show">字数</span></span>
     </span>
     
       <span id="/post/gu-ge-yun-fu-wu-qi-gcpda-jian-guo-cheng/" class="meta-item pc-show leancloud_visitors">
@@ -532,14 +540,12 @@ window.addEventListener('load', function() {
 <h3 id="安装screen"><strong>安装screen</strong></h3>
 <p>如果输入 <code>screen -S lamp</code><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>提示screen: command not found 命令不存在，可以执行：<code>yum install screen</code> 或 <code>apt-get install screen</code>进行安装，详细内容参考screen教程。使用该命令，如果安装过程中出现异常中断，重新登入服务器后，输入<code>screen -r lamp</code> 可以恢复到安装界面。</p>
 <h2 id="安装bbr"><strong>安装BBR</strong></h2>
-<p>VM虚拟机创建完成后，首先安装BBR服务</p>
-<pre><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh
-</code></pre>
+<p>VM虚拟机创建完成后，首先安装BBR服务<br>
+<code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</code></p>
 <h2 id="安装ssr"><strong>安装SSR</strong></h2>
 <p>SSR是科学上网程序，可以用来访问被屏蔽的国外网站，与网站功能没有冲突，顺手搭一个。<br>
-下载一键安装脚本程序：（四合一）<strong><mark>已删除（网站备份文件夹中有）</mark></strong></p>
-<pre><code>wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
-</code></pre>
+下载一键安装脚本程序：（四合一）<strong><mark>原作者已删除一键脚本（网站备份文件夹中有）</mark></strong><br>
+<code>wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</code></p>
 <p>给脚本程序赋权：<br>
 <code>chmod +x shadowsocks-all.sh</code><br>
 执行安装命令，并将安装日志记录到shadowsocks-all.log 位于home/var/log/<br>
@@ -571,125 +577,75 @@ window.addEventListener('load', function() {
 </li>
 <li>
 <p>下载并安装LNMP一键安装包：<br>
-安装LNMP稳定版</p>
-<pre><code></code></pre>
+安装LNMP稳定版<br>
+<code>wget http://soft.vpser.net/lnmp/lnmp1.6.tar.gz -cO lnmp1.6.tar.gz &amp;&amp; tar zxf lnmp1.6.tar.gz &amp;&amp; cd lnmp1.6 &amp;&amp; ./install.sh lnmp</code></p>
 </li>
 </ol>
-<p>wget http://soft.vpser.net/lnmp/lnmp1.6.tar.gz -cO lnmp1.6.tar.gz &amp;&amp; tar zxf lnmp1.6.tar.gz &amp;&amp; cd lnmp1.6 &amp;&amp; ./install.sh lnmp</p>
-<pre><code>如提示wget: command not found ，使用yum install wget 或 apt-get install wget 命令安装。
-
-使用域名or IP &lt;http://35.92.140.35/p.php&gt; 查看安装页
-
-将 phpmyadmin 目录重命名为不容易猜到的目录
-
-</code></pre>
-<p>cd /home/wwwroot/default<br>
-mv phpmyadmin mywebrootphp</p>
-<pre><code>
-将安装成功页面是IP访问时的默认页面（非域名），建议删除或改名
-
-</code></pre>
-<p>rm -rf index.html 或者<br>
-mv index.html web.html</p>
-<pre><code>
-### **添加域名解析**
-
-进入域名代理网站，将域名的@解析设置为VM的IP，解析生效即可使用，一般都很快，就几分钟。
-
-
-## **根据需要安装FTP**
-
-安装命令如下，一般不用安装，需要了再安装也不迟
-
-`cd ~/lnmp1.6-full`
-`./pureftpd.sh`
-`lnmp ftp add`
-
-
-
-
-LNMP最新版本已经默认开启了 scandir函数，所以该步骤可以忽略
-`vi /usr/local/php/etc/php.ini`打开php.ini文件
-`?scandir`查找scandir函数 （`/scandir`也可）
-按delete键删除，按Esc后，输入`:wq`保存并退出vi
-`lnmp restart`重启LNMP。
-
-
-
-## **安装wordpress网站程序**
-
-在安装WordPress之前，建议**安装PHP缓存加速类扩展**，对降低VPS压力和提高WordPress速度大有裨益。
-推荐安装两个：**OPcache**和**Memcached**。
-
-首先，需要进入LNMP解压目录 lnmp1.6-full ：
-`# cd /root/lnmp1.6-full`
-
-回车，接下来安装Opcache：
-`# ./addons.sh install opcache`
-
-回车，再回车，当出现 “Opcache installed successfully, enjoy it!” 字样时，即表示安装成功。
-
-接着安装Memcached：
-`# ./addons.sh install memcached`
-
-回车，选择 **2** （php-memcache**d**），回车，再回车。
-
-当出现 “Memcached installed successfully, enjoy it!” 字样时，即表示安装成功。
-
-此外，可以删除之前下载的lnmp压缩包，以节省空间：
-`# rm -rf /root/lnmp1.6-full.tar.gz`
-
-接下来，就可以添加域名并搭建WordPress博客了。
-首先，进入添加的域名目录：
-`cd /home/wwwroot/aoczo.com`
-回车后输入以下命令进行安装
-`wget https://cn.wordpress.org/wordpress-5.3.2-zh_CN.tar.gz`   下载wordpress程序包
-`tar -zxvf wordpress-5.3.2-zh_CN.tar.gz`解压程序包
-`mv wordpress/* . `将解压出来的wordpress文件夹内全部文件移动到当前的域名目录下（别忘了后面的.）
-`rm -rf wordpress-5.3.2-zh_CN.tar.gz`删掉空文件夹wordpress及源程序（可选）
-
-为避免因权限的问题导致安装出错（如wp-config.php无法创建、需要提供FTP用户密码以及主题和插件不能更新等），建议赋予网站根目录文件的可写权限。
-避免安装主题和插件需要提供FTP用户密码以及不能更新等问题，需要给网站根目录赋上可写权限
-命令：`chmod -R 755 /home/wwwroot &amp;&amp; chown -R www /home/wwwroot`
-或
-`# chmod -R 755 /home/wwwroot/seoimo.com`
-`# chown -R www /home/wwwroot/seoimo.com`
-`chmod -R 755 /home/wwwroot &amp;&amp; chown -R www /home/wwwroot`
-如果出现“.user.ini': Operation not permitted”问题
-
-执行：`chattr -i /home/wwwroot/wxlss.cn/.user.ini &amp;&amp; lnmp restart`
-
-建议此处重启一下lnmp：`lnmp stop &amp;&amp; lnmp start`
-可避免打不开网址
-
-## 申请Let's Encrypt通配符证书
-
-### 获取certbot 客户端
-
-```shell
-# 下载 Certbot 客户端
-$ wget -c https://dl.eff.org/certbot-auto -P /usr/local/bin/
-# 设为可执行权限
-$ chmod a+x /usr/local/bin/certbot-auto
-$ certbot-auto --version
-certbot 0.34.2
-
-</code></pre>
+<p>如提示wget: command not found ，使用yum install wget 或 apt-get install wget 命令安装。</p>
+<p>使用域名or IP <a href="http://35.92.140.35/p.php">http://35.92.140.35/p.php</a> 查看安装页</p>
+<p>将 phpmyadmin 目录重命名为不容易猜到的目录</p>
+<p><code>cd /home/wwwroot/default</code><br>
+<code>mv phpmyadmin mywebrootphp</code></p>
+<p>将安装成功页面是IP访问时的默认页面（非域名），建议删除或改名</p>
+<p><code>rm -rf index.html</code> 或者<code>mv index.html web.html</code></p>
+<h3 id="添加域名解析"><strong>添加域名解析</strong></h3>
+<p>进入域名代理网站，将域名的@解析设置为VM的IP，解析生效即可使用，一般都很快，就几分钟。</p>
+<h2 id="根据需要安装ftp"><strong>根据需要安装FTP</strong></h2>
+<p>安装命令如下，一般不用安装，需要了再安装也不迟</p>
+<p><code>cd ~/lnmp1.6-full</code><br>
+<code>./pureftpd.sh</code><br>
+<code>lnmp ftp add</code></p>
+<p>LNMP最新版本已经默认开启了 <strong>scandir</strong>函数，所以该步骤可以忽略<br>
+<code>vi /usr/local/php/etc/php.ini</code>打开php.ini文件<br>
+<code>?scandir</code>查找scandir函数 （<code>/scandir</code>也可）<br>
+按delete键删除，按Esc后，输入<code>:wq</code>保存并退出vi<br>
+<code>lnmp restart</code>重启LNMP。</p>
+<h2 id="安装wordpress网站程序"><strong>安装wordpress网站程序</strong></h2>
+<p>在安装WordPress之前，建议<strong>安装PHP缓存加速类扩展</strong>，对降低VPS压力和提高WordPress速度大有裨益。<br>
+推荐安装两个：<strong>OPcache</strong>和<strong>Memcached</strong>。</p>
+<p>首先，需要进入LNMP解压目录 lnmp1.6-full ：<br>
+<code>cd /root/lnmp1.6-full</code></p>
+<p>回车，接下来安装Opcache：<br>
+<code>./addons.sh install opcache</code></p>
+<p>回车，再回车，当出现 “Opcache installed successfully, enjoy it!” 字样时，即表示安装成功。</p>
+<p>接着安装Memcached：<br>
+<code>./addons.sh install memcached</code></p>
+<p>回车，选择 <strong>2</strong> （php-memcache<strong>d</strong>），回车，再回车。</p>
+<p>当出现 “Memcached installed successfully, enjoy it!” 字样时，即表示安装成功。</p>
+<p>此外，可以删除之前下载的lnmp压缩包，以节省空间：<br>
+<code>rm -rf /root/lnmp1.6-full.tar.gz</code></p>
+<p>接下来，就可以添加域名并搭建WordPress博客了。<br>
+首先，进入添加的域名目录：<br>
+<code>cd /home/wwwroot/aoczo.com</code><br>
+回车后输入以下命令进行安装<br>
+<code>wget https://cn.wordpress.org/wordpress-5.3.2-zh_CN.tar.gz</code>   下载wordpress程序包<br>
+<code>tar -zxvf wordpress-5.3.2-zh_CN.tar.gz</code>解压程序包<br>
+<code>mv wordpress/* .</code>将解压出来的wordpress文件夹内全部文件移动到当前的域名目录下（别忘了后面的.）<br>
+<code>rm -rf wordpress-5.3.2-zh_CN.tar.gz</code>删掉空文件夹wordpress及源程序（可选）</p>
+<p>为避免因权限的问题导致安装出错（如wp-config.php无法创建、需要提供FTP用户密码以及主题和插件不能更新等），建议赋予网站根目录文件的可写权限。<br>
+避免安装主题和插件需要提供FTP用户密码以及不能更新等问题，需要给网站根目录赋上可写权限<br>
+命令：（<code>chmod -R 755 /home/wwwroot &amp;&amp; chown -R www /home/wwwroot</code>）<br>
+或<code>chmod -R 755 /home/wwwroot/seoimo.com</code><br>
+<code>chown -R www /home/wwwroot/seoimo.com</code></p>
+<p>如果出现“.user.ini': Operation not permitted”问题</p>
+<p>执行：<code>chattr -i /home/wwwroot/wxlss.cn/.user.ini &amp;&amp; lnmp restart</code>后再次执行赋权命令。</p>
+<p>避免打不开网址，此处建议重启一下lnmp：<code>lnmp stop &amp;&amp; lnmp start</code></p>
+<h2 id="申请lets-encrypt通配符证书">申请Let's Encrypt通配符证书</h2>
+<h3 id="获取certbot-客户端">获取certbot 客户端</h3>
+<p>下载 Certbot 客户端：<code>wget -c https://dl.eff.org/certbot-auto -P /usr/local/bin/</code><br>
+设为可执行权限：<code>chmod a+x /usr/local/bin/certbot-auto</code><br>
+坚持版本：<code>certbot-auto --version</code><br>
+certbot 0.34.2</p>
 <blockquote>
 <p>注: Certbot 0.22.0 以上版本支持ACME v2 协议.</p>
 </blockquote>
 <h3 id="开始申请证书">开始申请证书</h3>
-<pre><code class="language-shell">certbot-auto certonly  -d *.example.com --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory 
-
-</code></pre>
+<p><code>certbot-auto certonly -d *.example.com --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory</code></p>
 <p>安装SSL证书后，建议打开<strong>HTTPS</strong>开头的网址安装，例如：https://www.aoczo.com/<br>
 如已经使用HTTP安装，需要把HTTP替换为HTTPS网址，修改方法如下：<br>
-进入 phpMyAdmin 管理后台地址<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>，选择目标数据库，在 SQL 里运行如下语句，将http文章和链接更改为https：</p>
-<pre><code>UPDATE wp_options SET option_value = replace( option_value, 'http://www.aoczo.com', ' https://www.aoczo.com' );
-
-UPDATE wp_posts SET post_content = replace( post_content, http://www.aoczo.com/wp-content, ' https://www.aoczo.com/wp-content );
-
-</code></pre>
+进入 phpMyAdmin 管理后台地址<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>，选择目标数据库，在 SQL 里运行如下语句，将http文章和链接更改为https：<br>
+UPDATE wp_options SET option_value = replace( option_value, 'http://www.aoczo.com', ' https://www.aoczo.com' );</p>
+<p>UPDATE wp_posts SET post_content = replace( post_content, http://www.aoczo.com/wp-content, ' https://www.aoczo.com/wp-content );</p>
 <p>如果安装了静态缓存（==如 WP-Super-Cache ==）和 Memcached 插件（<mark>如 MemcacheD Is Your Friend</mark>），建议再清空下缓存。<br>
 <code>telnet 127.0.0.1 11211</code> 连接 Memcached<br>
 <code>flush_all</code> 清空所有缓存数据<br>
@@ -733,11 +689,11 @@ Protocols h2 h2c http/1.1
 通常，保持默认即可。但是，免费证书有效期90天，每天都检测升级一次，有点麻烦。可以改为15天甚至一个月检测一次：<code>crontab -e</code><br>
 更改为以下设置：<br>
 <code>10 0 */15 * * &quot;/usr/local/acme.sh&quot;/acme.sh --cron --home &quot;/usr/local/acme.sh&quot; &gt; /dev/null</code><br>
-保存，重启<mark>crond</mark> ：<code>service crond restart</code><br>
+保存，重启crond ：<code>service crond restart</code><br>
 然后，设置开机启动：<code>chkconfig crond on</code><br>
 这样，每15天的凌晨，程序会自动检测证书是否需要更新；如果不需要，则直接跳过。当然，也可以随时强制性手动更新（注意：限制每周5次）。强制更新Let's Encrypt证书：<br>
 <code>&quot;/usr/local/acme.sh&quot;/acme.sh --force --cron --home &quot;/usr/local/acme.sh&quot; &gt; /dev/null</code><br>
-出现 ==Congratulations, all renewals succeeded. ==字样时，表示证书更新完成。</p>
+出现 Congratulations, all renewals succeeded. 字样时，表示证书更新完成。</p>
 <h2 id="http全部301重定向到httpsupdate"><strong>HTTP全部301重定向到HTTPS</strong><a href="%E7%BD%91%E7%AB%99%E6%9B%B4%E6%96%B0%E8%AF%81%E4%B9%A6%E9%94%99%E8%AF%AF#%E5%BB%BA%E8%AE%AE%E5%AE%89%E8%A3%85lnmp1-5%E7%89%88%E6%9C%AC%E5%90%A7%EF%BC%8C%E8%87%B3%E5%B0%91%E4%B8%8D%E4%BC%9A%E5%87%BA%E7%8E%B0%E5%A6%82%E4%B8%8Bpython%E4%BE%9D%E8%B5%96%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%81">UPDATE</a></h2>
 <p>编辑网站根目录下的 .htaccess 文件，在顶部添加如下代码：</p>
 <pre><code># BEGIN Rewrite
@@ -758,20 +714,17 @@ RewriteRule ^(.*)$ https://www.seoimo.com/$1 [R=301,L]
 <h3 id="网站源文件备份"><strong>网站源文件备份</strong></h3>
 <p>为了方便管理，我们先建立一个文件夹专门存放备份数据，比如 /home/backup/ :<code>mkdir /home/backup</code><br>
 以本站 aoczo.com 为例，压缩网站根目录并移动到 /home/backup/：</p>
-<pre><code>cd /home/wwwroot
-tar -zcvf aoczo-20191104.tar.gz aoczo.com
-mv aoczo-20191104.tar.gz /home/backup/
-</code></pre>
+<p><code>cd /home/wwwroot</code><br>
+<code>tar -zcvf aoczo-20191104.tar.gz aoczo.com</code><br>
+<code>mv aoczo-20191104.tar.gz /home/backup/</code></p>
 <p>这样，整站备份已经完成。接下来，开始备份网站数据库。</p>
 <h3 id="网站数据库备份"><strong>网站数据库备份</strong></h3>
 <p>打开 /home/backup/ 文件夹，我们需要将数据库备份在这里：</p>
-<pre><code>cd /home/backup
-lnmp database list
-</code></pre>
+<p><code>cd /home/backup</code><br>
+<code>lnmp database list</code></p>
 <p>输入 root 数据库安装时设置的密码，即可查看当前数据库列表。<br>
-选择需要备份网站的对应数据库，以本站的 sjk_seoimo 为例：</p>
-<pre><code>mysqldump -uroot -p aoczosql &gt; sjk-aoczosql-20191104.sql
-</code></pre>
+选择需要备份网站的对应数据库，以本站的aoczosql为例：</p>
+<p><code>mysqldump -uroot -p aoczosql &gt; sjk-aoczosql-20191104.sql</code></p>
 <p>再次输入 root 数据库密码，即可完成数据库备份。<br>
 通过命令 <code>ls -la</code> 查看当前目录，应该能看到已经备份好了的压缩包。<br>
 此时，可通过 FTP 工具下载到本地电脑保存，也可以上传到其他 VPS/FTP 上保存。</p>
@@ -780,9 +733,13 @@ lnmp database list
 在VM实例中使用浏览器窗口自动连接SSH，切换到root <code>sudo -i</code><br>
 然后编辑ssh配置文件 <code>vi /etc/ssh/sshd_config</code><br>
 找到下面的内容，并修改</p>
-<pre><code>PermitRootLogin yes
-PasswordAuthentication yes (no改为yes，如果前面有#注释的去掉#,如果没有这一行就添加)
-</code></pre>
+<ol>
+<li>PermitRootLogin no</li>
+<li>PasswordAuthentication no</li>
+</ol>
+<blockquote>
+<p>(no改为yes，如果前面有#注释的去掉#,如果没有这一行就添加)</p>
+</blockquote>
 <p>重启ssh <code>service sshd restart</code><br>
 修改root密码 <code>passwd root</code><br>
 然后我们可以尝试直接使用putty等ssh工具在本地连接登录VM22端口</p>
@@ -793,7 +750,8 @@ PasswordAuthentication yes (no改为yes，如果前面有#注释的去掉#,如�
 <p>数据库修改密码后建立数据库出错的问题，修改wpc-onfig.php文件中的密码即可；</p>
 </li>
 <li>
-<p>忘记mysql密码的修改方法：进入<code>lnmp1.6-tools</code>文件夹，运行：<code>sh reset_mysql_root_password.sh</code> 输入新密码即可</p>
+<p>忘记mysql密码的修改方法：进入<code>lnmp1.6-tools</code>文件夹，<br>
+运行：<code>sh reset_mysql_root_password.sh</code> 输入新密码即可</p>
 </li>
 </ol>
 <hr class="footnotes-sep">
