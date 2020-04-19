@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-04-19T06:52:04.759Z</updated>
+    <updated>2020-04-19T07:19:11.649Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,25 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[谷歌云服务器(GCP)搭建过程]]></title>
+        <id>https://thisming.github.io/post/gu-ge-yun-fu-wu-qi-gcpda-jian-guo-cheng/</id>
+        <link href="https://thisming.github.io/post/gu-ge-yun-fu-wu-qi-gcpda-jian-guo-cheng/">
+        </link>
+        <updated>2020-04-19T06:53:25.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>使用信用卡注册<mark>谷歌云</mark>(GCP)的服务器，可获赠$300美元的免费试用金，和一年的使用期限。 从2017年到现在也有两年多了，他给我在互联网上的探索搭建了一个新的网络桥梁，连接了外界，学习了一些有用没用的知识，也让我看到了更多的东西。<br>
+自2014年5月27日谷歌被屏蔽之后，对百度搜索出来的结果中全是广告和误导信息的不满，导致向我这样的非程序员、也没有程序员朋友的人，花了不少时间去学习如何使用谷歌搜索。开始的时候还有一些网友在论坛、个人博客写一些翻墙使用谷歌的技术文章和程序，最近(2018)也很多人被请喝茶或者收到警告，陆续关闭个人博客，删除之前的文章。<br>
+这里做一下这两年的学习、使用总结。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>使用信用卡注册<mark>谷歌云</mark>(GCP)的服务器，可获赠$300美元的免费试用金，和一年的使用期限。 从2017年到现在也有两年多了，他给我在互联网上的探索搭建了一个新的网络桥梁，连接了外界，学习了一些有用没用的知识，也让我看到了更多的东西。<br>
+自2014年5月27日谷歌被屏蔽之后，对百度搜索出来的结果中全是广告和误导信息的不满，导致向我这样的非程序员、也没有程序员朋友的人，花了不少时间去学习如何使用谷歌搜索。开始的时候还有一些网友在论坛、个人博客写一些翻墙使用谷歌的技术文章和程序，最近(2018)也很多人被请喝茶或者收到警告，陆续关闭个人博客，删除之前的文章。<br>
+这里做一下这两年的学习、使用总结。</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[申请Let's Encrypt证书]]></title>
         <id>https://thisming.github.io/post/申请Let&apos;s Encrypt证书/</id>
@@ -129,17 +148,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>面對疫情挑戰，政府一定會當國人堅強的後盾！</p>
 <p>針對疫情帶來的各種衝擊，上週我指示行政院要妥善應對，現在新一波針對個人、家庭、企業、產業的 #加碼紓困方案 已經公布，請大家點開圖片，幫忙分享給身邊的親朋好友喔！</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[東京奧運將延期]]></title>
-        <id>https://thisming.github.io/post/東京奧運將延期/</id>
-        <link href="https://thisming.github.io/post/東京奧運將延期/">
-        </link>
-        <updated>2020-03-25T09:03:09.000Z</updated>
-        <summary type="html"><![CDATA[<p>受到疫情影響，日本 #安倍首相 跟國際奧會 （IOC）巴赫主席討論後，確認2020東京奧運將延期至不晚於明年夏天舉行，我相信這是經過周延思考後的決定。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>受到疫情影響，日本 #安倍首相 跟國際奧會 （IOC）巴赫主席討論後，確認2020東京奧運將延期至不晚於明年夏天舉行，我相信這是經過周延思考後的決定。</p>
 ]]></content>
     </entry>
 </feed>

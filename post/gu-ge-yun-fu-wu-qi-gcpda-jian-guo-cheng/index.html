@@ -7,7 +7,7 @@
 <meta name="keywords" content="静态博客">
 <meta name="description" content="又是努力的一天！">
 <meta name="theme-color" content="#000">
-<title>申请Let&#39;s Encrypt证书 | MrdeABC</title>
+<title>谷歌云服务器(GCP)搭建过程 | MrdeABC</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1587280745810">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -25,8 +25,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
-    <meta name="description" content="申请Let's Encrypt证书" />
-    <meta name="keywords" content="知识" />
+    <meta name="description" content="谷歌云服务器(GCP)搭建过程" />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -209,23 +209,28 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li>
+<li><a href="#%E6%B3%A8%E5%86%8C%E8%B0%B7%E6%AD%8C%E4%BA%91gcp"><strong>注册谷歌云GCP</strong></a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AAvm%E8%99%9A%E6%8B%9F%E6%9C%BA"><strong>创建第一个VM虚拟机</strong></a>
 <ul>
-<li>
+<li><a href="#%E5%AE%89%E8%A3%85screen"><strong>安装screen</strong></a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%89%E8%A3%85bbr"><strong>安装BBR</strong></a></li>
+<li><a href="#%E5%AE%89%E8%A3%85ssr"><strong>安装SSR</strong></a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E9%98%B2%E7%81%AB%E5%A2%99%E8%A7%84%E5%88%99"><strong>设置防火墙规则</strong></a></li>
+<li><a href="#%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA"><strong>网站搭建</strong></a>
 <ul>
-<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF-lets-encrypt">什么是 Let’s Encrypt？</a></li>
-<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%80%9A%E9%85%8D%E7%AC%A6%E8%AF%81%E4%B9%A6">什么是通配符证书</a></li>
-<li><a href="#%E7%94%B3%E8%AF%B7%E9%80%9A%E9%85%8D%E7%AC%A6%E8%AF%81%E4%B9%A6">申请通配符证书</a>
-<ul>
-<li><a href="#%E8%8E%B7%E5%8F%96certbot-%E5%AE%A2%E6%88%B7%E7%AB%AF">获取certbot 客户端</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85lnmp16"><strong>安装LNMP1.6</strong></a></li>
 <li><a href="#%E5%BC%80%E5%A7%8B%E7%94%B3%E8%AF%B7%E8%AF%81%E4%B9%A6">开始申请证书</a></li>
 </ul>
 </li>
-<li><a href="#%E8%AF%81%E4%B9%A6%E7%BB%AD%E7%BA%A6">证书续约</a></li>
-<li><a href="#nginx-%E9%85%8D%E7%BD%AE">Nginx 配置</a></li>
-</ul>
-</li>
-<li><a href="#%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3">参考文档</a></li>
+<li><a href="#%E5%AE%9A%E6%97%B6%E6%9B%B4%E6%96%B0ssl%E8%AF%81%E4%B9%A6"><strong>定时更新SSL证书</strong></a></li>
+<li><a href="#http%E5%85%A8%E9%83%A8301%E9%87%8D%E5%AE%9A%E5%90%91%E5%88%B0httpsupdate"><strong>HTTP全部301重定向到HTTPS</strong>UPDATE</a></li>
+<li><a href="#%E7%BD%91%E7%AB%99%E7%9A%84%E5%A4%87%E4%BB%BD%E4%B8%8E%E8%BF%81%E7%A7%BB"><strong>网站的备份与迁移</strong></a>
+<ul>
+<li><a href="#%E7%BD%91%E7%AB%99%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD"><strong>网站源文件备份</strong></a></li>
+<li><a href="#%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD"><strong>网站数据库备份</strong></a></li>
+<li><a href="#gcp%E9%80%9A%E8%BF%87%E5%A4%96%E9%83%A8%E5%B7%A5%E5%85%B7%E7%99%BB%E5%BD%95%E7%AE%A1%E7%90%86vm%E5%AE%9E%E4%BE%8B"><strong>GCP通过外部工具登录管理VM实例</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -482,8 +487,8 @@ window.addEventListener('load', function() {
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://thisming.github.io/post/申请Let&#39;s Encrypt证书/">
-      申请Let&#39;s Encrypt证书
+    <a class="post-title-link" href="https://thisming.github.io/post/gu-ge-yun-fu-wu-qi-gcpda-jian-guo-cheng/">
+      谷歌云服务器(GCP)搭建过程
     </a>
   </h1>
   <div class="post-meta">
@@ -495,30 +500,17 @@ window.addEventListener('load', function() {
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://thisming.github.io/tag/zhi-shi/">
-              <span>知识</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>11分钟</span>
+      <span>14分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>2260<span class="pc-show">字数</span></span>
+      <span>3199<span class="pc-show">字数</span></span>
     </span>
     
-      <span id="/post/申请Let&#39;s Encrypt证书/" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/gu-ge-yun-fu-wu-qi-gcpda-jian-guo-cheng/" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -527,30 +519,155 @@ window.addEventListener('load', function() {
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <p>最近个人有10多个二级域名需要签发证书，而Let's encrypt 提供期限为三个月的免费SSL证书，到期之后需要renew，官方还提供自动renew的工具certbot。这里记录下使用Let's Encrypt生成泛域名的通用证书。</p>
+                <blockquote>
+<p>使用信用卡注册<mark>谷歌云</mark>(GCP)的服务器，可获赠$300美元的免费试用金，和一年的使用期限。 从2017年到现在也有两年多了，他给我在互联网上的探索搭建了一个新的网络桥梁，连接了外界，学习了一些有用没用的知识，也让我看到了更多的东西。<br>
+自2014年5月27日谷歌被屏蔽之后，对百度搜索出来的结果中全是广告和误导信息的不满，导致向我这样的非程序员、也没有程序员朋友的人，花了不少时间去学习如何使用谷歌搜索。开始的时候还有一些网友在论坛、个人博客写一些翻墙使用谷歌的技术文章和程序，最近(2018)也很多人被请喝茶或者收到警告，陆续关闭个人博客，删除之前的文章。<br>
+这里做一下这两年的学习、使用总结。</p>
+</blockquote>
 <!-- more -->
-<figure data-type="image" tabindex="1"><img src="https://thisming.github.io/post-images/1587278712516.jpg" alt="" loading="lazy"></figure>
-<h4 id="什么是-lets-encrypt">什么是 Let’s Encrypt？</h4>
-<p>部署 HTTPS 网站的时候需要证书，证书由 CA 机构签发，大部分传统 CA 机构签发证书是需要收费的，这不利于推动 HTTPS 协议的使用。</p>
-<p><a href="https://links.jianshu.com/go?to=https%3A%2F%2Fletsencrypt.org%2F">Let’s Encrypt</a> 也是一个 CA 机构，但这个 CA 机构是免费的。也就是说签发证书不需要任何费用。Let’s Encrypt 由于是非盈利性的组织，需要控制开支，他们搞了一个非常有创意的事情，设计了一个 ACME 协议。</p>
-<p>那为什么要创建 ACME 协议呢，传统的 CA 机构是人工受理证书申请、证书更新、证书撤销，完全是手动处理的。而 ACME 协议规范化了证书申请、更新、撤销等流程，只要一个客户端实现了该协议的功能，通过客户端就可以向 Let’s Encrypt 申请证书，也就是说 Let’s Encrypt CA 完全是自动化操作的。</p>
-<p>任何人都可以基于 ACME 协议实现一个客户端，官方推荐的客户端是<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fcertbot.eff.org%2F">Certbot</a> 。</p>
-<h4 id="什么是通配符证书">什么是通配符证书</h4>
-<p>在没有出现通配符证书之前，Let’s Encrypt 支持两种证书。</p>
-<p>1）单域名证书：证书仅仅包含一个主机。</p>
-<p>2）SAN 证书：域名通配符证书类似 DNS 解析的泛域名概念，通配符证书就是证书中可以包含一个通配符(*.exmaple.com)。主域名签发的通配符证书可以在所有子域名中使用，比如 <code>www.example.com</code>、<code>bbs.example.com</code>。</p>
-<h4 id="申请通配符证书">申请通配符证书</h4>
-<p>Let’s Encrypt 上的证书申请是通过 ACME 协议来完成的。ACME 协议规范化了证书申请、更新、撤销等流程，实现了 Let’s Encrypt CA 自动化操作。解决了传统的 CA 机构是人工手动处理证书申请、证书更新、证书撤销的效率和成本问题。</p>
-<p>ACME v2 是 ACME 协议的更新版本，通配符证书只能通过 ACME v2 获得。要使用 ACME v2 协议申请通配符证书，只需一个支持该协议的客户端就可以了，官方推荐的客户端是 <a href="https://links.jianshu.com/go?to=https%3A%2F%2Fcertbot.eff.org%2F">Certbot</a></p>
-<p>客户在申请 Let’s Encrypt 证书的时候，需要校验域名的所有权，证明操作者有权利为该域名申请证书，目前支持三种验证方式：</p>
-<ul>
-<li>dns01：给域名添加一个 DNS TXT 记录。</li>
-<li>http01：在域名对应的 Web 服务器下放置一个 HTTP well-known URL 资源文件。</li>
-<li>tls-sni01：在域名对应的 Web 服务器下放置一个 HTTPS well-known URL 资源文件。</li>
-</ul>
-<p>申请通配符证书，只能使用 dns验证的方式，下面开始申请</p>
-<h5 id="获取certbot-客户端">获取certbot 客户端</h5>
-<pre><code class="language-shell"># 下载 Certbot 客户端
+<h2 id="注册谷歌云gcp"><strong>注册谷歌云GCP</strong></h2>
+<p>内容待添加</p>
+<h2 id="创建第一个vm虚拟机"><strong>创建第一个VM虚拟机</strong></h2>
+<p>内容待添加</p>
+<h3 id="安装screen"><strong>安装screen</strong></h3>
+<p>如果输入 <code>screen -S lamp</code><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>提示screen: command not found 命令不存在，可以执行：<code>yum install screen</code> 或 <code>apt-get install screen</code>进行安装，详细内容参考screen教程。使用该命令，如果安装过程中出现异常中断，重新登入服务器后，输入<code>screen -r lamp</code> 可以恢复到安装界面。</p>
+<h2 id="安装bbr"><strong>安装BBR</strong></h2>
+<p>VM虚拟机创建完成后，首先安装BBR服务</p>
+<pre><code>wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh
+</code></pre>
+<h2 id="安装ssr"><strong>安装SSR</strong></h2>
+<p>SSR是科学上网程序，可以用来访问被屏蔽的国外网站，与网站功能没有冲突，顺手搭一个。<br>
+下载一键安装脚本程序：（四合一）<strong><mark>已删除（网站备份文件夹中有）</mark></strong></p>
+<pre><code>wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+</code></pre>
+<p>给脚本程序赋权：<br>
+<code>chmod +x shadowsocks-all.sh</code><br>
+执行安装命令，并将安装日志记录到shadowsocks-all.log 位于home/var/log/<br>
+<code>./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</code></p>
+<p>如果不需要该程序时可执行<code>./shadowsocks-all.sh uninstall</code>命令进行卸载。<br>
+启动脚本后面的参数含义，从左至右依次为：启动，停止，重启，查看状态。<br>
+<strong>Shadowsocks-Python 版：</strong><br>
+<code>/etc/init.d/shadowsocks-python start | stop | restart | status</code><br>
+<strong>ShadowsocksR 版：</strong><br>
+<code>/etc/init.d/shadowsocks-r start | stop | restart | status</code><br>
+<strong>Shadowsocks-Go 版：</strong><br>
+<code>/etc/init.d/shadowsocks-go start | stop | restart | status</code><br>
+<strong>Shadowsocks-libev 版：</strong><br>
+<code>/etc/init.d/shadowsocks-libev start | stop | restart | status</code><br>
+修改配置（查看用cat）<code>vi /etc/shadowsocks-r/config.json</code><br>
+按esc后输入<code>:q</code>退出vi编辑器</p>
+<h2 id="设置防火墙规则"><strong>设置防火墙规则</strong></h2>
+<p>安装完成之后，需要设置一下防火墙，新建一个规则以允许流量通过你安装SSR时设置的端口<br>
+点击 <mark>导航菜单</mark> - <mark>VPC网络</mark> - <mark>防火墙规则</mark> - <mark>创建防火墙</mark><br>
+填写 <mark>名称</mark>； 选择 <mark>流量方向</mark>，流量方向选入站； 设置 <mark>目标</mark>， 根据需求选择应用于所有实例或指定的实例、账号；<mark>来源IP地址范围</mark> 填写：<code>0.0.0.0/0</code>；<mark>指定端口与协议</mark> 填写你指定的TCP/UDP端口，也可以勾选 <mark>全部允许</mark>；点击 <mark>创建</mark> 完成入站流量防火墙规则，再按相同流程创建出站流量防火墙规则。没有测试不设置出站流量规则是否可以使用。</p>
+<h2 id="网站搭建"><strong>网站搭建</strong></h2>
+<h3 id="安装lnmp16"><strong>安装LNMP1.6</strong></h3>
+<p>安装步骤：</p>
+<ol>
+<li>
+<p>使用putty或类似的SSH工具登录VM；<br>
+登陆后运行：<code>screen -S lnmp</code><br>
+如果提示screen: command not found 命令不存在可以执行：yum install screen 或 apt-get install screen安装，详细内容参考screen教程。</p>
+</li>
+<li>
+<p>下载并安装LNMP一键安装包：<br>
+安装LNMP稳定版</p>
+<pre><code></code></pre>
+</li>
+</ol>
+<p>wget http://soft.vpser.net/lnmp/lnmp1.6.tar.gz -cO lnmp1.6.tar.gz &amp;&amp; tar zxf lnmp1.6.tar.gz &amp;&amp; cd lnmp1.6 &amp;&amp; ./install.sh lnmp</p>
+<pre><code>如提示wget: command not found ，使用yum install wget 或 apt-get install wget 命令安装。
+
+使用域名or IP &lt;http://35.92.140.35/p.php&gt; 查看安装页
+
+将 phpmyadmin 目录重命名为不容易猜到的目录
+
+</code></pre>
+<p>cd /home/wwwroot/default<br>
+mv phpmyadmin mywebrootphp</p>
+<pre><code>
+将安装成功页面是IP访问时的默认页面（非域名），建议删除或改名
+
+</code></pre>
+<p>rm -rf index.html 或者<br>
+mv index.html web.html</p>
+<pre><code>
+### **添加域名解析**
+
+进入域名代理网站，将域名的@解析设置为VM的IP，解析生效即可使用，一般都很快，就几分钟。
+
+
+## **根据需要安装FTP**
+
+安装命令如下，一般不用安装，需要了再安装也不迟
+
+`cd ~/lnmp1.6-full`
+`./pureftpd.sh`
+`lnmp ftp add`
+
+
+
+
+LNMP最新版本已经默认开启了 scandir函数，所以该步骤可以忽略
+`vi /usr/local/php/etc/php.ini`打开php.ini文件
+`?scandir`查找scandir函数 （`/scandir`也可）
+按delete键删除，按Esc后，输入`:wq`保存并退出vi
+`lnmp restart`重启LNMP。
+
+
+
+## **安装wordpress网站程序**
+
+在安装WordPress之前，建议**安装PHP缓存加速类扩展**，对降低VPS压力和提高WordPress速度大有裨益。
+推荐安装两个：**OPcache**和**Memcached**。
+
+首先，需要进入LNMP解压目录 lnmp1.6-full ：
+`# cd /root/lnmp1.6-full`
+
+回车，接下来安装Opcache：
+`# ./addons.sh install opcache`
+
+回车，再回车，当出现 “Opcache installed successfully, enjoy it!” 字样时，即表示安装成功。
+
+接着安装Memcached：
+`# ./addons.sh install memcached`
+
+回车，选择 **2** （php-memcache**d**），回车，再回车。
+
+当出现 “Memcached installed successfully, enjoy it!” 字样时，即表示安装成功。
+
+此外，可以删除之前下载的lnmp压缩包，以节省空间：
+`# rm -rf /root/lnmp1.6-full.tar.gz`
+
+接下来，就可以添加域名并搭建WordPress博客了。
+首先，进入添加的域名目录：
+`cd /home/wwwroot/aoczo.com`
+回车后输入以下命令进行安装
+`wget https://cn.wordpress.org/wordpress-5.3.2-zh_CN.tar.gz`   下载wordpress程序包
+`tar -zxvf wordpress-5.3.2-zh_CN.tar.gz`解压程序包
+`mv wordpress/* . `将解压出来的wordpress文件夹内全部文件移动到当前的域名目录下（别忘了后面的.）
+`rm -rf wordpress-5.3.2-zh_CN.tar.gz`删掉空文件夹wordpress及源程序（可选）
+
+为避免因权限的问题导致安装出错（如wp-config.php无法创建、需要提供FTP用户密码以及主题和插件不能更新等），建议赋予网站根目录文件的可写权限。
+避免安装主题和插件需要提供FTP用户密码以及不能更新等问题，需要给网站根目录赋上可写权限
+命令：`chmod -R 755 /home/wwwroot &amp;&amp; chown -R www /home/wwwroot`
+或
+`# chmod -R 755 /home/wwwroot/seoimo.com`
+`# chown -R www /home/wwwroot/seoimo.com`
+`chmod -R 755 /home/wwwroot &amp;&amp; chown -R www /home/wwwroot`
+如果出现“.user.ini': Operation not permitted”问题
+
+执行：`chattr -i /home/wwwroot/wxlss.cn/.user.ini &amp;&amp; lnmp restart`
+
+建议此处重启一下lnmp：`lnmp stop &amp;&amp; lnmp start`
+可避免打不开网址
+
+## 申请Let's Encrypt通配符证书
+
+### 获取certbot 客户端
+
+```shell
+# 下载 Certbot 客户端
 $ wget -c https://dl.eff.org/certbot-auto -P /usr/local/bin/
 # 设为可执行权限
 $ chmod a+x /usr/local/bin/certbot-auto
@@ -561,193 +678,133 @@ certbot 0.34.2
 <blockquote>
 <p>注: Certbot 0.22.0 以上版本支持ACME v2 协议.</p>
 </blockquote>
-<h5 id="开始申请证书">开始申请证书</h5>
+<h3 id="开始申请证书">开始申请证书</h3>
 <pre><code class="language-shell">certbot-auto certonly  -d *.example.com --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory 
 
 </code></pre>
-<ul>
-<li>certonly，表示安装模式，Certbot 有安装模式和验证模式两种类型的插件。</li>
-<li>-d 为那些主机申请证书，如果是通配符，输入 *.example.com</li>
-<li>--manual 表示手动安装插件，Certbot 有很多插件，不同的插件都可以申请证书，用户可以根据需要自行选择</li>
-<li>--preferred-challenges dns，使用 DNS 方式校验域名所有权</li>
-<li>--server，Let's Encrypt ACME v2 版本使用的服务器不同于 v1 版本，需要显示指定。</li>
-</ul>
-<p>执行完以上命令之后，就是命令行的输出，根据提示输入相应内容：</p>
-<pre><code class="language-php">Saving debug log to /var/log/letsencrypt/letsencrypt.log
-Plugins selected: Authenticator manual, Installer None
-Enter email address (used for urgent renewal and security notices) (Enter 'c' to
-cancel): fate1028@163.com #用于安全以及续约通知的邮箱
+<p>安装SSL证书后，建议打开<strong>HTTPS</strong>开头的网址安装，例如：https://www.aoczo.com/<br>
+如已经使用HTTP安装，需要把HTTP替换为HTTPS网址，修改方法如下：<br>
+进入 phpMyAdmin 管理后台地址<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>，选择目标数据库，在 SQL 里运行如下语句，将http文章和链接更改为https：</p>
+<pre><code>UPDATE wp_options SET option_value = replace( option_value, 'http://www.aoczo.com', ' https://www.aoczo.com' );
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Please read the Terms of Service at
-https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf. You must
-agree in order to register with the ACME server at
-https://acme-v02.api.letsencrypt.org/directory
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-(A)gree/(C)ancel: A #是否同意相关协议条款
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Would you be willing to share your email address with the Electronic Frontier
-Foundation, a founding partner of the Let's Encrypt project and the non-profit
-organization that develops Certbot? We'd like to send you email about our work
-encrypting the web, EFF news, campaigns, and ways to support digital freedom.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-(Y)es/(N)o: N #是否订阅相关的邮件
-Obtaining a new certificate
-Performing the following challenges:
-dns-01 challenge for example.com
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-NOTE: The IP of this machine will be publicly logged as having requested this
-certificate. If you're running certbot in manual mode on a machine that is not
-your server, please ensure you're okay with that.
-
-Are you OK with your IP being logged?
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-(Y)es/(N)o: Y  #询问是否对域名和机器（IP）进行绑定
+UPDATE wp_posts SET post_content = replace( post_content, http://www.aoczo.com/wp-content, ' https://www.aoczo.com/wp-content );
 
 </code></pre>
-<p>以上确认后继续，以下提示要求配置 DNS TXT 记录，从而校验域名所有权，也就是判断证书申请者是否有域名的所有权。</p>
-<pre><code class="language-shell">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Please deploy a DNS TXT record under the name
-_acme-challenge.example.com with the following value:
-
-OGWxK87UxvB5iMp2tn-tfnB7r_kICS3oSRHyo0ouwzU
-
-Before continuing, verify the record is deployed.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Press Enter to Continue  ## 这里切记自己验证生效后再回车执行
-
+<p>如果安装了静态缓存（==如 WP-Super-Cache ==）和 Memcached 插件（<mark>如 MemcacheD Is Your Friend</mark>），建议再清空下缓存。<br>
+<code>telnet 127.0.0.1 11211</code> 连接 Memcached<br>
+<code>flush_all</code> 清空所有缓存数据<br>
+显示 <mark>OK</mark> 之后，输入 <code>quit</code> 退出。<br>
+注意：如提示 <code>-bash:telnet:command not found</code>，需要安装下 telnet 命令：<code>yum -y install telnet</code><br>
+<code>/etc/init.d/memcached restart</code> 重启Memcached 扩展</p>
+<p>如果某些浏览器下会提示错误/证书有风险，网站不安全，则需要完善证书链接，并强制开启https访问：</p>
+<p><code>vi /usr/local/apache/conf/vhost/aoczo.com.conf</code>编辑网站的 Apache 配置文件，在 <mark>VirtualHost *:443</mark> 内添加 <mark>SSLCertificateChainFile</mark> 指向以及 <mark>HTTPS</mark>（HTTP Strict Transport Security）命令，完整内容如下：</p>
+<pre><code>&lt;VirtualHost *:443&gt;
+ServerAdmin aoczo.w@gmail.com
+php_admin_value open_basedir &quot;/home/wwwroot/aoczo.com:/tmp/:/var/tmp/:/proc/&quot;
+DocumentRoot /home/wwwroot/aoczo.com
+ServerName aoczo.com:443
+ServerAlias www.aoczo.com
+#ErrorLog &quot;/home/wwwlogs/aoczo.com-error_log&quot;
+#CustomLog &quot;/home/wwwlogs/aoczo.com-access_log&quot; combined
+SSLEngine on
+SSLCertificateFile /usr/local/apache/conf/ssl/aoczo.com/aoczo.com.cer
+SSLCertificateKeyFile /usr/local/apache/conf/ssl/aoczo.com/aoczo.com.key
+SSLCertificateChainFile /usr/local/apache/conf/ssl/aoczo.com/ca.cer
+Protocols h2 h2c http/1.1
+&lt;Directory &quot;/home/wwwroot/aoczo.com&quot;&gt;
+    SetOutputFilter DEFLATE
+    Options FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+    DirectoryIndex index.html index.php
+&lt;/Directory&gt;
+&lt;/VirtualHost&gt;
 </code></pre>
-<p>上面输出要求给 _acme-challenge.example.com 配置一条 TXT 记录，在没有确认 TXT 记录生效之前不要回车执行。请自行登录域名管理系统，比如我在namecheap买的域名，以下是我在域名解析里面配置的TXT记录.</p>
-<figure data-type="image" tabindex="2"><img src="//upload-images.jianshu.io/upload_images/3044060-6c630410a642ff65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt="" loading="lazy"></figure>
-<p>image.png</p>
-<p>然后输入下列命令确认 TXT 记录是否生效：</p>
-<pre><code class="language-shell">$ dig  -t txt  _acme-challenge.example.com @8.8.8.8 
-
-; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; -t txt _acme-challenge.example.com @8.8.8.8
-;; global options: +cmd
-;; Got answer:
-;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 20013
-;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 512
-;; QUESTION SECTION:
-;_acme-challenge.chat186.com.   IN  TXT
-
-;; ANSWER SECTION:
-_acme-challenge.example.com. 1798 IN    TXT &quot;OGWxK87UxvB5iMp2tn-tfnB7r_kICS3oSRHyo0ouwzU&quot;
-
-;; Query time: 258 msec
-;; SERVER: 8.8.8.8#53(8.8.8.8)
-;; WHEN: Fri May 31 20:33:01 CST 2019
-;; MSG SIZE  rcvd: 112
-
+<p>按Esc键输入==:wq== 保存并退出vi编辑器，输入<code>lnmp httpd restart</code>重启Apcahe<br>
+<em>新版已经修正证书链错误问题</em></p>
+<h2 id="定时更新ssl证书"><strong>定时更新SSL证书</strong></h2>
+<p>使用 LNMP 安装 Let's Encrypt - SSL 证书，会自动添加定时更新证书的指令。<br>
+查看指令： <code>crontab -l</code><br>
+正常情况下，显示如下信息（LNMP1.6）：<br>
+<code>5 0 * * * &quot;/usr/local/acme.sh&quot;/acme.sh --cron --home &quot;/usr/local/acme.sh&quot; &gt; /dev/null</code><br>
+或者（LNMP1.5）：<br>
+<code>30 0 * * * &quot;/usr/local/acme.sh&quot;/acme.sh --cron --home &quot;/usr/local/acme.sh&quot; &gt; /dev/null</code><br>
+通常，保持默认即可。但是，免费证书有效期90天，每天都检测升级一次，有点麻烦。可以改为15天甚至一个月检测一次：<code>crontab -e</code><br>
+更改为以下设置：<br>
+<code>10 0 */15 * * &quot;/usr/local/acme.sh&quot;/acme.sh --cron --home &quot;/usr/local/acme.sh&quot; &gt; /dev/null</code><br>
+保存，重启<mark>crond</mark> ：<code>service crond restart</code><br>
+然后，设置开机启动：<code>chkconfig crond on</code><br>
+这样，每15天的凌晨，程序会自动检测证书是否需要更新；如果不需要，则直接跳过。当然，也可以随时强制性手动更新（注意：限制每周5次）。强制更新Let's Encrypt证书：<br>
+<code>&quot;/usr/local/acme.sh&quot;/acme.sh --force --cron --home &quot;/usr/local/acme.sh&quot; &gt; /dev/null</code><br>
+出现 ==Congratulations, all renewals succeeded. ==字样时，表示证书更新完成。</p>
+<h2 id="http全部301重定向到httpsupdate"><strong>HTTP全部301重定向到HTTPS</strong><a href="%E7%BD%91%E7%AB%99%E6%9B%B4%E6%96%B0%E8%AF%81%E4%B9%A6%E9%94%99%E8%AF%AF#%E5%BB%BA%E8%AE%AE%E5%AE%89%E8%A3%85lnmp1-5%E7%89%88%E6%9C%AC%E5%90%A7%EF%BC%8C%E8%87%B3%E5%B0%91%E4%B8%8D%E4%BC%9A%E5%87%BA%E7%8E%B0%E5%A6%82%E4%B8%8Bpython%E4%BE%9D%E8%B5%96%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%81">UPDATE</a></h2>
+<p>编辑网站根目录下的 .htaccess 文件，在顶部添加如下代码：</p>
+<pre><code># BEGIN Rewrite
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^seoimo.com [NC]
+RewriteRule ^(.*)$ https://www.seoimo.com/$1 [R=301,L]
+# END Rewrite
 </code></pre>
-<p>确认生效后，回车执行，输出如下信息</p>
-<pre><code class="language-shell">Waiting for verification...
-Cleaning up challenges
-
-IMPORTANT NOTES:
- - Congratulations! Your certificate and chain have been saved at:
-   /etc/letsencrypt/live/example.com/fullchain.pem
-   Your key file has been saved at:
-   /etc/letsencrypt/live/example.com/privkey.pem
-   Your cert will expire on 2019-08-29\. To obtain a new or tweaked
-   version of this certificate in the future, simply run certbot-auto
-   again. To non-interactively renew *all* of your certificates, run
-   &quot;certbot-auto renew&quot;
- - Your account credentials have been saved in your Certbot
-   configuration directory at /etc/letsencrypt. You should make a
-   secure backup of this folder now. This configuration directory will
-   also contain certificates and private keys obtained by Certbot so
-   making regular backups of this folder is ideal.
- - If you like Certbot, please consider supporting our work by:
-
-   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
-   Donating to EFF:                    https://eff.org/donate-le
-
+<p>保存之后，上传覆盖即可。倘若访问提示“重定向次数过多”，也可设置仅跳转端口试试：</p>
+<pre><code># BEGIN Rewrite
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.seoimo.com/$1 [R=301,L]
+# END Rewrite
 </code></pre>
-<p>此时我们的证书已经申请成功了,证书都保存在如下目录中:</p>
-<pre><code class="language-shell">$ tree /etc/letsencrypt/live/example.com/
-/etc/letsencrypt/live/example.com/
-├── cert.pem -&gt; ../../archive/example/cert1.pem
-├── chain.pem -&gt; ../../archive/example.com/chain1.pem
-├── fullchain.pem -&gt; ../../archive/example.com/fullchain1.pem
-├── privkey.pem -&gt; ../../archive/example.com/privkey1.pem
-└── README
-
+<h2 id="网站的备份与迁移"><strong>网站的备份与迁移</strong></h2>
+<p>在Linux系统下，对WordPress进行手动备份其实也并不难。主要涉及两部分：<strong>网站源文件备份</strong>和对应的<strong>数据库备份</strong>。</p>
+<h3 id="网站源文件备份"><strong>网站源文件备份</strong></h3>
+<p>为了方便管理，我们先建立一个文件夹专门存放备份数据，比如 /home/backup/ :<code>mkdir /home/backup</code><br>
+以本站 aoczo.com 为例，压缩网站根目录并移动到 /home/backup/：</p>
+<pre><code>cd /home/wwwroot
+tar -zcvf aoczo-20191104.tar.gz aoczo.com
+mv aoczo-20191104.tar.gz /home/backup/
 </code></pre>
-<p>校验证书信息，输入如下命令：</p>
-<pre><code class="language-shell">$ openssl x509 -in  /etc/letsencrypt/live/example.com/cert.pem -noout -text 
-
-# 可以看到证书包含了 SAN 扩展，该扩展的值就是 *.example.com
-...
-Authority Information Access: 
-        OCSP - URI:http://ocsp.int-x3.letsencrypt.org
-        CA Issuers - URI:http://cert.int-x3.letsencrypt.org/
-
-X509v3 Subject Alternative Name: 
-    DNS:*.example.com
-...
-
+<p>这样，整站备份已经完成。接下来，开始备份网站数据库。</p>
+<h3 id="网站数据库备份"><strong>网站数据库备份</strong></h3>
+<p>打开 /home/backup/ 文件夹，我们需要将数据库备份在这里：</p>
+<pre><code>cd /home/backup
+lnmp database list
 </code></pre>
-<p>到此，我们就演示了如何在 Let’s Encrypt 申请免费的通配符证书。</p>
-<h4 id="证书续约">证书续约</h4>
-<p>上个环节最后一步最重要事项中提示Let’s encrypt 的免费证书默认有效期为 90 天，到期后如果要非交互式续期_所有_证书,可以执行如下命令：</p>
-<pre><code class="language-cpp">$ certbot-auto renew
-Saving debug log to /var/log/letsencrypt/letsencrypt.log
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Processing /etc/letsencrypt/renewal/example.com.conf
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Cert not yet due for renewal
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-The following certs are not due for renewal yet:
-  /etc/letsencrypt/live/example.com/fullchain.pem expires on 2019-08-29 (skipped)
-No renewals were attempted.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+<p>输入 root 数据库安装时设置的密码，即可查看当前数据库列表。<br>
+选择需要备份网站的对应数据库，以本站的 sjk_seoimo 为例：</p>
+<pre><code>mysqldump -uroot -p aoczosql &gt; sjk-aoczosql-20191104.sql
 </code></pre>
-<p>由于还没到期所以被忽略掉了，以上的非交互式续约的前提是存在续期的账号凭证，默认第一次是保存在/etc/letsencrypt目录中，建议定期备份。</p>
-<h4 id="nginx-配置">Nginx 配置</h4>
-<pre><code class="language-shell">$ cp chain.pem example.com.chain.crt
-$ cp privkey.pem example.com.key
-$ more ssl.conf
-ssl_certificate certs/example.com.chain.crt;
-ssl_certificate_key certs/example.com.key;
-ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-ssl_prefer_server_ciphers on;
-ssl_ciphers ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:ECDHE
--RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA256:DHE-RSA-AES128-SHA
-256:DHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA:ECDHE-RSA-DES-CBC3-SHA:EDH-RSA-DES-CBC3-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES
-256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:DES-CBC3-SHA:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!MD5:!PSK:!RC4;
-
-$ more example.com.conf
-server {
-    listen 80;
-    listen 443 ssl;
-    server_name  app.example.com;
-    default_type text/html;
-    return 200 &quot;are you ok ?&quot;;
-
-    include ssl.conf;
-.....
-
+<p>再次输入 root 数据库密码，即可完成数据库备份。<br>
+通过命令 <code>ls -la</code> 查看当前目录，应该能看到已经备份好了的压缩包。<br>
+此时，可通过 FTP 工具下载到本地电脑保存，也可以上传到其他 VPS/FTP 上保存。</p>
+<h3 id="gcp通过外部工具登录管理vm实例"><strong>GCP通过外部工具登录管理VM实例</strong></h3>
+<p>通过外部工具<mark>putty</mark>或者<mark>FileZilla</mark>来下载备份的网站源文件和数据库文件。<br>
+在VM实例中使用浏览器窗口自动连接SSH，切换到root <code>sudo -i</code><br>
+然后编辑ssh配置文件 <code>vi /etc/ssh/sshd_config</code><br>
+找到下面的内容，并修改</p>
+<pre><code>PermitRootLogin yes
+PasswordAuthentication yes (no改为yes，如果前面有#注释的去掉#,如果没有这一行就添加)
 </code></pre>
-<p>reload nginx之后，浏览器访问:</p>
-<figure data-type="image" tabindex="3"><img src="//upload-images.jianshu.io/upload_images/3044060-6a8d0728d05581a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1059/format/webp" alt="" loading="lazy"></figure>
-<p>image.png</p>
-<h3 id="参考文档">参考文档</h3>
-<p><a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwww.google.com%2F">https://www.google.com</a><br>
-<a href="https://www.jianshu.com/p/c5c9d071e395">https://www.jianshu.com/p/c5c9d071e395</a></p>
-<p>作者：YichenWong<br>
-链接：https://www.jianshu.com/p/c6f6f277a23d<br>
-来源：简书<br>
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>重启ssh <code>service sshd restart</code><br>
+修改root密码 <code>passwd root</code><br>
+然后我们可以尝试直接使用putty等ssh工具在本地连接登录VM22端口</p>
+<hr>
+<p>LNMP1.6环境下</p>
+<ol>
+<li>
+<p>数据库修改密码后建立数据库出错的问题，修改wpc-onfig.php文件中的密码即可；</p>
+</li>
+<li>
+<p>忘记mysql密码的修改方法：进入<code>lnmp1.6-tools</code>文件夹，运行：<code>sh reset_mysql_root_password.sh</code> 输入新密码即可</p>
+</li>
+</ol>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>名称可自行更改 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>phpMyAdmin 管理后台地址：ip/phpmyadmin 或者 ip/new-name <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
               </div>
               <div class="post-footer">
@@ -758,26 +815,20 @@ server {
     </li>
     <li class="post-copyright-link">
       <strong>本站链接：</strong>
-      <a href="https://thisming.github.io/post/申请Let&#39;s Encrypt证书/" title="申请Let&#39;s Encrypt证书">申请Let&#39;s Encrypt证书</a>
+      <a href="https://thisming.github.io/post/gu-ge-yun-fu-wu-qi-gcpda-jian-guo-cheng/" title="谷歌云服务器(GCP)搭建过程">谷歌云服务器(GCP)搭建过程</a>
     </li>
   </ul>
   <div class="tags">
-    
-      <a href="https://thisming.github.io/tag/zhi-shi/"># 知识</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="谷歌云服务器(GCP)搭建过程" href="https://thisming.github.io/post/gu-ge-yun-fu-wu-qi-gcpda-jian-guo-cheng/">谷歌云服务器(GCP)搭建过程</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="谷歌云服务器(GCP)搭建过程" href="https://thisming.github.io/post/gu-ge-yun-fu-wu-qi-gcpda-jian-guo-cheng/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="台灣防疫最前線" href="https://thisming.github.io/post/台灣防疫最前線/">台灣防疫最前線</a>
-        <a class="nav-mobile-next" title="台灣防疫最前線" href="https://thisming.github.io/post/台灣防疫最前線/">下一篇</a>
+        <a class="nav-pc-next" title="申请Let&#39;s Encrypt证书" href="https://thisming.github.io/post/申请Let&#39;s Encrypt证书/">申请Let&#39;s Encrypt证书</a>
+        <a class="nav-mobile-next" title="申请Let&#39;s Encrypt证书" href="https://thisming.github.io/post/申请Let&#39;s Encrypt证书/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
