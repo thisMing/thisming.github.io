@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-04-09T12:12:42.180Z</updated>
+    <updated>2020-04-19T06:45:48.551Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[申请Let's Encrypt证书]]></title>
+        <id>https://thisming.github.io/post/申请Let&apos;s Encrypt证书/</id>
+        <link href="https://thisming.github.io/post/申请Let&apos;s Encrypt证书/">
+        </link>
+        <updated>2020-04-19T06:39:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近个人有10多个二级域名需要签发证书，而Let's encrypt 提供期限为三个月的免费SSL证书，到期之后需要renew，官方还提供自动renew的工具certbot。这里记录下使用Let's Encrypt生成泛域名的通用证书。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>最近个人有10多个二级域名需要签发证书，而Let's encrypt 提供期限为三个月的免费SSL证书，到期之后需要renew，官方还提供自动renew的工具certbot。这里记录下使用Let's Encrypt生成泛域名的通用证书。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[台灣防疫最前線]]></title>
         <id>https://thisming.github.io/post/台灣防疫最前線/</id>
@@ -135,19 +146,6 @@
         <summary type="html"><![CDATA[<p>受到疫情影響，日本 #安倍首相 跟國際奧會 （IOC）巴赫主席討論後，確認2020東京奧運將延期至不晚於明年夏天舉行，我相信這是經過周延思考後的決定。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>受到疫情影響，日本 #安倍首相 跟國際奧會 （IOC）巴赫主席討論後，確認2020東京奧運將延期至不晚於明年夏天舉行，我相信這是經過周延思考後的決定。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[美国截至3月24日疫情通报]]></title>
-        <id>https://thisming.github.io/post/截至3月24日美国疫情通报/</id>
-        <link href="https://thisming.github.io/post/截至3月24日美国疫情通报/">
-        </link>
-        <updated>2020-03-25T06:21:53.000Z</updated>
-        <summary type="html"><![CDATA[<p>#疫情通报 #US #美国<br>
-以下数据截至美西时间3月24日晚上11点</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>#疫情通报 #US #美国<br>
-以下数据截至美西时间3月24日晚上11点</p>
 ]]></content>
     </entry>
 </feed>
