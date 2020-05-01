@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-04-19T07:38:06.157Z</updated>
+    <updated>2020-05-01T09:53:15.214Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[連續5天0確診，連續18天本土病例0新增！]]></title>
+        <id>https://thisming.github.io/post/台湾连续5天0确诊/</id>
+        <link href="https://thisming.github.io/post/台湾连续5天0确诊/">
+        </link>
+        <updated>2020-05-01T09:51:39.000Z</updated>
+        <summary type="html"><![CDATA[<p>連續5天0確診，連續18天本土病例0新增！</p>
+<p>在今天指揮中心的記者會上，陳時中部長展示的杯子，是前陣子我的Twitter追蹤人數破百萬時，拍的影片中出現的杯子，上面寫著 #TaiwanCanHelp。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>連續5天0確診，連續18天本土病例0新增！</p>
+<p>在今天指揮中心的記者會上，陳時中部長展示的杯子，是前陣子我的Twitter追蹤人數破百萬時，拍的影片中出現的杯子，上面寫著 #TaiwanCanHelp。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[谷歌云服务器(GCP)搭建过程]]></title>
         <id>https://thisming.github.io/post/gu-ge-yun-fu-wu-qi-gcpda-jian-guo-cheng/</id>
@@ -135,19 +148,6 @@
         <summary type="html"><![CDATA[<p>面對威權統治時期的歷史傷痛，我的態度很明確：過去的政治檔案，要盡快、盡可能攤開在陽光下，讓人民一起檢視，確保政府不會重蹈覆轍。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>面對威權統治時期的歷史傷痛，我的態度很明確：過去的政治檔案，要盡快、盡可能攤開在陽光下，讓人民一起檢視，確保政府不會重蹈覆轍。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[政府當國人堅強的後盾]]></title>
-        <id>https://thisming.github.io/post/政府當國人堅強的後盾/</id>
-        <link href="https://thisming.github.io/post/政府當國人堅強的後盾/">
-        </link>
-        <updated>2020-03-25T10:02:30.000Z</updated>
-        <summary type="html"><![CDATA[<p>面對疫情挑戰，政府一定會當國人堅強的後盾！</p>
-<p>針對疫情帶來的各種衝擊，上週我指示行政院要妥善應對，現在新一波針對個人、家庭、企業、產業的 #加碼紓困方案 已經公布，請大家點開圖片，幫忙分享給身邊的親朋好友喔！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>面對疫情挑戰，政府一定會當國人堅強的後盾！</p>
-<p>針對疫情帶來的各種衝擊，上週我指示行政院要妥善應對，現在新一波針對個人、家庭、企業、產業的 #加碼紓困方案 已經公布，請大家點開圖片，幫忙分享給身邊的親朋好友喔！</p>
 ]]></content>
     </entry>
 </feed>
