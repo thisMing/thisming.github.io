@@ -7,7 +7,7 @@
 <meta name="keywords" content="静态博客">
 <meta name="description" content="又是努力的一天！">
 <meta name="theme-color" content="#000">
-<title>台湾政治解密 | MrdeABC</title>
+<title>如何破解受保护的工作表 | MrdeABC</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1588652375767">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -25,8 +25,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
-    <meta name="description" content="台湾政治解密" />
-    <meta name="keywords" content="蔡英文,台湾,新闻" />
+    <meta name="description" content="如何破解受保护的工作表" />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -288,8 +288,8 @@
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://thisming.github.io/post/台湾政治解密/">
-      台湾政治解密
+    <a class="post-title-link" href="https://thisming.github.io/post/如何破解受保护的工作表/">
+      如何破解受保护的工作表
     </a>
   </h1>
   <div class="post-meta">
@@ -297,34 +297,9 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-03-28</span>
+      <span>2020-05-05</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
-    
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://thisming.github.io/tag/cai-ying-wen/">
-              <span>蔡英文</span>
-            </a>、
-          
-        
-          
-            <a href="https://thisming.github.io/tag/tai-wan/">
-              <span>台湾</span>
-            </a>、
-          
-        
-          
-            <a href="https://thisming.github.io/tag/xin-wen/">
-              <span>新闻</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
@@ -333,10 +308,10 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>273<span class="pc-show">字数</span></span>
+      <span>181<span class="pc-show">字数</span></span>
     </span>
     
-      <span id="/post/台湾政治解密/" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/如何破解受保护的工作表/" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -345,15 +320,21 @@
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <p>面對威權統治時期的歷史傷痛，我的態度很明確：過去的政治檔案，要盡快、盡可能攤開在陽光下，讓人民一起檢視，確保政府不會重蹈覆轍。</p>
+                <p>很多时候，为了安全，设置了保护工作表，时间久了忘记密码怎么办？<br>
+<img src="https://thisming.github.io/post-images/1588651164374.jpg" alt="" loading="lazy"><br>
+记录一个简单小方法..</p>
 <!-- more -->
-<p>上個月，我在228事件的紀念活動上指出：國安局配合 促進轉型正義委員會 調查而受徵集的政治檔案，除了極少數依法還不能解密的檔案外，都要在一個月內完成解密。</p>
-<p>一個月後的現在，國安局已經把118案、407卷、合計將近9萬頁的政治檔案，依法移轉給 檔案局：典藏國家記憶。促轉會也正加快腳步研讀檔案，要來還原威權時期的歷史真相。政府的各個機關，就是該像這樣，同心協力推動轉型正義的工作。</p>
-<p>依據「政治檔案條例」，相關檔案的徵集、整理、保存、開放應用，都是政府的責任。這些工作，我們將會努力做下去。</p>
-<blockquote>
-<p>新闻来源：<a href="https://t.me/iingtw">台灣隊長蔡英文</a></p>
-</blockquote>
-<hr>
+<p>第一步，将后缀修改为rar，确定<br>
+<img src="https://thisming.github.io/post-images/1588651258476.jpg" alt="" loading="lazy"><br>
+<img src="https://thisming.github.io/post-images/1588651290235.jpg" alt="" loading="lazy"><br>
+第二步，双击rar文件，依次打开<code>xl</code>-<code>worksheets</code>，将sheet1.xml解压到桌面<br>
+<img src="https://thisming.github.io/post-images/1588651562425.jpg" alt="" loading="lazy"><br>
+第三步，使用记事本打开解压的xml文件，<code>ctrl+f</code>搜索<code>protect</code>，删除<code>&lt;sheetProtection</code>后面至<code>&lt;pageMargins</code>前面的一段代码后保存<br>
+<img src="https://thisming.github.io/post-images/1588652092688.jpg" alt="" loading="lazy"><br>
+第四步，将保存好的文件拖回rar文件内，将rar后缀改回<code>.xlsx</code>，再打开，密码就解除了。</p>
+<p>是不是很简单呢！</p>
+<p>那么问题来了，如何保护工作表呢？<br>
+<code>审阅</code>-<code>保护工作表</code>-<code>设置密码</code>-<code>确认密码</code>-<code>关闭生效</code></p>
 
               </div>
               <div class="post-footer">
@@ -364,30 +345,20 @@
     </li>
     <li class="post-copyright-link">
       <strong>本站链接：</strong>
-      <a href="https://thisming.github.io/post/台湾政治解密/" title="台湾政治解密">台湾政治解密</a>
+      <a href="https://thisming.github.io/post/如何破解受保护的工作表/" title="如何破解受保护的工作表">如何破解受保护的工作表</a>
     </li>
   </ul>
   <div class="tags">
-    
-      <a href="https://thisming.github.io/tag/cai-ying-wen/"># 蔡英文</a>
-    
-      <a href="https://thisming.github.io/tag/tai-wan/"># 台湾</a>
-    
-      <a href="https://thisming.github.io/tag/xin-wen/"># 新闻</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="河南省新增新冠肺炎本地确诊病" href="https://thisming.github.io/post/河南省新增新冠肺炎本地确诊病/">河南省新增新冠肺炎本地确诊病</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="河南省新增新冠肺炎本地确诊病" href="https://thisming.github.io/post/河南省新增新冠肺炎本地确诊病/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="政府當國人堅強的後盾" href="https://thisming.github.io/post/政府當國人堅強的後盾/">政府當國人堅強的後盾</a>
-        <a class="nav-mobile-next" title="政府當國人堅強的後盾" href="https://thisming.github.io/post/政府當國人堅強的後盾/">下一篇</a>
+        <a class="nav-pc-next" title="連續5天0確診，連續18天本土病例0新增！" href="https://thisming.github.io/post/台湾连续5天0确诊/">連續5天0確診，連續18天本土病例0新增！</a>
+        <a class="nav-mobile-next" title="連續5天0確診，連續18天本土病例0新增！" href="https://thisming.github.io/post/台湾连续5天0确诊/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
