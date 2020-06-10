@@ -7,7 +7,7 @@
 <meta name="keywords" content="静态博客">
 <meta name="description" content="又是努力的一天！">
 <meta name="theme-color" content="#000">
-<title>你应该要知道这是哪儿 | MrdeABC</title>
+<title>WordPress 开启全站 HTTPS | MrdeABC</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1591828114368">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -25,7 +25,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
-    <meta name="description" content="你应该要知道这是哪儿" />
+    <meta name="description" content="WordPress 开启全站 HTTPS" />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -209,12 +209,15 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li>
+<li><a href="#%E5%85%B3%E4%BA%8E-https-%E7%9A%84%E9%82%A3%E7%82%B9%E4%B8%8D%E5%BE%97%E4%B8%8D%E8%AE%B2%E7%9A%84%E4%BA%8B%E6%83%85">关于 HTTPS 的那点不得不讲的事情</a></li>
+<li><a href="#%E4%B8%80-%E5%BC%80%E5%90%AF-ssl-%E8%AE%BF%E9%97%AE%E6%94%AF%E6%8C%81">一、开启 SSL 访问支持</a></li>
+<li><a href="#%E4%BA%8C-%E5%BC%80%E5%90%AF%E8%AE%BF%E9%97%AE-https-301%E9%87%8D%E5%AE%9A%E5%90%91">二、开启访问 HTTPS 301重定向</a></li>
+<li><a href="#%E4%B8%89-%E5%BC%80%E5%90%AF%E7%99%BB%E5%BD%95%E5%92%8C%E5%90%8E%E5%8F%B0%E7%9A%84%E5%BC%BA%E5%88%B6-ssl">三、开启登录和后台的强制 SSL</a></li>
+<li><a href="#%E5%9B%9B-%E7%AB%99%E5%86%85%E9%93%BE%E6%8E%A5%E6%94%AF%E6%8C%81">四、站内链接支持</a></li>
+<li><a href="#%E4%BA%94-%E5%85%B3%E5%BF%83%E4%B8%80%E4%B8%8B%E6%8F%92%E4%BB%B6">五、关心一下插件</a><br>
+*
 <ul>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8E%E5%88%A0%E9%99%A4%E7%9A%84%E6%8F%92%E4%BB%B6%E9%82%A3%E5%8A%9F%E8%83%BD%E6%80%8E%E4%B9%88%E5%8A%9E">关于删除的插件那功能怎么办？</a></li>
 </ul>
 </li>
 </ul>
@@ -471,8 +474,8 @@ window.addEventListener('load', function() {
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://thisming.github.io/post/about/">
-      你应该要知道这是哪儿
+    <a class="post-title-link" href="https://thisming.github.io/post/WordPress 开启全站 HTTPS/">
+      WordPress 开启全站 HTTPS
     </a>
   </h1>
   <div class="post-meta">
@@ -480,21 +483,21 @@ window.addEventListener('load', function() {
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2019-01-25</span>
+      <span>2020-06-11</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
+      <span>10分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>133<span class="pc-show">字数</span></span>
+      <span>2604<span class="pc-show">字数</span></span>
     </span>
     
-      <span id="/post/about/" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/WordPress 开启全站 HTTPS/" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -503,16 +506,101 @@ window.addEventListener('load', function() {
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <h3 id="博主是谁">👨‍💻 博主是谁</h3>
-<p>“我是谁？从哪儿来？要到哪儿去？”这一连串来自灵魂深处的拷问，让每一个还没有找好定位的人心里惴惴不安。</p>
+                <p>自从 <strong>CNNIC</strong> 颁发的子证书发生了中间人攻击这些事件之后，<strong>SSL</strong> 连接以及 <strong>HTTPS</strong> 变得越来越流行了。这时候我们从“<strong>使用 SSL 保护你的登录信息以及后台页面</strong>”变成了推荐“<strong>SSL Everywhere</strong>”，使用全局 SSL 加密，有效避免用户在访问网页的时候造成隐私的泄露。而且，根据谷歌站长的最新教程当中的介绍表示，使用 https 对 SEO 更有好处_（国内就别想了，但谷歌的爬虫真的会<a href="https://support.google.com/webmasters/answer/6073543?hl=zh-Hans">更看重 Https 网站</a>。）_另外，<strong>升级到 Https</strong>，也不需要在谷歌站长工具里做什么——支持平滑升级，唯一的缺点恐怕是收录会波动一小段时间。</p>
 <!-- more -->
-<h3 id="关于本站">🏠 关于本站</h3>
-<p>没有明确这里要放一些什么，但是这里很简单，简单到手还能动就行，简单也是我的个性。</p>
-<h3 id="兴趣爱好">⛹ 兴趣爱好</h3>
-<p>一直想找一个能坚持下去的爱好，好像除了呼吸，也没啥能坚定的坚持着的事情。</p>
-<h3 id="联系我呀">📬 联系我呀</h3>
-<p>联系我? <a href="https://t.me/thisming">Telegram</a></p>
+<figure data-type="image" tabindex="1"><a href="https://www.logcg.com/wp-content/uploads/2015/04/-2015-04-27-%E4%B8%8B%E5%8D%8811.53.54-e1430150097374.png"><img src="https://www.logcg.com/wp-content/uploads/2015/04/-2015-04-27-%E4%B8%8B%E5%8D%8811.53.54-e1430150097374.png" alt="谷歌支持到 HTTPS 的平滑迁移" loading="lazy"></a></figure>
+<p>谷歌支持到 HTTPS 的平滑迁移</p>
+<p><s>这里，我们要感谢 <strong>StartSSL</strong>™ ，如果不是他们，恐怕我们这些微小站长个人博客博主就无缘 SSL 了。</s>。</p>
+<p>由于<a href="https://pierrekim.github.io/blog/2016-02-16-why-i-stopped-using-startssl-because-of-qihoo-360.html">这个原因</a>，落格不在使用 StartSSL 的免费证书了，而是转而使用备受关注的 <a href="http://letsencrypt.org/"><strong>Let’s Encrypt</strong> 项目</a>，这样你可以很方便地获得个人免费证书。不过，如果你和我一样是把博客扔在虚拟主机，那我想你可能需要<a href="https://www.sslforfree.com/">这个网站</a>以支持虚拟主机的 cPanel 等后台配置。</p>
+<blockquote>
+<p>对于如何申请证书这个问题，这里暂时略过不讲，总之这篇文章假定你至少拥有了一个有效签名的证书以及对应的域名。</p>
+</blockquote>
+<h2 id="关于-https-的那点不得不讲的事情">关于 HTTPS 的那点不得不讲的事情</h2>
+<p>HTTPS 使用<strong>443端口</strong>来验证你的链接，通过 SSL、TLS 这种低层的加密技术来保证你的连接是安全的，由于 SSL 这种协议在 IP 层面上，所以建立安全握手的时候甚至还没有发生 HTTP 数据的交换，这就导致了 <strong>SSL</strong> 这个本身针对域名进行签名的证书却需求你有一个<strong>独立的 IP 地址</strong>。不过，现实很快就无情地证明——<strong>IPv4 地址终究会被用尽</strong>。虚拟主机应运而生，这时候我们很庆幸的还能有一个独立的域名和空间，<strong>但 IP 地址却是共享的</strong>。</p>
+<p>Web 服务器通过区分来自不同域名的请求来在同一 IP 的同一端口上提供不同的网站服务，这就导致了一个严重的问题：“<em>SSL 证书绑定给谁？</em>”事实上虚拟主机确实很难支持 SSL，一不小心就会导致同 IP 下的其他域名提示证书不正确。不过，现如今的主流浏览器都支持了一个新的协议：<strong>SNI</strong>。</p>
+<blockquote>
+<p>使用 SNI，将允许 Web 服务器在同一 IP 上单独为每一个域名提供证书。</p>
+</blockquote>
+<p>所以说，如果你想要在一个 IP 上绑定多个域名的证书，或者说你依旧使用着经济实惠的虚拟主机，想要绑定证书，那么就需要确定你的主机可以支持 <strong>SNI</strong>——当然了，目前主流的服务器比如 <strong>Nginx</strong>、<strong>Apache</strong> 等都已经支持，唯独要点名的是 <strong>IIS</strong> 貌似还是不支持的。</p>
+<p>至于浏览器，Safari、Chrome、Firefox 等知名浏览器都已经支持，要点名的是 IE 系列貌似 <em>5678</em> 都不太好使。</p>
+<p>好了，扒完了背景，我们正式开始操作：</p>
+<p>由于落格依旧是虚拟主机配置，这里我们讲如何**用 cPanel 来开启 **SSL：</p>
+<h2 id="一-开启-ssl-访问支持">一、开启 SSL 访问支持</h2>
+<p>登录你的 <strong>cPanel</strong>，如果你的虚拟主机支持 <strong>SNI</strong> 技术（就看服务商给不给力了），那么你应该可以在 cPanel 面板中的“<strong>安全</strong>”分类里边找到“<strong>SSL/TLS</strong>”功能按钮。</p>
+<figure data-type="image" tabindex="2"><a href="https://www.logcg.com/wp-content/uploads/2015/04/-2015-04-27-%E4%B8%8B%E5%8D%8810.40.55-e1430145773353.png"><img src="https://www.logcg.com/wp-content/uploads/2015/04/-2015-04-27-%E4%B8%8B%E5%8D%8810.40.55-e1430145773353.png" alt="“安全”分类里的“SSL/TLS”" loading="lazy"></a></figure>
+<p>“安全”分类里的“SSL/TLS”</p>
+<p>点击进入之后你就会看到上传私钥公钥以及绑定域名的链接，依次进入上传之，然后选择去绑定链接里绑定自己的域名“<strong>www</strong>”即可。<em>（这里要注意，如果你和落格一样使用的是一类证书，那么你应该没有资格签泛域名证书，裸域应该也是不行的。）</em></p>
+<p>绑定之后，你的博客应该就已经能够使用 Https 来访问了，不过，这才刚刚开始。</p>
+<h2 id="二-开启访问-https-301重定向">二、开启访问 HTTPS 301重定向</h2>
+<p>细心的你这时候一定会发现，你的网站这时候虽然支持了 HTTPS 访问，但是似乎也可以使用 HTTP 来访问，考虑到搜索引擎目前收录的都是你的 HTTP 链接，那么如果不做点什么的话恐怕这张 SSL 证书将会毫无用处！</p>
+<p>我希望你的空间能够支持 .htaccess ，如果你的博客开启了伪静态的话，那八成你的空间是支持的。 ：）</p>
+<p>我们使用 .htaccess  文件来添加一个301重定向（其实还有其他各种迁移的办法，但是谷歌大爷官方<a href="https://support.google.com/webmasters/answer/93633?hl=zh-Hans">推荐使用301重定向</a>）将所有的 HTTP 流量使用301重定向到 HTTPS 上边去，当然，这样还有一个潜在的问题：<s><strong>国内百度等搜索引擎的爬虫不支持 HTTPS</strong></s>！</p>
+<p>我很好奇，为什么在全世界都提倡 <strong>SSL Everywhere</strong> 的情况下，我国国内的互联网环境还是“明文走天下”，当然，这可能也跟那个“<strong>Girl Friend Wall</strong>”有关系吧……（不然不好和谐了啊~）所以，我们还要单独为国内的一些搜索引擎的爬虫定制一下规则，如果检测到他们的 UA，那么就允许他们访问 HTTP 流量。</p>
+<p>在你博客空间的 www  目录（有的可能是 public_html ）下，找到** .htaccess** 文件，编辑它，在里边填入下列代码：</p>
+<pre><code>#网站定制化开启 HTTPS 的301重定向
+
+RewriteCond  %{SERVER_PORT}  !^443$
+
+RewriteCond  %{HTTP_USER_AGENT}  !MSIE/[1-8]\.  [NC]
+
+RewriteCond  %{HTTP_HOST}  www.logcg.com
+
+RewriteRule  ^.*$  https://www.logcg.com%{REQUEST_URI} [L,R=301]
+
+</code></pre>
+<p><em>对了，考虑到巨硬的 IE 大爷，我们把12345678都排除在外，让它们妥妥的滚去访问 HTTP 吧，省的各种警告烦心。</em></p>
+<h2 id="三-开启登录和后台的强制-ssl">三、开启登录和后台的强制 SSL</h2>
+<p>虽然有了整站的重定向，但我们不妨还是将 <strong>WordPress</strong> 本身自带的功能打开，以期更完善的兼容体验——毕竟是301重定向。</p>
+<p>还是找到你网站根目录里边，这次要修改的文件是 <strong>config.php</strong>，直接在这个文件的末尾另起一行，追加两行代码：</p>
+<pre><code>/* 强制后台和登录使用 SSL */
+
+define('FORCE_SSL_LOGIN',  true);
+
+define('FORCE_SSL_ADMIN',  true);
+</code></pre>
+<h2 id="四-站内链接支持">四、站内链接支持</h2>
+<p>最主要的可能就是图片的问题了，你在上传到空间的附件都被 WordPress 标记为了绝对链接，而且全都妥妥的写入了 “http://”。一般来讲，是需要用数据库替换的，不过这种方法有点小危险，我这里给你推荐另外一个不错的选择：使用代码让 WordPress 在加载附件之前将链接替换就好了！——毕竟，只是协议的问题，跟路径没有半毛钱的关系~</p>
+<p><em>（我希望你使用了 WordPress 的子主题功能……）</em></p>
+<p>找到当前主题下的 <strong>function.php</strong> 文件，编辑之，在里边代码的末尾追加如下代码：</p>
+<pre><code>/* 替换图片链接为 https */
+
+function  my_content_manipulator($content){
+    if(  is_ssl()  ){
+        $content  =  str_replace('http://www.logcg.com/wp-content/uploads',  'https://www.logcg.com/wp-content/uploads',  $content);
+    }
+    return  $content;
+}
+
+add_filter('the_content',  'my_content_manipulator');
+
+</code></pre>
+<p>另外，除了这个大头意外，你还需要关心站内的各种内链：</p>
+<ul>
+<li>修改“菜单”当中的所有“自定义链接”为相对路径；</li>
+<li>修改“<strong>设置</strong>”→“<strong>常规</strong>”里的“<strong>站点地址</strong>”和“<strong>WordPress 地址</strong>”为 HTTPS；</li>
+<li>修改其他自己手贱写入的绝对链接地址……</li>
+</ul>
+<h2 id="五-关心一下插件">五、关心一下插件</h2>
+<p>现在，还剩下最后一个问题：<strong>插件的兼容性</strong>！</p>
+<p>是的没错！并不是所有的插件都会兼容 SSL！<em>（尤其是国内的插件）</em></p>
+<p>对了！关于 CNZZ 这个统计的话你只需要改动一下统计代码就可以，将 HTTP 修改为 HTTPS 即可。不过国内比较常用的 <strong>JiaThis</strong> 社会化分享插件就无力了，只能割爱<strong>停删</strong>。</p>
+<p>另外，曾今“<strong>我爱水煮鱼</strong>”开发的相关文章插件：<strong>WordPress Related Post</strong>，后来卖给了老外，总是会加载一个站外的链接，如今还因为** Girl Friend Wall** 的问题导致这个 js 脚本各种菊花，只好果断<strong>停删</strong>。</p>
+<p>你可以使用任意浏览器，打开你的博客页面之后随便打开一篇文章，选择类似于“<strong>检查元素</strong>”的操作，查看报错就可以了：<strong>要求是没有任何红色的错误，黄色的警告“⚠️”可以忽略。</strong></p>
+<h4 id="关于删除的插件那功能怎么办">关于删除的插件那功能怎么办？</h4>
+<p>当然是找替换插件了，这里针对如上的两个插件，路由推荐两个插件：</p>
+<ul>
+<li><strong><a href="https://wordpress.org/plugins/anyshare/">anyShare</a></strong> 它是一个功能简洁十分轻量级的社会化分享插件，按钮比较大（你可以稍后在这片文章末尾看到样式），虽然说它已经10个月没有更新，但我向你保证这玩意儿绝对兼容最新版本的 WordPress 并且功能完美。：）</li>
+<li><strong><a href="https://wordpress.org/plugins/yet-another-related-posts-plugin/">Yet Another Related Posts Plugin</a></strong> 这个是另外一个相关文章插件，再也没有烦人的站外链接了，免费版功能足够，而且同样<strong>支持RSS</strong>，而且现在它的配置界面也不再那么让人望而生畏，对了！虽然它同样被提示不兼容最新版——但我保证，这玩意儿同样功能正常~</li>
+</ul>
+<p>最后，你可以到这个页面来参考落格都使用了哪些<a href="https://www.logcg.com/%e8%90%bd%e6%a0%bc%e6%ad%a3%e5%9c%a8%e4%bd%bf%e7%94%a8%e7%9a%84%e6%8f%92%e4%bb%b6"><strong>狂拽炫酷吊的 WordPress 插件</strong></a>，这些插件至少都会<strong>兼容 SSL</strong> 。</p>
 <hr>
+<p><em>这下，你的博客应该已经能够完美的显示出一个<strong>灰色的小锁</strong>啦！</em></p>
+<p>唉？！为什么是灰色？知足吧，一类证书都是酱紫，想要绿色，请掏钱。</p>
+<p>对了，在 <strong>Chrome</strong> 下是绿色了，但 <strong>Safari</strong> 比较挑，是灰色的~</p>
+<p>另：如果你的博客包含了同域名下的非 HTTPS 链接，<strong>Chrome 会出现黄色的三角警告，而 Safari 则是像普通链接一样不在地址栏里显示小锁</strong>。</p>
+<p>本文由 落格博客 原创撰写：<a href="https://www.logcg.com/">落格博客</a> » <a href="https://www.logcg.com/archives/961.html">WordPress 开启全站 HTTPS</a></p>
+<p>转载请保留出处和原文链接：<a href="https://www.logcg.com/archives/961.html">https://www.logcg.com/archives/961.html</a><br>
+原文章发布日期：2015.4.28</p>
 
               </div>
               <div class="post-footer">
@@ -523,7 +611,7 @@ window.addEventListener('load', function() {
     </li>
     <li class="post-copyright-link">
       <strong>本站链接：</strong>
-      <a href="https://thisming.github.io/post/about/" title="你应该要知道这是哪儿">你应该要知道这是哪儿</a>
+      <a href="https://thisming.github.io/post/WordPress 开启全站 HTTPS/" title="WordPress 开启全站 HTTPS">WordPress 开启全站 HTTPS</a>
     </li>
   </ul>
   <div class="tags">
@@ -532,15 +620,11 @@ window.addEventListener('load', function() {
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="疫情防控期间外来人员流动管控的通告（第7号）" href="https://thisming.github.io/post/疫情防控期间外来人员流动管控的通告/">疫情防控期间外来人员流动管控的通告（第7号）</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="疫情防控期间外来人员流动管控的通告（第7号）" href="https://thisming.github.io/post/疫情防控期间外来人员流动管控的通告/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="Gridea介绍" href="https://thisming.github.io/post/hello-gridea/">Gridea介绍</a>
-        <a class="nav-mobile-next" title="Gridea介绍" href="https://thisming.github.io/post/hello-gridea/">下一篇</a>
+        <a class="nav-pc-next" title="记事本也设页眉页脚" href="https://thisming.github.io/post/记事本也设页眉页脚/">记事本也设页眉页脚</a>
+        <a class="nav-mobile-next" title="记事本也设页眉页脚" href="https://thisming.github.io/post/记事本也设页眉页脚/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-06-10T22:16:45.325Z</updated>
+    <updated>2020-06-10T22:29:03.050Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[WordPress 开启全站 HTTPS]]></title>
+        <id>https://thisming.github.io/post/WordPress 开启全站 HTTPS/</id>
+        <link href="https://thisming.github.io/post/WordPress 开启全站 HTTPS/">
+        </link>
+        <updated>2020-06-10T22:20:19.000Z</updated>
+        <summary type="html"><![CDATA[<p>自从 <strong>CNNIC</strong> 颁发的子证书发生了中间人攻击这些事件之后，<strong>SSL</strong> 连接以及 <strong>HTTPS</strong> 变得越来越流行了。这时候我们从“<strong>使用 SSL 保护你的登录信息以及后台页面</strong>”变成了推荐“<strong>SSL Everywhere</strong>”，使用全局 SSL 加密，有效避免用户在访问网页的时候造成隐私的泄露。而且，根据谷歌站长的最新教程当中的介绍表示，使用 https 对 SEO 更有好处_（国内就别想了，但谷歌的爬虫真的会<a href="https://support.google.com/webmasters/answer/6073543?hl=zh-Hans">更看重 Https 网站</a>。）_另外，<strong>升级到 Https</strong>，也不需要在谷歌站长工具里做什么——支持平滑升级，唯一的缺点恐怕是收录会波动一小段时间。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>自从 <strong>CNNIC</strong> 颁发的子证书发生了中间人攻击这些事件之后，<strong>SSL</strong> 连接以及 <strong>HTTPS</strong> 变得越来越流行了。这时候我们从“<strong>使用 SSL 保护你的登录信息以及后台页面</strong>”变成了推荐“<strong>SSL Everywhere</strong>”，使用全局 SSL 加密，有效避免用户在访问网页的时候造成隐私的泄露。而且，根据谷歌站长的最新教程当中的介绍表示，使用 https 对 SEO 更有好处_（国内就别想了，但谷歌的爬虫真的会<a href="https://support.google.com/webmasters/answer/6073543?hl=zh-Hans">更看重 Https 网站</a>。）_另外，<strong>升级到 Https</strong>，也不需要在谷歌站长工具里做什么——支持平滑升级，唯一的缺点恐怕是收录会波动一小段时间。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[记事本也设页眉页脚]]></title>
         <id>https://thisming.github.io/post/记事本也设页眉页脚/</id>
@@ -129,25 +140,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>在全體國人努力下，國內疫情得到最好的控制，更受到國際矚目和肯定。台灣也已經從過去的口罩進口國，轉變成 #全球第二大口罩生產國。口罩日產量不斷往上突破，可以充分供應國內的需求。</p>
 <p>但是我要提醒所有的國人：國際疫情如果不能有效控制，疫情就不會結束，台灣也依然會身處險境。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[口罩實名制要再升級]]></title>
-        <id>https://thisming.github.io/post/口罩實名制再升級/</id>
-        <link href="https://thisming.github.io/post/口罩實名制再升級/">
-        </link>
-        <updated>2020-03-30T10:15:01.000Z</updated>
-        <summary type="html"><![CDATA[<p>各位台灣隊友，晚安！</p>
-<p>4月9日(四)起，口罩實名制要再升級了！請大家幫我分享這張圖片給你的親友😉<br>
-💡每14天可買成人口罩9片或兒童口罩10片<br>
-💡購買日期不限單雙號<br>
-💡每張健保卡可任選成人或兒童口罩</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>各位台灣隊友，晚安！</p>
-<p>4月9日(四)起，口罩實名制要再升級了！請大家幫我分享這張圖片給你的親友😉<br>
-💡每14天可買成人口罩9片或兒童口罩10片<br>
-💡購買日期不限單雙號<br>
-💡每張健保卡可任選成人或兒童口罩</p>
 ]]></content>
     </entry>
 </feed>
