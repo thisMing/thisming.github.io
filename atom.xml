@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-06-10T22:29:03.050Z</updated>
+    <updated>2020-06-10T22:40:54.448Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[LNMP环境配置SSL证书实现https访问]]></title>
+        <id>https://thisming.github.io/post/LNMP环境配置SSL证书实现https访问/</id>
+        <link href="https://thisming.github.io/post/LNMP环境配置SSL证书实现https访问/">
+        </link>
+        <updated>2020-06-10T22:32:46.000Z</updated>
+        <summary type="html"><![CDATA[<p>Centos7下默认安装的Python版本是2.7.5，由于我LNMP环境使用的openssl版本和Python中使用的openssl版本不一致，具体版本查看方法：</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Centos7下默认安装的Python版本是2.7.5，由于我LNMP环境使用的openssl版本和Python中使用的openssl版本不一致，具体版本查看方法：</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[WordPress 开启全站 HTTPS]]></title>
         <id>https://thisming.github.io/post/WordPress 开启全站 HTTPS/</id>
@@ -127,19 +138,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>台灣隊友們大家好！<br>
 在全體國人努力下，國內疫情得到最好的控制，更受到國際矚目和肯定。台灣也已經從過去的口罩進口國，轉變成全球第二大口罩生產國。口罩日產量不斷往上突破，每日可生產1300萬片口罩，可以充分供應國內的需求。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[防疫物資的合作交換]]></title>
-        <id>https://thisming.github.io/post/防疫物資的合作交換/</id>
-        <link href="https://thisming.github.io/post/防疫物資的合作交換/">
-        </link>
-        <updated>2020-04-01T06:26:40.000Z</updated>
-        <summary type="html"><![CDATA[<p>在全體國人努力下，國內疫情得到最好的控制，更受到國際矚目和肯定。台灣也已經從過去的口罩進口國，轉變成 #全球第二大口罩生產國。口罩日產量不斷往上突破，可以充分供應國內的需求。</p>
-<p>但是我要提醒所有的國人：國際疫情如果不能有效控制，疫情就不會結束，台灣也依然會身處險境。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>在全體國人努力下，國內疫情得到最好的控制，更受到國際矚目和肯定。台灣也已經從過去的口罩進口國，轉變成 #全球第二大口罩生產國。口罩日產量不斷往上突破，可以充分供應國內的需求。</p>
-<p>但是我要提醒所有的國人：國際疫情如果不能有效控制，疫情就不會結束，台灣也依然會身處險境。</p>
 ]]></content>
     </entry>
 </feed>
