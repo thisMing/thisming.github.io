@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-05-05T05:23:53.879Z</updated>
+    <updated>2020-06-10T22:16:45.325Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[记事本也设页眉页脚]]></title>
+        <id>https://thisming.github.io/post/记事本也设页眉页脚/</id>
+        <link href="https://thisming.github.io/post/记事本也设页眉页脚/">
+        </link>
+        <updated>2020-06-10T22:02:48.000Z</updated>
+        <summary type="html"><![CDATA[<p>除了Word外，Windows XP的记事本中也可以设置页眉页脚。打开记事本，单击“文件→页面设置”，从这里我们可以看到“标头”和“页脚”框，在此输入的文字就会以页眉、页脚的方式被打印出来。不过想自由设置页眉页脚还得要用到下面几个参数：</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>除了Word外，Windows XP的记事本中也可以设置页眉页脚。打开记事本，单击“文件→页面设置”，从这里我们可以看到“标头”和“页脚”框，在此输入的文字就会以页眉、页脚的方式被打印出来。不过想自由设置页眉页脚还得要用到下面几个参数：</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[如何破解受保护的工作表]]></title>
         <id>https://thisming.github.io/post/如何破解受保护的工作表/</id>
@@ -137,19 +148,6 @@
 💡每14天可買成人口罩9片或兒童口罩10片<br>
 💡購買日期不限單雙號<br>
 💡每張健保卡可任選成人或兒童口罩</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[河南省新增新冠肺炎本地确诊病]]></title>
-        <id>https://thisming.github.io/post/河南省新增新冠肺炎本地确诊病/</id>
-        <link href="https://thisming.github.io/post/河南省新增新冠肺炎本地确诊病/">
-        </link>
-        <updated>2020-03-29T05:32:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>【河南省新增1例新冠肺炎确诊病例情况通报】<br>
-2020年3月28日0时—24时，河南省新增新冠肺炎本地确诊病例1例，患者为漯河市王某某。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>【河南省新增1例新冠肺炎确诊病例情况通报】<br>
-2020年3月28日0时—24时，河南省新增新冠肺炎本地确诊病例1例，患者为漯河市王某某。</p>
 ]]></content>
     </entry>
 </feed>
