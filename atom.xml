@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-06-25T01:40:48.914Z</updated>
+    <updated>2020-06-25T01:46:08.228Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -16,11 +16,11 @@
         <link href="https://thisming.github.io/post/CC协议是什么/">
         </link>
         <updated>2020-06-25T01:22:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>CC 协议<br>
-Creative Commons，简称 CC，中国大陆正式名称为常识同享，台湾正式名称为创用 CC。是一个非营利安排，也是一种创造的授权方法。此安排的主要主旨是增加创意著作的流通可及性，作为其别人据以创造及同享的根底，并寻找适当的法令以保证上述理念。自 3.0 版开端，原始的协议改以国际法及相关惯例撰写，称为“未移植版”，各司法范畴团队再依其法令翻译、修改成该司法范畴的适用版本。</p>
+        <summary type="html"><![CDATA[<h1 id="cc-协议">CC 协议</h1>
+<p>Creative Commons，简称 CC，中国大陆正式名称为常识同享，台湾正式名称为创用 CC。是一个非营利安排，也是一种创造的授权方法。此安排的主要主旨是增加创意著作的流通可及性，作为其别人据以创造及同享的根底，并寻找适当的法令以保证上述理念。自 3.0 版开端，原始的协议改以国际法及相关惯例撰写，称为“未移植版”，各司法范畴团队再依其法令翻译、修改成该司法范畴的适用版本。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>CC 协议<br>
-Creative Commons，简称 CC，中国大陆正式名称为常识同享，台湾正式名称为创用 CC。是一个非营利安排，也是一种创造的授权方法。此安排的主要主旨是增加创意著作的流通可及性，作为其别人据以创造及同享的根底，并寻找适当的法令以保证上述理念。自 3.0 版开端，原始的协议改以国际法及相关惯例撰写，称为“未移植版”，各司法范畴团队再依其法令翻译、修改成该司法范畴的适用版本。</p>
+        <content type="html"><![CDATA[<h1 id="cc-协议">CC 协议</h1>
+<p>Creative Commons，简称 CC，中国大陆正式名称为常识同享，台湾正式名称为创用 CC。是一个非营利安排，也是一种创造的授权方法。此安排的主要主旨是增加创意著作的流通可及性，作为其别人据以创造及同享的根底，并寻找适当的法令以保证上述理念。自 3.0 版开端，原始的协议改以国际法及相关惯例撰写，称为“未移植版”，各司法范畴团队再依其法令翻译、修改成该司法范畴的适用版本。</p>
 ]]></content>
     </entry>
     <entry>
