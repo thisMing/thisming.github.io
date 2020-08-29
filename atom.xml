@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-06-25T01:46:08.228Z</updated>
+    <updated>2020-08-29T01:49:44.995Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[三字经]]></title>
+        <id>https://thisming.github.io/post/三字经/</id>
+        <link href="https://thisming.github.io/post/三字经/">
+        </link>
+        <updated>2020-08-29T01:45:05.000Z</updated>
+        <summary type="html"><![CDATA[<p>《三字经》，是中国的传统启蒙教材。在中国古代经典当中，《三字经》是最浅显易懂的读本之一。《三字经》取材典范，包括中国传统文化的文学、历史、哲学、天文地理、人伦义理、忠孝节义等等，而核心思想又包括了“仁，义，诚，敬，孝。”背诵《三字经》的同时，就了解了常识、传统国学及历史故事，以及故事内涵中的做人做事道理。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>《三字经》，是中国的传统启蒙教材。在中国古代经典当中，《三字经》是最浅显易懂的读本之一。《三字经》取材典范，包括中国传统文化的文学、历史、哲学、天文地理、人伦义理、忠孝节义等等，而核心思想又包括了“仁，义，诚，敬，孝。”背诵《三字经》的同时，就了解了常识、传统国学及历史故事，以及故事内涵中的做人做事道理。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CC协议是什么？]]></title>
         <id>https://thisming.github.io/post/CC协议是什么/</id>
@@ -123,21 +134,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>台灣防疫最前線，從國門到家門，守護國人健康<br>
 在這次的防疫作戰中，#機場攔截 和 #居家檢疫 是最重要的兩大防線。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[人间百态：张静静因抢救无效死亡]]></title>
-        <id>https://thisming.github.io/post/张静静因抢救无效死亡/</id>
-        <link href="https://thisming.github.io/post/张静静因抢救无效死亡/">
-        </link>
-        <updated>2020-04-05T08:34:52.000Z</updated>
-        <summary type="html"><![CDATA[<p>【山东援鄂医疗队员张静静去世 丈夫援非未能赶回】<br>
-突发疾病的山东援鄂医疗队员张静静经过抢救后，最终没能迎来转机。<br>
-4月6日晚上，记者从接近张静静的人士处获悉，4月6日晚上，山东省第一批援鄂医疗队员、齐鲁医院呼吸与危重症医学科主管护师张静静因抢救无效，宣布临床死亡。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>【山东援鄂医疗队员张静静去世 丈夫援非未能赶回】<br>
-突发疾病的山东援鄂医疗队员张静静经过抢救后，最终没能迎来转机。<br>
-4月6日晚上，记者从接近张静静的人士处获悉，4月6日晚上，山东省第一批援鄂医疗队员、齐鲁医院呼吸与危重症医学科主管护师张静静因抢救无效，宣布临床死亡。</p>
 ]]></content>
     </entry>
 </feed>
