@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-08-29T01:51:55.578Z</updated>
+    <updated>2020-08-29T01:59:56.692Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[百家姓]]></title>
+        <id>https://thisming.github.io/post/百家姓/</id>
+        <link href="https://thisming.github.io/post/百家姓/">
+        </link>
+        <updated>2020-08-29T01:57:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>《三字经》与《百家姓》、《千字文》并称为三大国学启蒙读物。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>《三字经》与《百家姓》、《千字文》并称为三大国学启蒙读物。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[千字文]]></title>
+        <id>https://thisming.github.io/post/千字文/</id>
+        <link href="https://thisming.github.io/post/千字文/">
+        </link>
+        <updated>2020-08-29T01:56:10.000Z</updated>
+        <summary type="html"><![CDATA[<p>《三字经》与《百家姓》、《千字文》并称为三大国学启蒙读物。<br>
+千字文，由南北朝时期梁朝散骑侍郎、给事中周兴嗣编纂、一千个汉字组成的韵文（在隋唐之前，不押韵、不对仗的文字，被称为“笔”，而非“文”）。梁武帝（502—549年）命人从王羲之书法作品中选取1000个不重复汉字，命员外散骑侍郎周兴嗣编纂成文。全文为四字句，对仗工整，条理清晰，文采斐然。《千字文》语句平白如话，易诵易记，并译有英文版、法文版、拉丁文版、意大利文版，是中国影响很大的儿童启蒙读物。<br>
+文中1000字本来不得有所重复，但周兴嗣在编纂文章时，却重复了一个“洁”字（洁、絜为同义异体字）。因此，《千字文》实际只运用了999字。 中国大陆实行简化字、归并异体字后，其简体中文版本剩下九百九十余个相异汉字。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>《三字经》与《百家姓》、《千字文》并称为三大国学启蒙读物。<br>
+千字文，由南北朝时期梁朝散骑侍郎、给事中周兴嗣编纂、一千个汉字组成的韵文（在隋唐之前，不押韵、不对仗的文字，被称为“笔”，而非“文”）。梁武帝（502—549年）命人从王羲之书法作品中选取1000个不重复汉字，命员外散骑侍郎周兴嗣编纂成文。全文为四字句，对仗工整，条理清晰，文采斐然。《千字文》语句平白如话，易诵易记，并译有英文版、法文版、拉丁文版、意大利文版，是中国影响很大的儿童启蒙读物。<br>
+文中1000字本来不得有所重复，但周兴嗣在编纂文章时，却重复了一个“洁”字（洁、絜为同义异体字）。因此，《千字文》实际只运用了999字。 中国大陆实行简化字、归并异体字后，其简体中文版本剩下九百九十余个相异汉字。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[三字经]]></title>
         <id>https://thisming.github.io/post/三字经/</id>
@@ -112,30 +138,6 @@
 自2014年5月27日谷歌被屏蔽之后，对百度搜索出来的结果中全是广告和误导信息的不满，导致向我这样的非程序员、也没有程序员朋友的人，花了不少时间去学习如何使用谷歌搜索。开始的时候还有一些网友在论坛、个人博客写一些翻墙使用谷歌的技术文章和程序，最近(2018)也很多人被请喝茶或者收到警告，陆续关闭个人博客，删除之前的文章。<br>
 这里做一下这两年的学习、使用总结。</p>
 </blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[申请Let's Encrypt证书]]></title>
-        <id>https://thisming.github.io/post/申请Let&apos;s Encrypt证书/</id>
-        <link href="https://thisming.github.io/post/申请Let&apos;s Encrypt证书/">
-        </link>
-        <updated>2020-04-19T06:39:14.000Z</updated>
-        <summary type="html"><![CDATA[<p>最近个人有10多个二级域名需要签发证书，而Let's encrypt 提供期限为三个月的免费SSL证书，到期之后需要renew，官方还提供自动renew的工具certbot。这里记录下使用Let's Encrypt生成泛域名的通用证书。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>最近个人有10多个二级域名需要签发证书，而Let's encrypt 提供期限为三个月的免费SSL证书，到期之后需要renew，官方还提供自动renew的工具certbot。这里记录下使用Let's Encrypt生成泛域名的通用证书。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[台灣防疫最前線]]></title>
-        <id>https://thisming.github.io/post/台灣防疫最前線/</id>
-        <link href="https://thisming.github.io/post/台灣防疫最前線/">
-        </link>
-        <updated>2020-04-09T12:06:32.000Z</updated>
-        <summary type="html"><![CDATA[<p>台灣防疫最前線，從國門到家門，守護國人健康<br>
-在這次的防疫作戰中，#機場攔截 和 #居家檢疫 是最重要的兩大防線。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>台灣防疫最前線，從國門到家門，守護國人健康<br>
-在這次的防疫作戰中，#機場攔截 和 #居家檢疫 是最重要的兩大防線。</p>
 ]]></content>
     </entry>
 </feed>

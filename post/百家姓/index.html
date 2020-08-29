@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta charset="UTF-8"/>
+    <meta charset="UTF-8"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="静态博客">
 <meta name="description" content="又是努力的一天！">
 <meta name="theme-color" content="#000">
-<title>MrdeABC</title>
+<title>百家姓 | MrdeABC</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1598666390672">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -25,6 +25,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
+    <meta name="description" content="百家姓" />
+    <meta name="keywords" content="学习,智慧,知识" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -126,10 +128,25 @@
     </div>
     <div class="main-continer">
       
-      <div class="section-layout  gemini">
+      <div class="section-layout gemini ">
         <div class="section-layout-wrapper">
-          <div id="sidebarMeta" class="sidebar">
-    
+          
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://thisming.github.io/images/avatar.png"/>
@@ -184,400 +201,279 @@
 
 
 </div>
+          
+        
+      </div>
+    </div>
+  
 </div>
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
       }
-    });
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
   }
-  </script>
-            <div class="section-box tag-line">
-              <div class="box-shadow-wrapper">
-                <div class="bg-color">
-                  <section class="section posts-expand">
-                    <div class="padding-wrapper">
-  <div class="tag-timeline-box">
-    <div class="tag-timeline-wrapper">
-      <div class="tag-timeline-title">
-        <h2>
-          tracker
-          <small>标签</small>
-        </h2>
-      </div>
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-            <a href="https://thisming.github.io/post/bing-COVID-19-Tracker/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    03-16
-                    <small>基于Bing搜索的全球冠状病毒追踪器</small>
-                  </h1>
-                </div>  
-              </div>
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+          <div class="section-box box-shadow-wrapper">
+            <div class="section bg-color post post-page">
+              <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://thisming.github.io/post/百家姓/">
+      百家姓
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2020-08-29</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+      <span class="meta-item">
+        <i class="fa fa-folder-o"></i>
+        <span class="pc-show">分类于</span>
+        
+          
+            <a href="https://thisming.github.io/tag/xue-xi/">
+              <span>学习</span>
+            </a>、
+          
+        
+          
+            <a href="https://thisming.github.io/tag/zhi-hui/">
+              <span>智慧</span>
+            </a>、
+          
+        
+          
+            <a href="https://thisming.github.io/tag/zhi-shi/">
+              <span>知识</span>
             </a>
           
         
-          
-        
-          
-        
+      </span>
+      <span class="post-meta-divider">|</span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>2分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>589<span class="pc-show">字数</span></span>
+    </span>
+    
+      <span id="/post/百家姓/" class="meta-item pc-show leancloud_visitors">
+        <span class="post-meta-divider">|</span>
+        <i class="fa fa-eye"></i>
+        <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
+      </span>
+    
+  </div>
+</header>
+              <div class="post-body next-md-body" id="post_body">
+                <p>《三字经》与《百家姓》、《千字文》并称为三大国学启蒙读物。</p>
+<!-- more -->
+<p>赵钱孙李，周吴郑王。<br>
+冯陈褚卫，蒋沈韩杨。<br>
+朱秦尤许，何吕施张。<br>
+孔曹严华，金魏陶姜。<br>
+戚谢邹喻，柏水窦章。<br>
+云苏潘葛，奚范彭郎。<br>
+鲁韦昌马，苗凤花方。<br>
+俞任袁柳，酆鲍史唐。<br>
+费廉岑薛，雷贺倪汤。<br>
+滕殷罗毕，郝邬安常。<br>
+乐于时傅，皮卞齐康。<br>
+伍余元卜，顾孟平黄。<br>
+和穆萧尹，姚邵湛汪。<br>
+祁毛禹狄，米贝明臧。<br>
+计伏成戴，谈宋茅庞。<br>
+熊纪舒屈，项祝董梁。<br>
+杜阮蓝闵，席季麻强。<br>
+贾路娄危，江童颜郭。<br>
+梅盛林刁，钟徐邱骆。<br>
+高夏蔡田，樊胡凌霍。<br>
+虞万支柯，昝管卢莫。<br>
+经房裘缪，干解应宗。<br>
+丁宣贲邓，郁单杭洪。<br>
+包诸左石，崔吉钮龚。<br>
+程嵇邢滑，裴陆荣翁。<br>
+荀羊於惠，甄曲家封。<br>
+芮羿储靳，汲邴糜松。<br>
+井段富巫，乌焦巴弓。<br>
+牧隗山谷，车侯宓蓬。<br>
+全郗班仰，秋仲伊宫。<br>
+宁仇栾暴，甘钭厉戎。<br>
+祖武符刘，景詹束龙。<br>
+叶幸司韶，郜黎蓟薄。<br>
+印宿白怀，蒲邰从鄂。<br>
+索咸籍赖，卓蔺屠蒙。<br>
+池乔阴鬱，胥能苍双。<br>
+闻莘党翟，谭贡劳逄。<br>
+姬申扶堵，冉宰郦雍。<br>
+卻璩桑桂，濮牛寿通。<br>
+边扈燕冀，郏浦尚农。<br>
+温别庄晏，柴瞿阎充。<br>
+慕连茹习，宦艾鱼容。<br>
+向古易慎，戈廖庾终。<br>
+暨居衡步，都耿满弘。<br>
+匡国文寇，广禄阙东。<br>
+欧殳沃利，蔚越夔隆。<br>
+师巩厍聂，晁勾敖融。<br>
+冷訾辛阚，那简饶空。<br>
+曾毋沙乜，养鞠须丰。<br>
+巢关蒯相，查后荆红。<br>
+游竺权逯，盖益桓公。<br>
+万俟司马，上官欧阳。<br>
+夏侯诸葛，闻人东方。<br>
+赫连皇甫，尉迟公羊。<br>
+澹台公冶，宗政濮阳。<br>
+淳于单于，太叔申屠。<br>
+公孙仲孙，轩辕令狐。<br>
+钟离宇文，长孙慕容。<br>
+鲜于闾丘，司徒司空。<br>
+丌官司寇，仉督子车。<br>
+颛孙端木，巫马公西。<br>
+漆雕乐正，壤驷公良。<br>
+拓跋夹谷，宰父谷梁。<br>
+晋楚闫法，汝鄢涂钦。<br>
+段干百里，东郭南门。<br>
+呼延归海，羊舌微生。<br>
+岳帅缑亢，况郈有琴。<br>
+梁丘左丘，东门西门。<br>
+商牟佘佴，伯赏南宫。<br>
+墨哈谯笪，年爱阳佟。<br>
+第五言福，百家姓终</p>
+
+              </div>
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>编辑上传：</strong>
+      MrdeABC
+    </li>
+    <li class="post-copyright-link">
+      <strong>本站链接：</strong>
+      <a href="https://thisming.github.io/post/百家姓/" title="百家姓">百家姓</a>
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://thisming.github.io/tag/xue-xi/"># 学习</a>
+    
+      <a href="https://thisming.github.io/tag/zhi-hui/"># 智慧</a>
+    
+      <a href="https://thisming.github.io/tag/zhi-shi/"># 知识</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
       
-        
-          
-        
+    </div>
+    <div class="nav-next">
       
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-          
-        
-          
-        
-          
-        
-      
-        
-      
-        
-          
-        
+        <a class="nav-pc-next" title="千字文" href="https://thisming.github.io/post/千字文/">千字文</a>
+        <a class="nav-mobile-next" title="千字文" href="https://thisming.github.io/post/千字文/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
 </div>
-                  </section>
-                </div>
-              </div>
+              
+                
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
+<script>
+new Valine({
+    el: '#vcomments' ,
+    appId: 'voomdQXXilbYk2KjQu293htD-MdYXbMMI',
+    appKey: 'XEyIBIWgyI0eQkWJ2sDqsUnP',
+    notify: 'true' === 'false', 
+    avatar:'mp', 
+    placeholder: '说点什么...',
+    pageSize: '',
+    lang: 'zh-cn',
+    visitor: 'true' === 'true',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'false',
+});
+</script>
+              
+            </div>
           </div>
         </div>
       </div>
