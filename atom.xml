@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://thisming.github.io</id>
     <title>MrdeABC</title>
-    <updated>2020-10-01T13:20:39.738Z</updated>
+    <updated>2020-12-13T02:27:58.915Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://thisming.github.io"/>
     <link rel="self" href="https://thisming.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://thisming.github.io/images/avatar.png</logo>
     <icon>https://thisming.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, MrdeABC</rights>
+    <entry>
+        <title type="html"><![CDATA[已经很久没更新了...]]></title>
+        <id>https://thisming.github.io/post/yi-jing-hen-jiu-mei-geng-xin-liao/</id>
+        <link href="https://thisming.github.io/post/yi-jing-hen-jiu-mei-geng-xin-liao/">
+        </link>
+        <updated>2020-12-13T02:26:24.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[百家姓]]></title>
         <id>https://thisming.github.io/post/百家姓/</id>
@@ -119,25 +126,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>連續5天0確診，連續18天本土病例0新增！</p>
 <p>在今天指揮中心的記者會上，陳時中部長展示的杯子，是前陣子我的Twitter追蹤人數破百萬時，拍的影片中出現的杯子，上面寫著 #TaiwanCanHelp。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[谷歌云服务器(GCP)搭建过程]]></title>
-        <id>https://thisming.github.io/post/gu-ge-yun-fu-wu-qi-gcpda-jian-guo-cheng/</id>
-        <link href="https://thisming.github.io/post/gu-ge-yun-fu-wu-qi-gcpda-jian-guo-cheng/">
-        </link>
-        <updated>2020-04-19T06:53:25.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>使用信用卡注册<mark>谷歌云</mark>(GCP)的服务器，可获赠$300美元的免费试用金，和一年的使用期限。 从2017年到现在也有两年多了，他给我在互联网上的探索搭建了一个新的网络桥梁，连接了外界，学习了一些有用没用的知识，也让我看到了更多的东西。<br>
-自2014年5月27日谷歌被屏蔽之后，对百度搜索出来的结果中全是广告和误导信息的不满，导致向我这样的非程序员、也没有程序员朋友的人，花了不少时间去学习如何使用谷歌搜索。开始的时候还有一些网友在论坛、个人博客写一些翻墙使用谷歌的技术文章和程序，最近(2018)也很多人被请喝茶或者收到警告，陆续关闭个人博客，删除之前的文章。<br>
-这里做一下这两年的学习、使用总结。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>使用信用卡注册<mark>谷歌云</mark>(GCP)的服务器，可获赠$300美元的免费试用金，和一年的使用期限。 从2017年到现在也有两年多了，他给我在互联网上的探索搭建了一个新的网络桥梁，连接了外界，学习了一些有用没用的知识，也让我看到了更多的东西。<br>
-自2014年5月27日谷歌被屏蔽之后，对百度搜索出来的结果中全是广告和误导信息的不满，导致向我这样的非程序员、也没有程序员朋友的人，花了不少时间去学习如何使用谷歌搜索。开始的时候还有一些网友在论坛、个人博客写一些翻墙使用谷歌的技术文章和程序，最近(2018)也很多人被请喝茶或者收到警告，陆续关闭个人博客，删除之前的文章。<br>
-这里做一下这两年的学习、使用总结。</p>
-</blockquote>
 ]]></content>
     </entry>
 </feed>
